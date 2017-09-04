@@ -4,7 +4,7 @@ $(document).ready(function () {
 
     function show_popup (ind){
         var popup_content = $('#ajax_container_shop_points #popup_'+ind);
-        if(screen.width > 768) {
+        if(screen.width > 1199) {
             $('#block_on_map').html( popup_content.html() );
             $('#block_on_map').closest('.modal_map').addClass('in');
         } else {

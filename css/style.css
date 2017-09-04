@@ -166,7 +166,7 @@
     margin-left: -7.5px;
   }
 }
-@media (min-width: 1600px) {
+@media (min-width: 1200px) {
   .main {
     padding: 0 10px;
   }
@@ -302,6 +302,9 @@ a:active {
   .canvas {
     padding: 0;
   }
+}
+#header .address {
+  margin: 0;
 }
 .navbar-toggle {
   float: left;
@@ -440,6 +443,8 @@ a:active {
   color: #000;
 }
 .phone__link {
+  display: block;
+  padding: 2px 0;
   font-size: 12px;
   line-height: 1.5;
   text-align: left;
@@ -475,18 +480,18 @@ a:active {
   background-color: #e9001c;
 }
 .cart__count {
-  margin: 0 0 2px;
   font-size: 14px;
   line-height: 1.43;
   text-align: left;
   color: #000;
 }
 .cart__link {
+  display: block;
+  padding: 2px 0;
   font-size: 12px;
   line-height: 1.5;
   text-align: left;
   color: #ff6700;
-  display: block;
 }
 .service-nav {
   padding: 0;
@@ -554,6 +559,16 @@ a:active {
   right: auto;
   left: 0;
 }
+.catalog-nav .dropdown-menu .catalog-nav__link {
+  text-transform: none;
+}
+.catalog-nav .dropdown-menu .catalog-nav__link span {
+  float: none;
+  color: #000000;
+}
+.catalog-nav .dropdown-menu .catalog-nav__link span:after {
+  content: none;
+}
 .catalog-nav .dropdown-menu li {
   display: block;
 }
@@ -620,6 +635,9 @@ a:active {
   background: url("../img/ic-magnifying.svg") no-repeat 50%;
   font-size: 0;
   line-height: 0;
+}
+.selection-tabs {
+  margin: 0 0 20px;
 }
 .selection-tabs .nav-pills > li {
   margin: 0;
@@ -1100,8 +1118,8 @@ input[type="checkbox"] {
   vertical-align: middle;
   margin: 5px 30px 5px 0;
 }
-h1,
-.h1 {
+h2,
+.h2 {
   font-family: "clearsans", sans-serif;
   font-size: 24px;
   font-weight: 500;
@@ -1116,6 +1134,9 @@ h1,
   border: solid 1px #D8D8D8;
   padding: 30px 20px 25px;
   position: relative;
+}
+.product-teaser .tooltip {
+  width: 190px;
 }
 .product-teaser__img {
   position: absolute;
@@ -1144,6 +1165,7 @@ h1,
   overflow: hidden;
 }
 .product-teaser__name-link {
+  display: block;
   font-size: 14px;
   line-height: 1.43;
   text-align: left;
@@ -1506,6 +1528,12 @@ h1,
   padding: 30px 0 60px;
   border-top: 4px solid #000;
 }
+.footer__container > .row {
+  margin-bottom: 15px;
+}
+.footer__container > .row:last-child {
+  margin-bottom: 0;
+}
 .footer ul {
   margin: 0;
 }
@@ -1528,14 +1556,14 @@ h1,
   line-height: 1.43;
   text-align: left;
   color: #000;
-  margin: 0 0 18px;
+  margin: 0 0 14px;
 }
 .footer-phone {
   font-size: 12px;
   line-height: 1.33;
   text-align: left;
   color: #8b8b8b;
-  margin: 0 0 23px;
+  margin: 0 0 20px;
 }
 .footer-phone__link {
   font-size: 18px;
@@ -1543,7 +1571,7 @@ h1,
   text-align: left;
   color: #000;
   display: block;
-  margin: 0 0 4px;
+  padding: 4px 0;
 }
 .footer-logo {
   display: block;
@@ -1553,6 +1581,9 @@ h1,
 .footer-logo img {
   width: 100%;
   height: auto;
+}
+.payment {
+  margin-bottom: 20px;
 }
 .payment__title {
   font-size: 11px;
@@ -2110,7 +2141,6 @@ h1,
   margin: 0 0 20px;
 }
 .slick-dotted.slick-slider.carousel {
-  margin-bottom: -20px;
   position: relative;
   z-index: 1;
 }
@@ -2149,6 +2179,8 @@ h1,
 .banner {
   display: block;
   background-size: auto;
+  background-position: 50%;
+  background-repeat: no-repeat;
 }
 .banner__container {
   max-width: 1120px;
@@ -2203,6 +2235,7 @@ h1,
 }
 .modal {
   z-index: 99999;
+  padding: 0 15px !important;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
@@ -2515,7 +2548,13 @@ form[name="login_form"] .form-group-submit .btn {
 }
 #shopModal .modal-dialog {
   width: 290px;
-  margin: 20px auto 30px;
+  margin: 0 auto;
+  height: 100%;
+  padding: 20px 0 22px;
+}
+#shopModal .modal-content {
+  height: 100%;
+  position: relative;
 }
 #shopModal .shop-detail {
   position: static;
@@ -2526,10 +2565,21 @@ form[name="login_form"] .form-group-submit .btn {
 }
 #shopModal .modal-header {
   padding-top: 44px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 10;
+  background: #fff;
 }
 #shopModal .modal-body {
   padding: 0;
-  max-height: 100%;
+  height: 100%;
+  padding-top: 44px;
+  overflow: hidden;
+}
+#shopModal .shop-detail__item {
+  height: 100%;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
@@ -2713,7 +2763,7 @@ form[name="login_form"] .form-group-submit .btn {
   opacity: 1;
 }
 .tooltip .tooltip-inner {
-  width: 190px;
+  width: 100%;
   padding: 8px 10px 8px 20px;
   text-align: left;
   background-color: #fff;
@@ -2768,6 +2818,18 @@ form[name="login_form"] .form-group-submit .btn {
   display: block;
   height: 182px;
   background-color: #d8d8d8;
+  position: relative;
+}
+.fitting__img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+  z-index: 1;
 }
 .fitting__title {
   font-size: 12px;
@@ -2779,18 +2841,6 @@ form[name="login_form"] .form-group-submit .btn {
 }
 .fitting__title a {
   color: #f56605;
-}
-.slideout-panel {
-  padding-bottom: 544px;
-  position: relative;
-}
-#footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 524px;
-  background: #fff;
-  z-index: 1;
 }
 .scroll-disable {
   overflow: hidden;
@@ -2846,23 +2896,29 @@ form[name="login_form"] .form-group-submit .btn {
 #menu {
   display: none;
 }
+#menu .navmenu-nav {
+  height: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
 .slideout-open #menu {
   display: block;
 }
-.carousel,
-.comment-carousel {
+.carousel {
   height: 400px;
   opacity: 0;
+  overflow: hidden;
   -webkit-transition: all 200ms 0ms ease-in-out;
   -moz-transition: all 200ms 0ms ease-in-out;
   -ms-transition: all 200ms 0ms ease-in-out;
   -o-transition: all 200ms 0ms ease-in-out;
   transition: all 200ms 0ms ease-in-out;
 }
-.carousel.visible,
-.comment-carousel.visible {
+.carousel.visible {
   opacity: 1;
-  height: auto;
+}
+#myCarousel {
+  margin-bottom: -20px;
 }
 #myCarousel .slick-arrow {
   display: none !important;
@@ -2878,11 +2934,11 @@ form[name="login_form"] .form-group-submit .btn {
 }
 #myCarousel .slick-arrow.slick-prev {
   background: url("../img/slide-arrow-left-white.svg") no-repeat 50%;
-  left: 50px;
+  left: 0;
 }
 #myCarousel .slick-arrow.slick-next {
   background: url("../img/slide-arrow-right-white.svg") no-repeat 50%;
-  right: 50px;
+  right: 0;
 }
 html {
   position: relative;
@@ -2934,9 +2990,6 @@ html {
     padding-bottom: 740px;
     position: relative;
   }
-  #footer {
-    height: 720px;
-  }
   .footer__text {
     padding-right: 70px;
   }
@@ -2945,15 +2998,8 @@ html {
   .footer__text {
     padding-right: 0;
   }
-  .slideout-panel {
-    padding-bottom: 540px;
-    position: relative;
-  }
-  #footer {
-    height: 520px;
-  }
   .footer-heading {
-    margin: 0 0 12px;
+    margin: 0 0 8px;
   }
   .footer .footer-phone + .footer-phone {
     margin: 0 0 30px;
@@ -3191,8 +3237,15 @@ html {
   .footer__container .m-b-20 {
     margin-bottom: 23px;
   }
-  .footer__container .m-b-15 {
+  .footer__container .footer__container {
+    padding: 30px 0 60px;
+    border-top: 4px solid #000;
+  }
+  .footer__container .footer__container > .row {
     margin-bottom: 20px;
+  }
+  .footer__container .footer__container > .row:last-child {
+    margin-bottom: 0;
   }
   .footer__container .list-unstyled {
     font-size: 0;
@@ -3470,6 +3523,9 @@ html {
     -o-transition: all 200ms 0ms ease-in-out;
     transition: all 200ms 0ms ease-in-out;
   }
+  #id_map {
+    max-height: 80vh;
+  }
 }
 @media (max-width: 767px) and (max-width: 479px) {
   .shop-tabs__nav.translate li {
@@ -3480,9 +3536,6 @@ html {
   }
 }
 @media (min-width: 768px) {
-  #id_map {
-    max-height: 80vh;
-  }
   .product-comment__item-container {
     max-width: 474px;
     margin: 0 auto;
@@ -3495,14 +3548,12 @@ html {
     margin: 20px auto;
   }
 }
+@media (max-width: 992px) {
+  .actions .col-sm-4:nth-child(3n+1) {
+    clear: both;
+  }
+}
 @media (min-width: 992px) {
-  .slideout-panel {
-    padding-bottom: 520px;
-    position: relative;
-  }
-  #footer {
-    height: 500px;
-  }
   .autocomplete-suggestions {
     padding: 20px 15px;
   }
@@ -3566,14 +3617,7 @@ html {
     margin: 0;
   }
 }
-@media (min-width: 1600px) {
-  .slideout-panel {
-    padding-bottom: 500px;
-    position: relative;
-  }
-  #footer {
-    height: 480px;
-  }
+@media (min-width: 1200px) {
   .catalog .col-sm-4 {
     margin: 20px 0 0;
   }
@@ -3665,5 +3709,13 @@ html {
   }
   .product-comment .slick-arrow.slick-prev {
     left: 50px;
+  }
+}
+@media (min-width: 1600px) {
+  #myCarousel .slick-arrow.slick-prev {
+    left: 50px;
+  }
+  #myCarousel .slick-arrow.slick-next {
+    right: 50px;
   }
 }
