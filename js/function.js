@@ -118,4 +118,24 @@ $(document).ready(function () {
                 top: ''
             }).scrollTop(scrollPos);
         });
+
+    var catalog_item_1 = $('.catalog-nav > li:eq(4)');
+    var catalog_item_2 = $('.catalog-nav > li:eq(5)');
+    console.log(catalog_item_1,catalog_item_2);
+    function catalogNav_replace() {
+        if (window.matchMedia("(min-width: 768px) and (max-width: 1024px)").matches) {
+            $('.catalog-nav .last .dropdown-menu').prepend($(catalog_item_2));
+            $('.catalog-nav .last .dropdown-menu').prepend($(catalog_item_1));
+        } else if (window.matchMedia("(min-width: 1025px) and (max-width: 1199px)").matches) {
+            $('.catalog-nav .last .dropdown-menu').prepend($(catalog_item_1));
+            $(catalog_item_2).insertBefore($('.catalog-nav .last'));
+        } else if (window.matchMedia("(min-width: 1200px)").matches) {
+            $(catalog_item_2).insertBefore($('.catalog-nav .last'));
+            $(catalog_item_2).insertBefore($('.catalog-nav .last'));
+        }
+    }
+    catalogNav_replace();
+    $(window).on('resize', function () {
+        catalogNav_replace();
+    });
 });

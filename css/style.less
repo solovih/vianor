@@ -390,6 +390,19 @@ a {
     right: auto;
     left: 0;
 
+    .catalog-nav__link {
+      text-transform: none;
+
+      span {
+        float: none;
+        color: #000000;
+
+        &:after {
+          content: none;
+        }
+      }
+    }
+
     li {
       display: block;
     }
@@ -1565,7 +1578,7 @@ h1, .h1 {
   line-height: 1.43;
   text-align: left;
   color: @black;
-  margin: 0 0 18px;
+  margin: 0 0 14px;
 }
 
 .footer-phone {
@@ -1581,7 +1594,7 @@ h1, .h1 {
     text-align: left;
     color: @black;
     display: block;
-    margin: 0 0 4px;
+    padding: 4px 0;
   }
 }
 
@@ -3211,7 +3224,7 @@ html {
   }
 
   .footer-heading {
-    margin: 0 0 12px;
+    margin: 0 0 8px;
   }
 
   .footer {
@@ -3860,6 +3873,16 @@ html {
 }
 
 @media (min-width: 768px) {
+
+  .actions {
+
+    .col-sm-4 {
+
+      &:nth-child(3n+1) {
+        clear: both;
+      }
+    }
+  }
 
   #id_map {
     max-height: 80vh;
