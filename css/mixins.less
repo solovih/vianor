@@ -1,0 +1,159 @@
+.none-appearance() {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.clearfix() {
+
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+.translate3d (@x: 0, @y: 0, @z: 0) {
+  -webkit-transform: translate3d(@x, @y, @z);
+  -moz-transform: translate3d(@x, @y, @z);
+  -ms-transform: translate3d(@x, @y, @z);
+  -o-transform: translate3d(@x, @y, @z);
+}
+
+.radius(@radius) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+}
+
+.shadow(@shadow) {
+  -webkit-box-shadow: @shadow;
+  -moz-box-shadow: @shadow;
+  box-shadow: @shadow;
+}
+
+.background_icon(@url; @size: cover; @position: left top;) {
+  background-repeat: no-repeat;
+  background-size: @size;
+  background-position: @position;
+  background-image: url(@url);
+}
+
+.gradient(@c1,@c2) {
+  background: @c1;
+  background: -moz-linear-gradient(top,    @c1 0%, @c2 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@c1), color-stop(100%,@c2));
+  background: -webkit-linear-gradient(top,    @c1 0%,@c2 100%);
+  background: -o-linear-gradient(top,    @c1 0%,@c2 100%);
+  background: -ms-linear-gradient(top,    @c1 0%,@c2 100%);
+  background: linear-gradient(to bottom,    @c1 0%,@c2 100%);
+}
+
+.transitions(@property: all; @time: 200ms; @delay: 0ms; @function: ease-in-out;) {
+  -webkit-transition: @arguments;
+  -moz-transition: @arguments;
+  -ms-transition: @arguments;
+  -o-transition: @arguments;
+  transition: @arguments;
+}
+
+.transitions_off() {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+
+.rotate(@degree) {
+  -webkit-transform: rotate(@degree); /* Chrome y Safari */
+  -moz-transform: rotate(@degree); /* Firefox */
+  -o-transform: rotate(@degree); /* Opera */
+  transform: rotate(@degree); /* Opera */
+}
+
+.origin(@left: 50%; @top: 50%) {
+  -webkit-transform-origin: @left @top; /* Safari and Chrome */
+  -moz-transform-origin: @left @top;
+  -ms-transform-origin: @left @top; /* IE 9 */
+  transform-origin: @left @top;
+}
+
+.scale(@scale: 0.95) {
+  -webkit-transform: scale(@scale);
+  -moz-transform: scale(@scale);
+  -ms-transform: scale(@scale);
+  -o-transform: scale(@scale);
+  transform: scale(@scale);
+}
+
+.skew(@degree) {
+  -webkit-transform: skew(@degree);
+  -moz-transform: skew(@degree);
+  -ms-transform: skew(@degree);
+  -o-transform: skew(@degree);
+  transform: skew(@degree);
+}
+
+.ellipsis() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+}
+
+
+.overflow-x() {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.overflow-y() {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.overflow() {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.justifier() {
+  text-align: justify;
+  -webkit-text-align-last: justify;
+  -moz-text-align-last: justify;
+  -ms-text-align-last: justify;
+  -o-text-align-last: justify;
+  text-align-last: justify;
+  line-height: 0;
+  > * {
+    display: inline-block;
+    vertical-align: top;
+    line-height: normal;
+    text-align: left;
+    padding-top: @pad2/2; // fix bottom magic padding
+  }
+  &:after {
+    width: 100%;
+    height: 0px;
+    visibility: hidden;
+    overflow: hidden;
+    content: '';
+    display: inline-block;
+  }
+}
+
+.tableToBlocks() {
+  display: block;
+  width: 100%;
+  > * {
+    display: block;
+    width: 100%;
+    > * {
+      display: block;
+      width: 100%;
+      > * {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+}
