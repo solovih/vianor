@@ -18,7 +18,7 @@ html, body {
   height: 100%;
 }
 
-img, a, div {
+img {
 
   &:focus {
     outline: none;
@@ -29,6 +29,29 @@ a {
 
   &:hover, &:focus, &:active {
     text-decoration: none;
+  }
+
+  &:focus {
+    outline: -webkit-focus-ring-color auto 5px;
+  }
+}
+
+.dropdown {
+
+  a {
+    &:focus {
+      outline: -webkit-focus-ring-color auto 5px;
+    }
+  }
+}
+
+.service-nav {
+
+  a {
+
+    &:focus {
+      color: #fff;
+    }
   }
 }
 
@@ -109,6 +132,7 @@ a {
     }
   }
 }
+
 .navbar-toggle {
   float: left;
 }
@@ -902,10 +926,6 @@ input.checkbox, input[type="checkbox"] {
     position: static;
     margin: 0;
     border: solid 1px #c1c1c1 !important;
-
-    &:focus, &.focus {
-      outline: none;
-    }
 
     &:first-child {
       .radius(2px 0 0 2px);
@@ -2786,7 +2806,7 @@ form[name="login_form"] {
 
   .modal-dialog {
     width: 290px;
-    margin:0 auto;
+    margin: 0 auto;
     height: 100%;
     padding: 20px 0 22px;
   }
@@ -3118,6 +3138,7 @@ form[name="login_form"] {
   width: 260px;
   background: #fff;
 }
+
 .pushy ul:first-child {
   margin-top: 0;
 }
@@ -3896,14 +3917,12 @@ html {
     }
   }
 
-
   #id_map {
     max-height: 80vh;
   }
 }
 
 @media (min-width: 768px) {
-
 
   .product-comment__item-container {
     max-width: 474px;
@@ -3925,7 +3944,6 @@ html {
 
 @media (max-width: 992px) {
 
-
   .actions {
 
     .col-sm-4 {
@@ -3936,6 +3954,7 @@ html {
     }
   }
 }
+
 @media (min-width: 992px) {
 
   .autocomplete-suggestions {

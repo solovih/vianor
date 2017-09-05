@@ -251,15 +251,22 @@ html,
 body {
   height: 100%;
 }
-img:focus,
-a:focus,
-div:focus {
+img:focus {
   outline: none;
 }
 a:hover,
 a:focus,
 a:active {
   text-decoration: none;
+}
+a:focus {
+  outline: -webkit-focus-ring-color auto 5px;
+}
+.dropdown a:focus {
+  outline: -webkit-focus-ring-color auto 5px;
+}
+.service-nav a:focus {
+  color: #fff;
 }
 .container {
   max-width: 1160px;
@@ -1024,10 +1031,6 @@ input[type="checkbox"] {
   position: static;
   margin: 0;
   border: solid 1px #c1c1c1 !important;
-}
-.btn-group .btn:focus,
-.btn-group .btn.focus {
-  outline: none;
 }
 .btn-group .btn:first-child {
   -webkit-border-radius: 2px 0 0 2px;
