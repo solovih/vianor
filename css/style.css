@@ -1,6 +1,5 @@
 @import "../js/slick/slick-theme.css";
 @import "../js/slick/slick.css";
-@import "../js/pushy/pushy.css";
 @font-face {
   font-family: 'clearsans';
   src: url('../fonts/clearsans/ClearSansRegular.eot');
@@ -485,6 +484,13 @@ a:active {
   line-height: 1.43;
   text-align: left;
   color: #000;
+  height: 20px;
+  overflow: hidden;
+}
+.cart__count strong,
+.cart__count span {
+  display: inline-block;
+  vertical-align: baseline;
 }
 .cart__link {
   display: block;

@@ -3,7 +3,6 @@
 @import "mixins.less";
 @import "../js/slick/slick-theme.css";
 @import "../js/slick/slick.css";
-@import "../js/pushy/pushy.css";
 
 body {
   background: @white;
@@ -308,6 +307,13 @@ a {
     line-height: 1.43;
     text-align: left;
     color: @black;
+    height: 20px;
+    overflow: hidden;
+
+    strong, span {
+      display: inline-block;
+      vertical-align: baseline;
+    }
   }
 
   &__link {
