@@ -306,6 +306,20 @@ a:active {
 #header .address {
   margin: 0;
 }
+#header .address a {
+  display: block;
+  max-width: 250px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+#header .nav .dropdown-toggle {
+  display: block;
+  max-width: 200px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 .navbar-toggle {
   float: left;
 }

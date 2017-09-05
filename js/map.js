@@ -77,7 +77,7 @@ $(document).ready(function () {
         clusterer = new ymaps.Clusterer({
             gridSize: 64,
             clusterDisableClickZoom: false,
-            zoomMargin: [80,80,80,80],
+            zoomMargin: [64,64,64,64],
             preset:'islands#orangeClusterIcons'
         });
 
