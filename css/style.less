@@ -2408,7 +2408,7 @@ h2, .h2 {
 .modal-dialog {
   position: relative;
   width: auto;
-  margin: 20px 15px;
+  margin: 20px 0 15px;
 }
 
 .modal-content {
@@ -2623,6 +2623,7 @@ form[name="login_form"] {
 
 .modal-backdrop {
   background-color: #000;
+  z-index: 9999;
 }
 
 .shop-tabs__nav {
@@ -4199,16 +4200,16 @@ html {
     padding: 0;
     width: @slide-px;
     display: block;
-    .transitions(300ms, all);
+    .transitions(300ms, all, 0ms, ease-out);
     //.translate3d();
-    z-index: 9999999;
+    z-index: 9999;
     .overflow-y;
 
     .navbar-toggle {
       background: url("../img/ic-cross-default.svg") no-repeat 50%;
       position: absolute;
-      right: 0;
-      top: 8px;
+      right: 10px;
+      top: 10px;
     }
   }
   #container {

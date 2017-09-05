@@ -2262,7 +2262,7 @@ h2,
 .modal-dialog {
   position: relative;
   width: auto;
-  margin: 20px 15px;
+  margin: 20px 0 15px;
 }
 .modal-content {
   border: none;
@@ -2444,6 +2444,7 @@ form[name="login_form"] .form-group-submit .btn {
 }
 .modal-backdrop {
   background-color: #000;
+  z-index: 9999;
 }
 .shop-tabs__nav {
   white-space: nowrap;
@@ -3711,20 +3712,20 @@ html {
   padding: 0;
   width: 100%;
   display: block;
-  -webkit-transition: 300ms all 0ms ease-in-out;
-  -moz-transition: 300ms all 0ms ease-in-out;
-  -ms-transition: 300ms all 0ms ease-in-out;
-  -o-transition: 300ms all 0ms ease-in-out;
-  transition: 300ms all 0ms ease-in-out;
-  z-index: 9999999;
+  -webkit-transition: 300ms all 0ms ease-out;
+  -moz-transition: 300ms all 0ms ease-out;
+  -ms-transition: 300ms all 0ms ease-out;
+  -o-transition: 300ms all 0ms ease-out;
+  transition: 300ms all 0ms ease-out;
+  z-index: 9999;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
 #page #menu .navbar-toggle {
   background: url("../img/ic-cross-default.svg") no-repeat 50%;
   position: absolute;
-  right: 0;
-  top: 8px;
+  right: 10px;
+  top: 10px;
 }
 #page #container {
   -webkit-transition: 300ms all 0ms ease-in-out;
