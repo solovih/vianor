@@ -1,5 +1,9 @@
 $(document).ready(function () {
 
+    $('.navbar-toggle').on('click', function () {
+        $('#page').toggleClass('opened');
+    });
+
     $('#myCarousel').on('init', function(event, slick, direction){
         $(this).addClass('visible');
     });
@@ -111,14 +115,14 @@ $(document).ready(function () {
     $(window).on('resize', function () {
         catalogNav_replace();
         var footerHeight = $('footer').outerHeight(true);
-        $('#panel > .content').css('min-height', 'calc(100vh - '+footerHeight+'px)');
+        $('#container > .content').css('min-height', 'calc(100vh - '+footerHeight+'px)');
     });
 });
 
 $(window).on('load', function(){
     setTimeout(function(){
         var footerHeight = $('footer').outerHeight(true);
-        $('#panel > .content').css('min-height', 'calc(100vh - '+footerHeight+'px)');
+        $('#container > .content').css('min-height', 'calc(100vh - '+footerHeight+'px)');
     },1);
 
 });

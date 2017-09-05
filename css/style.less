@@ -721,12 +721,13 @@ input[type="text"], input[type="tel"], input[type="email"], input[type="password
 
 .control-label {
 
-  label {
+  label, .label {
     font-size: 14px;
     line-height: 1.43;
     text-align: left;
     color: #181818;
     font-weight: normal;
+    padding: 0;
   }
 }
 
@@ -785,7 +786,14 @@ input[type="text"], input[type="tel"], input[type="email"], input[type="password
   }
 
   .no-mobile {
-    line-height: 32px;
+    display: inline-block;
+    vertical-align: bottom;
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: left;
+    color: #181818;
   }
 
   .small {
@@ -920,7 +928,7 @@ input.checkbox, input[type="checkbox"] {
 
   .control-label {
 
-    label {
+    label, .label {
       margin: 0;
     }
   }
@@ -1723,6 +1731,10 @@ h2, .h2 {
     padding-bottom: 6px;
     margin-bottom: 6px;
 
+    .login {
+      padding-right: 50px;
+    }
+
     &:last-child {
       border: none;
     }
@@ -2487,7 +2499,7 @@ form[name="login_form"] {
 
   .control-label {
 
-    label {
+    label, .label {
       display: block;
       margin: 0 0 6px;
       font-size: 12px;
@@ -3702,7 +3714,7 @@ html {
       width: 100%;
       margin: 0 0 8px;
 
-      label {
+      label, .label {
 
         font-size: 14px;
         font-weight: bold;
@@ -4161,6 +4173,59 @@ html {
       &.slick-next {
         right: 50px;
       }
+    }
+  }
+}
+
+@slide-px: 100%;
+
+#page {
+  overflow: hidden;
+  width: 100%;
+
+  #menu {
+    position: fixed;
+    top: 0;
+    right: 100%;
+    left: -100%;
+    bottom: 0;
+    color: #000000;
+    padding: 0;
+    width: @slide-px;
+    display: block;
+    .transitions(300ms, all);
+    //.translate3d();
+    z-index: 9999999;
+    .overflow-y;
+
+    .navbar-toggle {
+      background: url("../img/ic-cross-default.svg") no-repeat 50%;
+      position: absolute;
+      right: 0;
+      top: 8px;
+    }
+  }
+  #container {
+    .transitions(300ms, all);
+    position: relative;
+    left: 0;
+    //.translate3d();
+  }
+  &.opened {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    &:before {
+      display: block;
+    }
+    #menu {
+      left: 0;
+      //right: @slide-px;
+    }
+    #container {
+      left: @slide-px;
     }
   }
 }

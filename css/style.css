@@ -871,12 +871,14 @@ textarea::-webkit-input-placeholder {
 .btn-black[disabled] span {
   display: none;
 }
-.control-label label {
+.control-label label,
+.control-label .label {
   font-size: 14px;
   line-height: 1.43;
   text-align: left;
   color: #181818;
   font-weight: normal;
+  padding: 0;
 }
 #by_tire > .form-group {
   display: table;
@@ -921,7 +923,14 @@ textarea::-webkit-input-placeholder {
   margin-right: 30px;
 }
 .product-size-select .no-mobile {
-  line-height: 32px;
+  display: inline-block;
+  vertical-align: bottom;
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.5;
+  text-align: left;
+  color: #181818;
 }
 .product-size-select .small {
   display: block;
@@ -1042,7 +1051,8 @@ input[type="checkbox"] {
 .param-form {
   padding-top: 5px;
 }
-.param-form .control-label label {
+.param-form .control-label label,
+.param-form .control-label .label {
   margin: 0;
 }
 .param-form .form-group {
@@ -1664,6 +1674,9 @@ h2,
   border-bottom: 1px solid #d8d8d8;
   padding-bottom: 6px;
   margin-bottom: 6px;
+}
+.navigation__sec .login {
+  padding-right: 50px;
 }
 .navigation__sec:last-child {
   border: none;
@@ -2324,7 +2337,8 @@ form[name="login_form"] input[type="tel"] {
   padding: 8px 10px;
   height: auto;
 }
-form[name="login_form"] .control-label label {
+form[name="login_form"] .control-label label,
+form[name="login_form"] .control-label .label {
   display: block;
   margin: 0 0 6px;
   font-size: 12px;
@@ -3353,7 +3367,8 @@ html {
     width: 100%;
     margin: 0 0 8px;
   }
-  .param-form .control-label label {
+  .param-form .control-label label,
+  .param-form .control-label .label {
     font-size: 14px;
     font-weight: bold;
     line-height: 1.43;
@@ -3675,4 +3690,58 @@ html {
   #myCarousel .slick-arrow.slick-next {
     right: 50px;
   }
+}
+#page {
+  overflow: hidden;
+  width: 100%;
+}
+#page #menu {
+  position: fixed;
+  top: 0;
+  right: 100%;
+  left: -100%;
+  bottom: 0;
+  color: #000000;
+  padding: 0;
+  width: 100%;
+  display: block;
+  -webkit-transition: 300ms all 0ms ease-in-out;
+  -moz-transition: 300ms all 0ms ease-in-out;
+  -ms-transition: 300ms all 0ms ease-in-out;
+  -o-transition: 300ms all 0ms ease-in-out;
+  transition: 300ms all 0ms ease-in-out;
+  z-index: 9999999;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+#page #menu .navbar-toggle {
+  background: url("../img/ic-cross-default.svg") no-repeat 50%;
+  position: absolute;
+  right: 0;
+  top: 8px;
+}
+#page #container {
+  -webkit-transition: 300ms all 0ms ease-in-out;
+  -moz-transition: 300ms all 0ms ease-in-out;
+  -ms-transition: 300ms all 0ms ease-in-out;
+  -o-transition: 300ms all 0ms ease-in-out;
+  transition: 300ms all 0ms ease-in-out;
+  position: relative;
+  left: 0;
+}
+#page.opened {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+#page.opened:before {
+  display: block;
+}
+#page.opened #menu {
+  left: 0;
+}
+#page.opened #container {
+  left: 100%;
 }
