@@ -1,5 +1,6 @@
 @import "../js/slick/slick-theme.css";
 @import "../js/slick/slick.css";
+@import "../js/pushy/pushy.css";
 @font-face {
   font-family: 'clearsans';
   src: url('../fonts/clearsans/ClearSansRegular.eot');
@@ -2845,64 +2846,20 @@ form[name="login_form"] .form-group-submit .btn {
 .scroll-disable {
   overflow: hidden;
 }
-.slideout-menu {
+.pushy {
+  width: 260px;
+  background: #fff;
+}
+.pushy ul:first-child {
+  margin-top: 0;
+}
+.pushy-open-left {
   position: fixed;
   top: 0;
-  bottom: 0;
-  width: 260px;
-  min-height: 100vh;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
-  z-index: 0;
-  display: none;
-}
-.slideout-menu-left {
   left: 0;
-}
-.slideout-menu-right {
   right: 0;
-}
-.slideout-panel {
-  position: relative;
-  z-index: 1;
-  will-change: transform;
-  background-color: #FFF;
-  /* A background-color is required */
-  min-height: 100vh;
-}
-.slideout-open,
-.slideout-open body,
-.slideout-open .slideout-panel {
-  overflow: hidden;
-}
-.slideout-open .slideout-menu {
-  display: block;
-}
-.canvas:before {
-  content: '';
-  display: block;
-  background-color: rgba(0, 0, 0, 0);
-  transition: background-color 0.5s ease-in-out;
-}
-.panel-open:before {
-  position: absolute;
-  top: 0;
   bottom: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-  z-index: 99;
-  cursor: pointer;
-}
-#menu {
-  display: none;
-}
-#menu .navmenu-nav {
-  height: 100%;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-}
-.slideout-open #menu {
-  display: block;
+  overflow: hidden;
 }
 .carousel {
   height: 400px;

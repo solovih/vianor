@@ -20,108 +20,111 @@
 </head>
 <body>
 
-<div id="menu" class="menu navmenu navmenu-default navmenu-fixed-left">
-    <ul class="nav navmenu-nav">
-        <div class="navigation">
-            <div class="navigation__sec">
-                <div class="login">
-                    <a href="#loginModal" data-toggle="modal" class="login__link">
-                        <div class="login__title">
-                            Личный кабинет
-                        </div>
-                        <div class="login__links">Вход / Регистрация</div>
-                    </a>
+<div id="menu" class="menu pushy pushy-left">
+    <div class="pushy-content">
+        <ul class="nav navmenu-nav">
+            <div class="navigation">
+                <div class="navigation__sec">
+                    <div class="login">
+                        <a href="#loginModal" data-toggle="modal" class="login__link">
+                            <div class="login__title">
+                                Личный кабинет
+                            </div>
+                            <div class="login__links">Вход / Регистрация</div>
+                        </a>
 
 
+                    </div>
+                </div>
+                <div class="navigation__sec">
+                    <ul class="list-unstyled catalog-menu">
+                        <li>
+                            <a href="#">
+                                ШИНЫ
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                ДИСКИ
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                АККУМУЛЯТОРЫ
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                АВТОСЕРВИС И УСЛУГИ
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                АВТОЗАПЧАСТИ
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                ПРИМЕРКА ДИСКОВ
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                ПОИСК
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navigation__sec">
+                    <ul class="list-unstyled nav-menu">
+                        <li>
+                            <a href="#">
+                                Акции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Доставка
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Оплата
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Гарантия
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Vianor клуб
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Что с моим заказом?
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navigation__sec">
+                    <ul class="list-unstyled  location-menu">
+                        <li>
+                            <a href="#cityModal" data-toggle="modal" class="location__link icon-marker">Санкт-Петербург</a>
+                        </li>
+                        <li>
+                            <a href="#" class="location__link">Контакты и адреса</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div class="navigation__sec">
-                <ul class="list-unstyled catalog-menu">
-                    <li>
-                        <a href="#">
-                            ШИНЫ
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            ДИСКИ
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            АККУМУЛЯТОРЫ
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            АВТОСЕРВИС И УСЛУГИ
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            АВТОЗАПЧАСТИ
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            ПРИМЕРКА ДИСКОВ
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            ПОИСК
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="navigation__sec">
-                <ul class="list-unstyled nav-menu">
-                    <li>
-                        <a href="#">
-                            Акции
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Доставка
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Оплата
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Гарантия
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Vianor клуб
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Что с моим заказом?
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="navigation__sec">
-                <ul class="list-unstyled  location-menu">
-                    <li>
-                        <a href="#cityModal" data-toggle="modal" class="location__link icon-marker">Санкт-Петербург</a>
-                    </li>
-                    <li>
-                        <a href="#" class="location__link">Контакты и адреса</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </ul>
+        </ul>
+    </div>
 </div>
-<div id="panel" class="canvas">
+<div class="site-overlay"></div>
+<div id="container" class="canvas">
     <div class="content">
         <header id="header">
             <div class="navbar navbar-default  hidden-xs">
@@ -198,7 +201,7 @@
             </div>
             <div class="container">
                 <div class="top-line mobile-menu clearfix ">
-                    <button type="button" class="navbar-toggle pull-left visible-xs" data-toggle="offcanvas"
+                    <button type="button" class="navbar-toggle pull-left visible-xs menu-btn" data-toggle="offcanvas"
                             data-recalc="false"
                             data-target=".navmenu" data-canvas=".canvas">
                     </button>
@@ -2146,7 +2149,7 @@
 <script src="js/jquery.mask.js" type="text/javascript"></script>
 <script src="js/jquery.autocomplete.js" type="text/javascript"></script>
 <script src="js/geo.js" type="text/javascript"></script>
-<script src="js/slideout.min.js" type="text/javascript"></script>
+<script src="js/pushy/pushy.min.js" type="text/javascript"></script>
 <script src="js/function.js" type="text/javascript"></script>
 </body>
 </html>
