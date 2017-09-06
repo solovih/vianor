@@ -76,7 +76,7 @@ a {
 }
 
 .navbar {
-  min-height: auto;
+  min-height: 0;
 }
 
 .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
@@ -1586,7 +1586,8 @@ h2, .h2 {
   &__more {
 
     a {
-      display: block;
+      display: inline-block;
+      vertical-align: top;
       font-size: 12px;
       line-height: 1.5;
       text-align: left;
@@ -1683,7 +1684,8 @@ h2, .h2 {
   }
 
   &__link {
-    display: block;
+    display: inline-block;
+    vertical-align: top;
     font-size: 12px;
     line-height: 1.5;
     text-align: left;
@@ -1707,12 +1709,17 @@ h2, .h2 {
   color: @warm-grey-two;
   margin: 0 0 20px;
 
+  span {
+    display: block;
+  }
+
   &__link {
     font-size: 18px;
     line-height: 1.33;
     text-align: left;
     color: @black;
-    display: block;
+    display: inline-block;
+    vertical-align: top;
     padding: 4px 0;
   }
 }

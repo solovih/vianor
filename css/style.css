@@ -287,7 +287,7 @@ a:focus {
   margin-left: 15px;
 }
 .navbar {
-  min-height: auto;
+  min-height: 0;
 }
 .navbar-default .navbar-nav > li > a:focus,
 .navbar-default .navbar-nav > li > a:hover {
@@ -1539,7 +1539,8 @@ h2,
   margin: 0 0 4px;
 }
 .action-teaser__more a {
-  display: block;
+  display: inline-block;
+  vertical-align: top;
   font-size: 12px;
   line-height: 1.5;
   text-align: left;
@@ -1617,7 +1618,8 @@ h2,
   margin: 0;
 }
 .footer__link {
-  display: block;
+  display: inline-block;
+  vertical-align: top;
   font-size: 12px;
   line-height: 1.5;
   text-align: left;
@@ -1638,12 +1640,16 @@ h2,
   color: #8b8b8b;
   margin: 0 0 20px;
 }
+.footer-phone span {
+  display: block;
+}
 .footer-phone__link {
   font-size: 18px;
   line-height: 1.33;
   text-align: left;
   color: #000;
-  display: block;
+  display: inline-block;
+  vertical-align: top;
   padding: 4px 0;
 }
 .footer-logo {
