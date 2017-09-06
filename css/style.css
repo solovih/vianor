@@ -232,28 +232,37 @@ body {
 img:focus {
   outline: none;
 }
+button:focus {
+  outline-width: 1px;
+  outline-style: solid;
+  outline-color: #66afe9;
+  outline-offset: 1px;
+}
 a:hover,
 a:focus,
 a:active {
   text-decoration: none;
 }
 a:focus {
-  outline-width: 5px;
-  outline-style: auto;
+  outline-width: 1px;
+  outline-style: solid;
   outline-color: #66afe9;
+  outline-offset: -2px;
   color: #ff6700;
 }
 .slick-prev:focus,
 .slick-next:focus,
 .slick-dots li button:focus {
-  outline-width: 5px;
-  outline-style: auto;
+  outline-width: 1px;
+  outline-style: solid;
   outline-color: #66afe9;
+  outline-offset: -2px;
 }
 .dropdown a:focus {
-  outline-width: 5px;
-  outline-style: auto;
+  outline-width: 1px;
+  outline-style: solid;
   outline-color: #66afe9;
+  outline-offset: -2px;
 }
 .service-nav a:focus {
   color: #fff;
@@ -1246,6 +1255,12 @@ h2,
   display: block;
   margin-bottom: 9px;
   cursor: pointer;
+}
+.tag:focus {
+  outline-width: 1px;
+  outline-style: solid;
+  outline-color: #66afe9;
+  outline-offset: 1px;
 }
 .tag_best {
   width: 33px;

@@ -30,6 +30,14 @@ img {
   }
 }
 
+button {
+  &:focus {
+    outline-width: 1px;
+    outline-style: solid;
+    outline-color: #66afe9;
+    outline-offset: 1px;
+  }
+}
 a {
 
   &:hover, &:focus, &:active {
@@ -37,26 +45,29 @@ a {
   }
 
   &:focus {
-    outline-width: 5px;
-    outline-style: auto;
-    outline-color:#66afe9;
+    outline-width: 1px;
+    outline-style: solid;
+    outline-color: #66afe9;
+    outline-offset: -2px;
     color: @bright-orange;
   }
 }
 
 .slick-prev:focus, .slick-next:focus, .slick-dots li button:focus {
-  outline-width: 5px;
-  outline-style: auto;
-  outline-color:#66afe9;
+  outline-width: 1px;
+  outline-style: solid;
+  outline-color: #66afe9;
+  outline-offset: -2px;
 }
 
 .dropdown {
 
   a {
     &:focus {
-      outline-width: 5px;
-      outline-style: auto;
-      outline-color:#66afe9;
+      outline-width: 1px;
+      outline-style: solid;
+      outline-color: #66afe9;
+      outline-offset: -2px;
     }
   }
 }
@@ -1213,6 +1224,13 @@ h2, .h2 {
   display: block;
   margin-bottom: 9px;
   cursor: pointer;
+
+  &:focus {
+    outline-width: 1px;
+    outline-style: solid;
+    outline-color: #66afe9;
+    outline-offset: 1px;
+  }
 
   &_best {
     width: 33px;
