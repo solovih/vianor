@@ -123,7 +123,7 @@
         <div class="content">
             <header id="header">
                 <div class="navbar navbar-default  hidden-xs">
-                    <div class="main container">
+                    <div class="container">
                         <address class="address pull-left">
                             <a class="city" href="#cityModal" data-toggle="modal">Москва, Огородный проезд, 5 стр. 9</a>
                         </address>
@@ -168,7 +168,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="main container">
+                <div class=" container">
                     <div class="top-line mobile-menu clearfix ">
                         <button type="button" class="navbar-toggle pull-left visible-xs menu-btn" data-toggle="offcanvas"
                                 data-recalc="false"
@@ -1747,8 +1747,8 @@
     </div>
 </div>
 
-<div id="loginModal" class="modal fade">
-    <div class="modal-dialog">
+<div id="loginModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="loginModal">
+    <div class="modal-dialog" role="document">
         <div class="modal-content">
             <!-- Заголовок модального окна -->
             <div class="modal-header">
@@ -1767,7 +1767,7 @@
                             </div>
                             <div class="controls">
                                 <input class="form-control" type="tel" name="login"
-                                       id="id_popup_login_phone" required placeholder="+7">
+                                       id="id_popup_login_phone" required placeholder="+7" autofocus>
                             </div>
                         </div>
                         <div class="form-group">
@@ -1814,8 +1814,8 @@
         </div>
     </div>
 </div>
-<div id="cityModal" class="modal fade">
-    <div class="modal-dialog">
+<div id="cityModal" class="modal fade"  tabindex="-1" role="dialog" aria-labelledby="cityModal">
+    <div class="modal-dialog" role="document">
         <div class="modal-content">
             <!-- Заголовок модального окна -->
             <div class="modal-header">
@@ -2102,8 +2102,8 @@
         </div>
     </div>
 </div>
-<div id="shopModal" class="modal fade">
-    <div class="modal-dialog">
+<div id="shopModal" class="modal fade"  tabindex="-1" role="dialog" aria-labelledby="shopModal">
+    <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" aria-label="Close" class="close" data-dismiss="modal"
