@@ -33,7 +33,12 @@ a {
 
   &:focus {
     outline: -webkit-focus-ring-color auto 5px;
+    color: @bright-orange;
   }
+}
+
+.slick-prev:focus, .slick-next:focus, .slick-dots li button:focus {
+  outline: -webkit-focus-ring-color auto 5px;
 }
 
 .dropdown {
@@ -67,6 +72,17 @@ a {
 
 .navbar {
   min-height: auto;
+}
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+  color: @bright-orange;
+}
+
+.btn {
+
+  &:focus {
+    color: #ffffff;
+  }
 }
 
 .navmenu {
@@ -118,6 +134,10 @@ a {
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;
+
+      &:focus {
+        color: @bright-orange;
+      }
     }
   }
 
@@ -439,8 +459,10 @@ a {
       }
     }
   }
-
-  a:focus, a:hover {
+  a:focus {
+    color: @bright-orange;
+  }
+  a:hover {
     color: inherit;
   }
 

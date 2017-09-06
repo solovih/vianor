@@ -261,6 +261,12 @@ a:active {
 }
 a:focus {
   outline: -webkit-focus-ring-color auto 5px;
+  color: #ff6700;
+}
+.slick-prev:focus,
+.slick-next:focus,
+.slick-dots li button:focus {
+  outline: -webkit-focus-ring-color auto 5px;
 }
 .dropdown a:focus {
   outline: -webkit-focus-ring-color auto 5px;
@@ -278,6 +284,13 @@ a:focus {
 }
 .navbar {
   min-height: auto;
+}
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > li > a:hover {
+  color: #ff6700;
+}
+.btn:focus {
+  color: #ffffff;
 }
 .navmenu {
   z-index: 1;
@@ -319,6 +332,9 @@ a:focus {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+#header .address a:focus {
+  color: #ff6700;
 }
 #header .nav .dropdown-toggle {
   display: block;
@@ -579,7 +595,9 @@ a:focus {
 .catalog-nav .dropdown.open span:after {
   right: 0;
 }
-.catalog-nav a:focus,
+.catalog-nav a:focus {
+  color: #ff6700;
+}
 .catalog-nav a:hover {
   color: inherit;
 }
