@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/catalog.html" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/css/font.less" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/css/style.less" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/css/vars.less" charset="windows-1251" />
@@ -9,8 +10,10 @@
     <file url="file://$PROJECT_DIR$/home_auth_of.html" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/home_modal1.html" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/home_modal2.html" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/js/catalog.js" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/js/function.js" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/js/geo.js" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/js/home.js" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/js/map.js" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/js/search.js" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/js/slick/slick-theme.css" charset="windows-1251" />

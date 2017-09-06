@@ -4,6 +4,11 @@
 @import "../js/slick/slick-theme.css";
 @import "../js/slick/slick.css";
 
+legend {
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
 body {
   background: @white;
   font-family: @arial;
@@ -74,7 +79,7 @@ a {
   min-height: auto;
 }
 
-.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
   color: @bright-orange;
 }
 
@@ -790,9 +795,24 @@ input[type="text"], input[type="tel"], input[type="email"], input[type="password
   }
 }
 
+.btn-black-grad {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(@white-30), to(rgba(0, 0, 0, 0))), -webkit-gradient(linear, left top, left bottom, from(@black), to(@black));
+  background-image: -webkit-linear-gradient(top, @white-30, rgba(0, 0, 0, 0)), -webkit-linear-gradient(@black, @black);
+  background-image: -o-linear-gradient(top, @white-30, rgba(0, 0, 0, 0)), -o-linear-gradient(@black, @black);
+  background-image: linear-gradient(to bottom, @white-30, rgba(0, 0, 0, 0)), linear-gradient(@black, @black);
+  text-transform: none;
+  font-size: 14px;
+  line-height: 1.43;
+  padding: 8px 15px;
+  border-radius: 2px;
+  display: inline-block;
+  vertical-align: middle;
+  width: auto;
+}
+
 .control-label {
 
-  label, .label {
+  label, .label, legend {
     font-size: 14px;
     line-height: 1.43;
     text-align: left;
@@ -825,6 +845,7 @@ input[type="text"], input[type="tel"], input[type="email"], input[type="password
 .product-size-select {
   display: block;
   font-size: 0;
+  width: 100%;
 
   &.disk {
     .clearfix;
@@ -995,7 +1016,7 @@ input.checkbox, input[type="checkbox"] {
 
   .control-label {
 
-    label, .label {
+    label, .label, legend {
       margin: 0;
     }
   }
@@ -2566,7 +2587,7 @@ form[name="login_form"] {
 
   .control-label {
 
-    label, .label {
+    label, .label, legend {
       display: block;
       margin: 0 0 6px;
       font-size: 12px;
@@ -3783,7 +3804,7 @@ html {
       width: 100%;
       margin: 0 0 8px;
 
-      label, .label {
+      label, .label, legend {
 
         font-size: 14px;
         font-weight: bold;
@@ -4293,6 +4314,175 @@ html {
     }
     #container {
       left: @slide-px;
+    }
+  }
+}
+
+.container-tab {
+  margin: auto;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+/* TABS */
+.accordion-tabs {
+  *zoom: 1;
+  width: 100%;
+  border: 1px solid #dddddd;
+  border-radius: 0.1875em;
+  margin-bottom: 1.5em;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.accordion-tabs:before,
+.accordion-tabs:after {
+  content: " ";
+  display: table;
+}
+
+.accordion-tabs:after {
+  clear: both;
+}
+
+.accordion-tabs li {
+  list-style: none;
+}
+
+.accordion-tabs li.tab-head-cont:first-child a {
+  border-top-left-radius: 0.1875em;
+  border-top-right-radius: 0.1875em;
+  border-top: 0;
+}
+
+.accordion-tabs li.tab-head-cont:last-child a {
+  border-bottom-left-radius: 0.1875em;
+  border-bottom-right-radius: 0.1875em;
+}
+
+.accordion-tabs li.tab-head-cont a {
+  text-decoration: none;
+  border-top: 1px solid #dddddd;
+  color: #888888;
+  display: block;
+  padding: 0.75em 0.809em;
+}
+
+.accordion-tabs li.tab-head-cont a:hover {
+  color: #000000;
+}
+
+.accordion-tabs li.tab-head-cont a:focus {
+  outline: none;
+}
+
+.accordion-tabs li.tab-head-cont a.is-active {
+  background-color: #f7f7f7;
+  border-bottom: 0;
+  color: #333333;
+}
+
+.accordion-tabs li.tab-head-cont section {
+  padding: 1.5em 1.618em;
+  background: #f7f7f7;
+  display: none;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* RESPONSIVE */
+@media screen and (min-width: 40em) {
+  .accordion-tabs {
+    border: none;
+    position: relative;
+  }
+
+  .accordion-tabs li.tab-head-cont {
+    display: inline;
+  }
+
+  .accordion-tabs li.tab-head-cont:last-child a {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .accordion-tabs li.tab-head-cont a {
+    display: inline-block;
+    vertical-align: baseline;
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto;
+    border-top: 0;
+    border-top-right-radius: 0.1875em;
+    border-top-left-radius: 0.1875em;
+  }
+
+  .accordion-tabs li.tab-head-cont a.is-active {
+    background-color: #f7f7f7;
+    border: 1px solid #dddddd;
+    border-bottom: 1px solid #f7f7f7;
+    margin-bottom: -1px;
+  }
+
+  .accordion-tabs li.tab-head-cont section {
+    border-bottom-left-radius: 0.1875em;
+    border-bottom-right-radius: 0.1875em;
+    border: 1px solid #dddddd;
+    float: left;
+    left: 0;
+    padding: 0.75em 0.809em;
+  }
+
+  .accordion-tabs li.tab-head-cont section p {
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    columns: 2;
+  }
+}
+
+.switch {
+
+  &__input {
+    position: absolute;
+    opacity: 0;
+
+    &:checked {
+
+      & + .switch__label {
+        background-color: #1b75cc;
+
+        &:before {
+          left: auto;
+          right: 2px;
+        }
+      }
+    }
+  }
+
+  &__label {
+    display: block;
+    margin: 0;
+    width: 34px;
+    height: 18px;
+    border-radius: 100px;
+    background-color: #c1c1c1;
+    position: relative;
+    cursor: pointer;
+    .transitions();
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      right: auto;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background-color: @white;
+      box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.15);
+      .transitions();
     }
   }
 }

@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="windows-1251">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="MobileOptimized" content="320">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+    <title></title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!--realtime less compiler-->
+    <script>less = {env: 'development'};</script>
+    <link rel="stylesheet/less" type="text/css" href="css/style.less?{rand}">
+    <script src="js/less.min.js" type="text/javascript"></script>
+    <script>less.watch();</script>
+
+    <!--это для скопмилированного css-->
+    <!--<link rel="stylesheet" href="css/style.css">-->
+</head>
+<body>
+<div id="page">
+    <div id="menu" class="menu">
+        <button type="button" class="navbar-toggle pull-right visible-xs" data-toggle="offcanvas"
+                data-recalc="false"
+                data-target=".navmenu" data-canvas=".canvas">
+        </button>
+        <ul class="nav navmenu-nav">
+            <div class="navigation">
+                <div class="navigation__sec">
+                    <div class="login">
+                        <a href="#loginModal" data-toggle="modal" class="login__link">
+                            <div class="login__title">
+                                Личный кабинет
+                            </div>
+                            <div class="login__links">Вход / Регистрация</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="navigation__sec">
+                    <ul class="list-unstyled catalog-menu">
+                        <li>
+                            <a href="#">
+                                ШИНЫ
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                ДИСКИ
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                АККУМУЛЯТОРЫ
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                АВТОСЕРВИС И УСЛУГИ
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                АВТОЗАПЧАСТИ
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                ПРИМЕРКА ДИСКОВ
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                ПОИСК
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navigation__sec">
+                    <ul class="list-unstyled nav-menu">
+                        <li>
+                            <a href="#">
+                                Акции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Доставка
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Оплата
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Гарантия
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Vianor клуб
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Что с моим заказом?
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navigation__sec">
+                    <ul class="list-unstyled  location-menu">
+                        <li>
+                            <a href="#cityModal" data-toggle="modal" class="location__link icon-marker">
+                                Санкт-Петербург
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="location__link">Контакты и адреса</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </ul>
+    </div>
+    <!--<div class="site-overlay"></div>-->
+    <div id="container" class="canvas">
+        <div class="content">
+            <header id="header">
+                <div class="navbar navbar-default  hidden-xs">
+                    <div class="container">
+                        <address class="address pull-left">
+                            <a class="city" href="#cityModal" data-toggle="modal">Москва, Огородный проезд, 5 стр. 9</a>
+                        </address>
+                        <!--/.nav-collapse -->
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="">
+                                <a href="#">Доставка</a>
+                            </li>
+                            <li>
+                                <a href="#about">Оплата</a>
+                            </li>
+                            <li>
+                                <a href="#contact">Vianor клуб</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="javascript:void(0)" data-toggle="dropdown" class="dropdown-toggle">Личный
+                                    кабинет
+                                </a>
+                                <div class="dropdown-menu">
+                                    <form name="login_form" method="post" action="">
+                                        <div class="login-form">
+                                            <div class="form-group">
+                                                <div class="control-label">
+                                                    <label for="id_popup_login_phone">Номер телефона</label>
+                                                </div>
+                                                <div class="controls">
+                                                    <input class="form-control" type="tel" name="login"
+                                                           id="id_popup_login_phone_1" required placeholder="+7">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="control-label">
+                                                    <label for="login_pass_1">Пароль</label>
+                                                </div>
+                                                <div class="controls">
+                                                    <div class="input-group password">
+                                                        <input class="form-control" type="password" name="password"
+                                                               value="" id="login_pass_1" required>
+                                                        <button class="view-toggler" type="button"></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-checkbox">
+                                                    <input type="checkbox" class="">
+                                                    <span>Чужой компьютер</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-group form-group-submit">
+                                                <div class="controls">
+                                                    <button type="submit" class="btn btn-orange-grad">Войти в личный
+                                                        кабинет
+                                                    </button>
+                                                    <div class="social-login">
+                                                        <div id="uLogin_1"
+                                                             data-ulogin="display=panel;theme=flat;fields=first_name,last_name;providers=vkontakte,facebook,odnoklassniki,twitter;hidden=;redirect_uri=http%3A%2F%2F;mobilebuttons=0;"></div>
+                                                    </div>
+                                                    <div class="login__links">
+                                                        <a href="#">Восстановление пароля</a>
+                                                        <a href="#">Регистрация</a>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="top-line mobile-menu clearfix ">
+                        <button type="button" class="navbar-toggle pull-left visible-xs" data-toggle="offcanvas"
+                                data-recalc="false"
+                                data-target=".navmenu" data-canvas=".canvas">
+                        </button>
+                        <div class="top-line__item pull-left">
+                            <a class="logo" href="/">
+                                <img class="visible-xs" src="img/logo-small.svg" alt="logo">
+                                <img class="hidden-xs" src="img/logo-default.svg" alt="logo">
+                            </a>
+                        </div>
+                        <div class="top-line__item pull-left hidden-xs">
+                            <div class="phone">
+                                <div class="phone__item">Москва
+                                    <a href="tel:+74952121606" class="phone__tel">8 (495) <b>212-16-06</b></a>
+                                </div>
+                                <a class="phone__link" href="#">Не дозвонились?</a>
+                            </div>
+                        </div>
+                        <div class="top-line__item pull-left hidden-xs visible-lg visible-md">
+                            <div class="phone">
+                                <div class="phone__item">Регионы
+                                    <a href="tel:+78005004124" class="phone__tel">8 (800) <b>500-41-24</b></a>
+                                </div>
+                                <a class="phone__link" href="#">Отвечаем на популярные вопросы</a>
+                            </div>
+                        </div>
+                        <div class="top-line__item pull-right">
+                            <div class="cart">
+
+                                <div class="cart__count">
+                                    Ваша корзина пуста
+                                </div>
+                                <a href="#" class="cart__link">Как сделать заказ?</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row ">
+                        <div class="col-xs-12">
+                            <ul class="service-nav">
+                                <li>
+                                    <a href="#" class="service-nav__link service-nav__link_1 ">
+                                        Запись на
+                                        <span>ШИНОМОНТАЖ</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="service-nav__link service-nav__link_2">
+                                        Сезонное
+                                        <span>ХРАНЕНИЕ</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="service-nav__link service-nav__link_3">
+                                        Запись в
+                                        <span>АВТОСЕРВИС</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="service-nav__link service-nav__link_4">
+                                        Жалобы и
+                                        <span>ПРЕДЛОЖЕНИЯ</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="service-nav__link service-nav__link_5">
+                                        Наши
+                                        <span>ЦЕНТРЫ ВИАНОР</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="row hidden-xs">
+                        <div class="col-xs-12">
+                            <nav>
+                                <ul class="catalog-nav">
+                                    <li class="dropdown">
+                                        <a href="javascript:void(0)" class="dropdown-toggle catalog-nav__link"
+                                           data-toggle="dropdown"><span>ШИНЫ</span>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a href="#">Каталог шин</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Подбор шин по параметрам</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Подбор шин по автомобилю</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Грузовые шины</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="catalog-nav__link">
+                                            <span>ДИСКИ</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="catalog-nav__link">
+                                            <span>АККУМУЛЯТОРЫ</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="catalog-nav__link">
+                                            <span>АВТОСЕРВИС И УСЛУГИ</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="catalog-nav__link">
+                                            <span>Автозапчасти</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="catalog-nav__link">
+                                            <span>Подбор по авто</span>
+                                        </a>
+                                    </li>
+                                    <li class="dropdown last">
+                                        <a href="javascript:void(0)" class="dropdown-toggle catalog-nav__link"
+                                           data-toggle="dropdown"><span>ЕЩЕ...</span>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a href="#">Подбор дисков</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Грузовые шины</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="search">
+                                        <a href="/search.html" class="search__link">Поиск</a>
+                                    </li>
+                                </ul>
+                            </nav>
+
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="main container">
+
+                <ol class="breadcrumb">
+                    <li>
+                        <a href="#">Главная</a>
+                    </li>
+                    <li class="active">Каталог шин</li>
+                </ol>
+                <h1>Каталог производителей шин</h1>
+
+                <div class="container-tab">
+
+                    <ul class="accordion-tabs">
+                        <li class="tab-head-cont">
+                            <a href="#" class="is-active">Размер и вид шины</a>
+                            <section>
+                                <form method="get" action="" id="by_tire" class="param-form">
+                                    <div class="param-form__container">
+                                        <div class="param-form__row">
+                                            <div class="control-label">
+                                                <label for="different">Разноширокие шины</label>
+                                            </div>
+                                            <div class="controls">
+                                                <div class="switch">
+                                                    <input class="switch__input" type="checkbox" id="different">
+                                                    <label class="switch__label" for="different"></label>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="param-form__row size">
+                                            <div class="control-label">
+                                                <label for="width">Типоразмер</label>
+                                            </div>
+                                            <div class="controls">
+                                                <div class="product-size-select tyre">
+                                                    <div class="form-group middle-size">
+                                                        <label for="width" class="small">Ширина</label>
+                                                        <select class="form-control" name="w" id="width">
+                                                            <option value="0">*</option>
+                                                            <option value="30">30</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="no-mobile">&nbsp;/&nbsp;</div>
+                                                    <div class="form-group middle-size">
+                                                        <label for="height" class="small">Высота профиля</label>
+                                                        <select class="form-control" name="h" id="height">
+                                                            <option value="0">*</option>
+                                                            <option value="8.5">8.5</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="no-mobile">&nbsp;&nbsp;R&nbsp;</div>
+                                                    <div class="form-group small-size">
+                                                        <label for="diameter" class="small"><span
+                                                                class="hidden-xs">Диаметр</span><span
+                                                                class="visible-xs">Посадочный диаметр, R</span></label>
+                                                        <select class="form-control" name="d" id="diameter">
+                                                            <option value="0">*</option>
+                                                            <option value="12">12</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <div class="control-label">
+                                                        <label class="checkbox-control">
+                                                            <input type="checkbox" class="checkbox">
+                                                            <span>Технология Run Flat</span></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="param-form__row m-b-xs-30">
+                                            <div class="control-label">
+                                                <label for="season_winter">Сезонность</label>
+                                            </div>
+                                            <div class="controls">
+                                                <div class="form-inline js_season_btns">
+                                                    <div class="form-group main-param">
+                                                        <div data-toggle="buttons" class="btn-group">
+
+                                                            <label class="btn-default-alt btn active">
+                                                                <input type="checkbox" name="season" value="W"
+                                                                       checked id="season_winter">
+                                                                <span>Зимние</span>
+                                                            </label>
+                                                            <label class="btn-default-alt btn">
+                                                                <input type="checkbox" name="season" value="S"
+                                                                       id="season_summer">
+                                                                <span>Летние</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group add-param">
+                                                        <div data-toggle="buttons" class="btn-group">
+                                                            <label class="btn-default-alt btn">
+                                                                <input type="checkbox" name="type" value="S"
+                                                                       id="type_stud">
+                                                                <span>Шипы</span></label>
+                                                            <label class="btn-default-alt btn">
+                                                                <input type="checkbox" name="type" value="f"
+                                                                       id="type_friction">
+                                                                <span>Нешипы</span></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="param-form__row">
+
+                                        <div class="btn-block">
+                                            <button data-loading-text='<div id="squaresWaveG"><div id="squaresWaveG_1" class="squaresWaveG"></div><div id="squaresWaveG_2" class="squaresWaveG"></div><div id="squaresWaveG_3" class="squaresWaveG"></div></div>'
+                                                    type="button" disabled class="btn btn-black btn-black-grad">Показать
+                                                шины
+                                                <span>(165)</span></button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </section>
+                        </li>
+                        <li class="tab-head-cont">
+                            <a href="#">Производитель <sup>1</sup></a>
+                            <section>
+                                <p>Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у
+                                    себя в постели превратился в страшное насекомое. Лежа на панцирнотвердой спине, он
+                                    видел, стоило ему приподнять голову, свой коричневый, выпуклый, разделенный
+                                    дугообразными чешуйками живот, на верхушке которого еле держалось готовое вот-вот
+                                    окончательно сползти одеяло. Его многочисленные, убого тонкие по сравнению с
+                                    остальным телом ножки беспомощно копошились у него перед глазами. «Что со мной
+                                    случилось?» – подумал он. Это не было сном. Его комната, настоящая, разве что
+                                    слишком маленькая, но обычная комната, мирно покоилась в своих четырех хорошо
+                                    знакомых стенах.</p>
+                            </section>
+                        </li>
+                        <li class="tab-head-cont">
+                            <a href="#">Цена</a>
+                            <section>
+                                <p>Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я
+                                    наслаждаюсь от всего сердца. Я совсем один и блаженствую в здешнем краю, словно
+                                    созданном для таких, как я. Я так счастлив, мой друг, так упоен ощущением покоя, что
+                                    искусство мое страдает от этого. Ни одного штриха не мог бы я сделать, а никогда не
+                                    был таким большим художником, как в эти минуты.</p>
+                            </section>
+                        </li>
+                        <li class="tab-head-cont">
+                            <a href="#">Акции</a>
+                            <section>
+                                <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
+                                    Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового
+                                    океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми
+                                    необходимыми правилами. Эта парадигматическая страна, в которой жаренные члены
+                                    предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти над
+                                    рыбными текстами, ведущими безорфографичный образ жизни. Однажды одна маленькая
+                                    строчка рыбного текста по имени Lorem ipsum решила выйти в большой мир
+                                    грамматики.</p>
+                            </section>
+                        </li>
+                        <li class="tab-head-cont">
+                            <a href="#">Дополнительно<sup>2</sup></a>
+                            <section>
+                                <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
+                                    Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового
+                                    океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми
+                                    необходимыми правилами. Эта парадигматическая страна, в которой жаренные члены
+                                    предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти над
+                                    рыбными текстами, ведущими безорфографичный образ жизни. Однажды одна маленькая
+                                    строчка рыбного текста по имени Lorem ipsum решила выйти в большой мир
+                                    грамматики.</p>
+                            </section>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+        <footer id="footer" class="footer">
+            <div class="main container">
+                <div class="footer__container">
+                    <div class="row">
+                        <div class="col-xs-12 col-xs_h-6 col-sm-3">
+                            <h5 class="footer-heading">Контакты</h5>
+
+                            <div class="footer-phone">
+                                <a class="footer-phone__link" href="tel:+74952121606">8 (495) 212-16-06</a>
+                                <span class="text-muted">Москва и МО</span>
+                            </div>
+                            <div class="footer-phone">
+                                <a class="footer-phone__link" href="tel:+78005004124">8 (800) 500-41-24</a>
+                                <span class="text-muted">Бесплатно по регионам</span>
+                            </div>
+                            <a href="#" class="footer__link">Адреса и телефоны</a>
+                        </div>
+
+                        <div class="col-xs-12 col-xs_h-6 col-sm-3">
+                            <h5 class="footer-heading">Информация</h5>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="#" class="footer__link">Доставка</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer__link">Оплата</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer__link">Гарантия</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer__link">Условия возврата</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer__link">Книга жалоб и предложений</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer__link">Шинный калькулятор</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer__link">Что с моим заказом?</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col-sm-3  hidden-xs">
+                            <h5 class="footer-heading">Услуги и сервис</h5>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="#" class="footer__link">Запись на шиномонтаж</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer__link">Забрать шины с хранения</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer__link">Записаться в автосервис</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer__link">Сезонное хранение шин</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col-sm-3  hidden-xs">
+                            <h5 class="footer-heading">Компания</h5>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="#" class="footer__link">О компании</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer__link">Адреса центров Вианор</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer__link">Программа лояльности</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer__link">Оптовые продажи</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer__link">Новости</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer__link">Обзоры и статьи</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row  hidden-xs">
+                        <div class="col-sm-12">
+                            <a class="footer-logo" href="/">
+                                <img src="img/logo-default.svg" alt="logo">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-xs_h-6 col-sm-6">
+                            <div class="footer__text">
+                                <span class="copy"> © 1994 — 2017 ООО «Северный путь» </span>
+                                Шинные центры VIANOR в Москве. Профессиональный шиномонтаж, сезонное хранение.
+                            <span class="hidden-xs">Сайт не является публичной офертой, определяемой положениями Статьи 437 (2) ГК РФ и носит
+                            исключительно
+                            информационный характер. Для получения точной информации о наличии и стоимости товара,
+                            пожалуйста,
+                            обращайтесь по указанным контактным данным.
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-xs_h-6 col-xs-12">
+                            <div class="row">
+                                <div class="payment col-md-6">
+                                    <div class="payment__title">Принимаем к оплате</div>
+                                    <div class="payment__list">
+                                        <img alt="mastercard" src="img/paylogo-mastercard.svg"
+                                             class="payment__item mastercard">
+                                        <img alt="visa" src="img/paylogo-visa.svg" class="payment__item visa">
+                                        <img alt="paykeeper" src="img/paylogo-paykeeper.png"
+                                             class="payment__item paykeeper">
+                                    </div>
+                                </div>
+                                <div class="social  col-md-6">
+                                    <div class="social__title">Мы в социальных сетях</div>
+                                    <div class="social__list">
+                                        <a href="#" target="_blank" rel="nofollow" title="vk" class="social__item vk">
+                                            vk
+                                        </a>
+                                        <a href="#" target="_blank" rel="nofollow" title="fb" class="social__item fb">
+                                            facebook
+                                        </a>
+                                        <a href="#" target="_blank" rel="nofollow" title="ok" class="social__item ok">
+                                            ok
+                                        </a>
+                                        <a href="#" target="_blank" rel="nofollow" title="tw" class="social__item tw">
+                                            twitter
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+
+<div id="loginModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Заголовок модального окна -->
+            <div class="modal-header">
+                <img class="modal__logo" src="img/logo-default.svg" alt="logo">
+                <button type="button" aria-label="Close" class="close" data-dismiss="modal"
+                        aria-hidden="true"></button>
+            </div>
+            <!-- Основное содержимое модального окна -->
+            <div class="modal-body">
+
+                <form name="login_form" method="post" action="">
+                    <div class="login-form">
+                        <div class="form-group">
+                            <div class="control-label">
+                                <label for="id_popup_login_phone">Номер телефона</label>
+                            </div>
+                            <div class="controls">
+                                <input class="form-control" type="tel" name="login"
+                                       id="id_popup_login_phone" required placeholder="+7">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="control-label">
+                                <label for="login_pass">Пароль</label>
+                            </div>
+                            <div class="controls">
+                                <div class="input-group password">
+                                    <input class="form-control" type="password" name="password"
+                                           value="" id="login_pass" required>
+                                    <button class="view-toggler" type="button"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-checkbox">
+                                <input type="checkbox" class="">
+                                <span>Чужой компьютер</span>
+                            </label>
+                        </div>
+                        <div class="error-msg">
+                            Неверный логин или пароль.
+                        </div>
+                        <div class="form-group form-group-submit">
+                            <div class="controls">
+                                <button type="submit" class="btn btn-orange-grad">Войти в личный
+                                    кабинет
+                                </button>
+                                <div class="social-login">
+                                    <div id="uLogin"
+                                         data-ulogin="display=panel;theme=flat;fields=first_name,last_name;providers=vkontakte,facebook,odnoklassniki,twitter;hidden=;redirect_uri=http%3A%2F%2F;mobilebuttons=0;"></div>
+                                </div>
+                                <div class="login__links">
+                                    <a href="#">Восстановление пароля</a>
+                                    <a href="#">Регистрация</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div id="cityModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Заголовок модального окна -->
+            <div class="modal-header">
+                <button type="button" aria-label="Close" class="close" data-dismiss="modal"
+                        aria-hidden="true"></button>
+                <ul class="nav nav-tabs shop-tabs__nav">
+                    <li class="active">
+                        <a data-toggle="tab" href="#panel1">Центры Вианор</a>
+                    </li>
+                    <li>
+                        <a data-toggle="tab" href="#panel2">Выбрать другой город</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Основное содержимое модального окна -->
+            <div class="modal-body">
+
+
+                <div class="tab-content shop-tabs__content">
+                    <div id="panel1" class="tab-pane fade in active">
+                        <div class="location__list">
+                            <div class="h2">
+                                Москва
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-4">
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a href="#">
+                                                Пришвина, 10А
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Академика Волгина, 8А стр. 2
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Флотская, 5 к. 2
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Ижорский проезд, 17
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Огородный проезд, 5 стр. 9
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-4">
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a href="#">
+                                                Свободы, 1 корп. 5
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Космонавтов, 28
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Плеханова, 17 стр. 20
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Куркинское шоссе, 30
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Б.Черкизовская, 9 к. 1
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-4">
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a href="#">
+                                                Мячковский б-р, 23
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Красных Зорь, 4 стр. 3
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Можайское шоссе, 17
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Вианор Зеленоград
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="h2">
+                                Московская область
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-4">
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a href="#">
+                                                Железнодорожный, ул. Автозаводская, 19
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Электросталь, Ногинское шоссе, 28
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Одинцово, ул. Железнодорожная, 1Б
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Мытищи, Олимпийский проспект, 2
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-4">
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a href="#">
+                                                Егорьевск, Коломенское Шоссе, 3А
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Люберецкий р-н, деревня Часовня, 30А
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Бронницы, ул. Строительная, 6А
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Раменское, ул Михалевича, 131
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-4">
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a href="#">
+                                                Шатура, ул. 1 Мая, 12А
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Жуковский, с. Быково, ул. Шоссейная, 242 стр. 9
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div id="panel2" class="tab-pane fade">
+                        <div class="location">
+                            <form class="location__form">
+                                <input class="form-control" type="text"
+                                       id="id_region_select_city">
+                                <button type="reset" class="location__reset hidden-xs"></button>
+                            </form>
+                            <div class="location__list">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-4">
+                                        <ul class="list-unstyled">
+                                            <li>
+                                                <a href="#">
+                                                    Санкт-Петербург
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    Волгоград
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    Воронеж
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    Екатеринбург
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    Казань
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-4">
+                                        <ul class="list-unstyled">
+                                            <li>
+                                                <a href="#">
+                                                    Красноярск
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    Липецк
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    Нижний Новгород
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    Новосибирск
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    Омск
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-4">
+                                        <ul class="list-unstyled">
+                                            <li>
+                                                <a href="#">
+                                                    Пермь
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    Ростов-на-Дону
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    Рязань
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    Самара
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    Челябинск
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div id="shopModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" aria-label="Close" class="close" data-dismiss="modal"
+                        aria-hidden="true"></button>
+            </div>
+            <div class="modal-body">
+
+            </div>
+        </div>
+    </div>
+</div>
+<div id="ajax_container_shop_points" style="display: none !important;"></div>
+<script src="js/jquery-3.2.1.min.js"></script>
+
+<script src="//ulogin.ru/js/ulogin.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="js/jquery.mask.js" type="text/javascript"></script>
+<script src="js/jquery.autocomplete.js" type="text/javascript"></script>
+<script src="js/geo.js" type="text/javascript"></script>
+<script src="js/function.js" type="text/javascript"></script>
+<script src="js/catalog.js" type="text/javascript"></script>
+</body>
+</html>
