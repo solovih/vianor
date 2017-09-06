@@ -19,6 +19,375 @@
     <!--<link rel="stylesheet" href="css/style.css">-->
 </head>
 <body>
+
+<div id="loginModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="loginModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <!-- Заголовок модального окна -->
+            <div class="modal-header">
+                <img class="modal__logo" src="img/logo-default.svg" alt="logo">
+                <button type="button" aria-label="Close" class="close" data-dismiss="modal"
+                        aria-hidden="true"></button>
+            </div>
+            <!-- Основное содержимое модального окна -->
+            <div class="modal-body">
+
+                <form name="login_form" method="post" action="">
+                    <div class="login-form">
+                        <div class="form-group">
+                            <div class="control-label">
+                                <label for="id_popup_login_phone">Номер телефона</label>
+                            </div>
+                            <div class="controls">
+                                <input class="form-control" type="tel" name="login"
+                                       id="id_popup_login_phone" required placeholder="+7" autofocus>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="control-label">
+                                <label for="login_pass">Пароль</label>
+                            </div>
+                            <div class="controls">
+                                <div class="input-group password">
+                                    <input class="form-control" type="password" name="password"
+                                           value="" id="login_pass" required>
+                                    <button class="view-toggler" type="button"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-checkbox">
+                                <input type="checkbox" class="">
+                                <span>Чужой компьютер</span>
+                            </label>
+                        </div>
+                        <div class="error-msg">
+                            Неверный логин или пароль.
+                        </div>
+                        <div class="form-group form-group-submit">
+                            <div class="controls">
+                                <button type="submit" class="btn btn-orange-grad">Войти в личный
+                                    кабинет
+                                </button>
+                                <div class="social-login">
+                                    <div id="uLogin"
+                                         data-ulogin="display=panel;theme=flat;fields=first_name,last_name;providers=vkontakte,facebook,odnoklassniki,twitter;hidden=;redirect_uri=http%3A%2F%2F;mobilebuttons=0;"></div>
+                                </div>
+                                <div class="login__links">
+                                    <a href="#">Восстановление пароля</a>
+                                    <a href="#">Регистрация</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div id="cityModal" class="modal fade"  tabindex="-1" role="dialog" aria-labelledby="cityModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <!-- Заголовок модального окна -->
+            <div class="modal-header">
+                <button type="button" aria-label="Close" class="close" data-dismiss="modal"
+                        aria-hidden="true"></button>
+                <ul class="nav nav-tabs shop-tabs__nav">
+                    <li class="active">
+                        <a data-toggle="tab" href="#panel1">Центры Вианор</a>
+                    </li>
+                    <li>
+                        <a data-toggle="tab" href="#panel2">Выбрать другой город</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Основное содержимое модального окна -->
+            <div class="modal-body">
+
+
+                <div class="tab-content shop-tabs__content">
+                    <div id="panel1" class="tab-pane fade in active">
+                        <div class="location__list">
+                            <div class="h2">
+                                Москва
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-4">
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a href="#">
+                                                Пришвина, 10А
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Академика Волгина, 8А стр. 2
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Флотская, 5 к. 2
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Ижорский проезд, 17
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Огородный проезд, 5 стр. 9
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-4">
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a href="#">
+                                                Свободы, 1 корп. 5
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Космонавтов, 28
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Плеханова, 17 стр. 20
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Куркинское шоссе, 30
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Б.Черкизовская, 9 к. 1
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-4">
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a href="#">
+                                                Мячковский б-р, 23
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Красных Зорь, 4 стр. 3
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Можайское шоссе, 17
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Вианор Зеленоград
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="h2">
+                                Московская область
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-4">
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a href="#">
+                                                Железнодорожный, ул. Автозаводская, 19
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Электросталь, Ногинское шоссе, 28
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Одинцово, ул. Железнодорожная, 1Б
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Мытищи, Олимпийский проспект, 2
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-4">
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a href="#">
+                                                Егорьевск, Коломенское Шоссе, 3А
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Люберецкий р-н, деревня Часовня, 30А
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Бронницы, ул. Строительная, 6А
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Раменское, ул Михалевича, 131
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-4">
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a href="#">
+                                                Шатура, ул. 1 Мая, 12А
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Жуковский, с. Быково, ул. Шоссейная, 242 стр. 9
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div id="panel2" class="tab-pane fade">
+                        <div class="location">
+                            <form class="location__form">
+                                <input class="form-control" type="text"
+                                       id="id_region_select_city">
+                                <button type="reset" class="location__reset hidden-xs"></button>
+                            </form>
+                            <div class="location__list">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-4">
+                                        <ul class="list-unstyled">
+                                            <li>
+                                                <a href="#">
+                                                    Санкт-Петербург
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    Волгоград
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    Воронеж
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    Екатеринбург
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    Казань
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-4">
+                                        <ul class="list-unstyled">
+                                            <li>
+                                                <a href="#">
+                                                    Красноярск
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    Липецк
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    Нижний Новгород
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    Новосибирск
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    Омск
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-4">
+                                        <ul class="list-unstyled">
+                                            <li>
+                                                <a href="#">
+                                                    Пермь
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    Ростов-на-Дону
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    Рязань
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    Самара
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    Челябинск
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div id="shopModal" class="modal fade"  tabindex="-1" role="dialog" aria-labelledby="shopModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" aria-label="Close" class="close" data-dismiss="modal"
+                        aria-hidden="true"></button>
+            </div>
+            <div class="modal-body">
+
+            </div>
+        </div>
+    </div>
+</div>
 <div id="page">
     <div id="menu" class="menu">
         <button type="button" class="navbar-toggle pull-right visible-xs" data-toggle="offcanvas"
@@ -682,374 +1051,6 @@
     </div>
 </div>
 
-<div id="loginModal" class="modal fade">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <!-- Заголовок модального окна -->
-            <div class="modal-header">
-                <img class="modal__logo" src="img/logo-default.svg" alt="logo">
-                <button type="button" aria-label="Close" class="close" data-dismiss="modal"
-                        aria-hidden="true"></button>
-            </div>
-            <!-- Основное содержимое модального окна -->
-            <div class="modal-body">
-
-                <form name="login_form" method="post" action="">
-                    <div class="login-form">
-                        <div class="form-group">
-                            <div class="control-label">
-                                <label for="id_popup_login_phone">Номер телефона</label>
-                            </div>
-                            <div class="controls">
-                                <input class="form-control" type="tel" name="login"
-                                       id="id_popup_login_phone" required placeholder="+7">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="control-label">
-                                <label for="login_pass">Пароль</label>
-                            </div>
-                            <div class="controls">
-                                <div class="input-group password">
-                                    <input class="form-control" type="password" name="password"
-                                           value="" id="login_pass" required>
-                                    <button class="view-toggler" type="button"></button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-checkbox">
-                                <input type="checkbox" class="">
-                                <span>Чужой компьютер</span>
-                            </label>
-                        </div>
-                        <div class="error-msg">
-                            Неверный логин или пароль.
-                        </div>
-                        <div class="form-group form-group-submit">
-                            <div class="controls">
-                                <button type="submit" class="btn btn-orange-grad">Войти в личный
-                                    кабинет
-                                </button>
-                                <div class="social-login">
-                                    <div id="uLogin"
-                                         data-ulogin="display=panel;theme=flat;fields=first_name,last_name;providers=vkontakte,facebook,odnoklassniki,twitter;hidden=;redirect_uri=http%3A%2F%2F;mobilebuttons=0;"></div>
-                                </div>
-                                <div class="login__links">
-                                    <a href="#">Восстановление пароля</a>
-                                    <a href="#">Регистрация</a>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </form>
-
-            </div>
-        </div>
-    </div>
-</div>
-<div id="cityModal" class="modal fade">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <!-- Заголовок модального окна -->
-            <div class="modal-header">
-                <button type="button" aria-label="Close" class="close" data-dismiss="modal"
-                        aria-hidden="true"></button>
-                <ul class="nav nav-tabs shop-tabs__nav">
-                    <li class="active">
-                        <a data-toggle="tab" href="#panel1">Центры Вианор</a>
-                    </li>
-                    <li>
-                        <a data-toggle="tab" href="#panel2">Выбрать другой город</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- Основное содержимое модального окна -->
-            <div class="modal-body">
-
-
-                <div class="tab-content shop-tabs__content">
-                    <div id="panel1" class="tab-pane fade in active">
-                        <div class="location__list">
-                            <div class="h2">
-                                Москва
-                            </div>
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-12 col-md-4">
-                                    <ul class="list-unstyled">
-                                        <li>
-                                            <a href="#">
-                                                Пришвина, 10А
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                Академика Волгина, 8А стр. 2
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                Флотская, 5 к. 2
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                Ижорский проезд, 17
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                Огородный проезд, 5 стр. 9
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="col-xs-12 col-sm-12 col-md-4">
-                                    <ul class="list-unstyled">
-                                        <li>
-                                            <a href="#">
-                                                Свободы, 1 корп. 5
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                Космонавтов, 28
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                Плеханова, 17 стр. 20
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                Куркинское шоссе, 30
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                Б.Черкизовская, 9 к. 1
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="col-xs-12 col-sm-12 col-md-4">
-                                    <ul class="list-unstyled">
-                                        <li>
-                                            <a href="#">
-                                                Мячковский б-р, 23
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                Красных Зорь, 4 стр. 3
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                Можайское шоссе, 17
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                Вианор Зеленоград
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="h2">
-                                Московская область
-                            </div>
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-12 col-md-4">
-                                    <ul class="list-unstyled">
-                                        <li>
-                                            <a href="#">
-                                                Железнодорожный, ул. Автозаводская, 19
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                Электросталь, Ногинское шоссе, 28
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                Одинцово, ул. Железнодорожная, 1Б
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                Мытищи, Олимпийский проспект, 2
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="col-xs-12 col-sm-12 col-md-4">
-                                    <ul class="list-unstyled">
-                                        <li>
-                                            <a href="#">
-                                                Егорьевск, Коломенское Шоссе, 3А
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                Люберецкий р-н, деревня Часовня, 30А
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                Бронницы, ул. Строительная, 6А
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                Раменское, ул Михалевича, 131
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="col-xs-12 col-sm-12 col-md-4">
-                                    <ul class="list-unstyled">
-                                        <li>
-                                            <a href="#">
-                                                Шатура, ул. 1 Мая, 12А
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                Жуковский, с. Быково, ул. Шоссейная, 242 стр. 9
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-
-
-                        </div>
-                    </div>
-                    <div id="panel2" class="tab-pane fade">
-                        <div class="location">
-                            <form class="location__form">
-                                <input class="form-control" type="text"
-                                       id="id_region_select_city">
-                                <button type="reset" class="location__reset hidden-xs"></button>
-                            </form>
-                            <div class="location__list">
-                                <div class="row">
-                                    <div class="col-xs-12 col-sm-12 col-md-4">
-                                        <ul class="list-unstyled">
-                                            <li>
-                                                <a href="#">
-                                                    Санкт-Петербург
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    Волгоград
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    Воронеж
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    Екатеринбург
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    Казань
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-xs-12 col-sm-12 col-md-4">
-                                        <ul class="list-unstyled">
-                                            <li>
-                                                <a href="#">
-                                                    Красноярск
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    Липецк
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    Нижний Новгород
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    Новосибирск
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    Омск
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-xs-12 col-sm-12 col-md-4">
-                                        <ul class="list-unstyled">
-                                            <li>
-                                                <a href="#">
-                                                    Пермь
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    Ростов-на-Дону
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    Рязань
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    Самара
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    Челябинск
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</div>
-<div id="shopModal" class="modal fade">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" aria-label="Close" class="close" data-dismiss="modal"
-                        aria-hidden="true"></button>
-            </div>
-            <div class="modal-body">
-
-            </div>
-        </div>
-    </div>
-</div>
 <div id="ajax_container_shop_points" style="display: none !important;"></div>
 <script src="js/jquery-3.2.1.min.js"></script>
 
