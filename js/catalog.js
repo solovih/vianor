@@ -12,4 +12,18 @@ $(document).ready(function () {
             event.preventDefault();
         }
     });
+
+    $("#id_multi_size_selector").change(function () {
+
+        if ($(this).is(":checked")) {
+            $("#id_single_size").hide();
+            $("#id_multi_size_1").show();
+            $("#id_multi_size_2").show();
+
+        } else {
+            $("#id_single_size").show();
+            $("#id_multi_size_1").hide();
+            $("#id_multi_size_2").hide();
+        }
+    });
 });

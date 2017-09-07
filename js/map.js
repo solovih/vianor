@@ -32,7 +32,7 @@ $(document).ready(function () {
                 {
                     iconLayout: 'default#imageWithContent',
                     iconImageHref: pin,
-                    iconImageSize: [32, 38],
+                    iconImageSize: [40, 38],
                     iconImageOffset: [-17, -43],
                     
                     popupIndex: ind,

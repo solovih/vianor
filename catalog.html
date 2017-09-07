@@ -87,7 +87,7 @@
         </div>
     </div>
 </div>
-<div id="cityModal" class="modal fade"  tabindex="-1" role="dialog" aria-labelledby="cityModal">
+<div id="cityModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="cityModal">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <!-- Заголовок модального окна -->
@@ -375,7 +375,7 @@
         </div>
     </div>
 </div>
-<div id="shopModal" class="modal fade"  tabindex="-1" role="dialog" aria-labelledby="shopModal">
+<div id="shopModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="shopModal">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -727,181 +727,522 @@
                     </li>
                     <li class="active">Каталог шин</li>
                 </ol>
-                <h1>Каталог производителей шин</h1>
+                <div class="section">
+                    <h1>Каталог производителей шин</h1>
 
-                <div class="container-tab">
-
-                    <ul class="accordion-tabs">
-                        <li class="tab-head-cont">
-                            <a href="#" class="is-active">Размер и вид шины</a>
-                            <section>
-                                <form method="get" action="" id="by_tire" class="param-form">
-                                    <div class="param-form__container">
-                                        <div class="param-form__row">
-                                            <div class="control-label">
-                                                <div class="label">Разноширокие шины</label>
-                                            </div>
-                                            <div class="controls">
-                                                <div class="switch">
-                                                    <input class="switch__input" type="checkbox" id="different">
-                                                    <label class="switch__label" for="different"></label>
+                    <div class="container-tab">
+                        <form method="get" action="" id="by_tire" class="param-form">
+                            <ul class="accordion-tabs">
+                                <li class="tab-head-cont">
+                                    <a href="#" class="is-active">Размер и вид шины</a>
+                                    <section>
+                                        <div class="param-form__container">
+                                            <div class="param-form__row">
+                                                <div class="control-label">
+                                                    <div class="label">Разноширокие шины</div>
                                                 </div>
+                                                <div class="controls">
+                                                    <div class="switch">
+                                                        <input class="switch__input" type="checkbox" id="id_multi_size_selector">
+                                                        <label class="switch__label" for="id_multi_size_selector"></label>
+                                                    </div>
 
-                                            </div>
-                                        </div>
-                                        <div class="param-form__row size">
-                                            <div class="control-label">
-                                                <div class="label">Типоразмер</div>
-                                            </div>
-                                            <div class="controls">
-                                                <div class="product-size-select tyre">
-                                                    <div class="form-group middle-size">
-                                                        <label for="width" class="small">Ширина</label>
-                                                        <select class="form-control" name="w" id="width">
-                                                            <option value="0">*</option>
-                                                            <option value="30">30</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="no-mobile">&nbsp;/&nbsp;</div>
-                                                    <div class="form-group middle-size">
-                                                        <label for="height" class="small">Высота профиля</label>
-                                                        <select class="form-control" name="h" id="height">
-                                                            <option value="0">*</option>
-                                                            <option value="8.5">8.5</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="no-mobile">&nbsp;&nbsp;R&nbsp;</div>
-                                                    <div class="form-group small-size">
-                                                        <label for="diameter" class="small"><span
-                                                                class="hidden-xs">Диаметр</span><span
-                                                                class="visible-xs">Посадочный диаметр, R</span></label>
-                                                        <select class="form-control" name="d" id="diameter">
-                                                            <option value="0">*</option>
-                                                            <option value="12">12</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-
-                                                <div class="form-group">
-                                                    <div class="control-label">
-                                                        <label class="checkbox-control">
-                                                            <input type="checkbox" class="checkbox">
-                                                            <span>Технология Run Flat</span></label>
-                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="param-form__row m-b-xs-30">
-                                            <div class="control-label">
-                                                <div class="label">Сезонность</div>
-                                            </div>
-                                            <div class="controls">
-                                                <div class="form-inline js_season_btns">
-                                                    <div class="form-group main-param">
-                                                        <div data-toggle="buttons" class="btn-group">
-
-                                                            <label class="btn-default-alt btn active">
-                                                                <input type="checkbox" name="season" value="W"
-                                                                       checked id="season_winter">
-                                                                <span>Зимние</span>
+                                            <div id="id_multi_size_1" class="param-form__row size">
+                                                <div class="control-label">
+                                                    <div class="label">Передняя ось</div>
+                                                </div>
+                                                <div class="controls">
+                                                    <div class="product-size-select tyre">
+                                                        <div class="form-group middle-size">
+                                                            <label for="width" class="small">Ширина</label>
+                                                            <select class="form-control" name="w" id="width_f">
+                                                                <option value="0">*</option>
+                                                                <option value="30">30</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="no-mobile">&nbsp;/&nbsp;</div>
+                                                        <div class="form-group middle-size">
+                                                            <label for="height" class="small">Высота профиля</label>
+                                                            <select class="form-control" name="h" id="height_f">
+                                                                <option value="0">*</option>
+                                                                <option value="8.5">8.5</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="no-mobile">&nbsp;&nbsp;R&nbsp;</div>
+                                                        <div class="form-group small-size">
+                                                            <label for="diameter" class="small"><span
+                                                                    class="hidden-xs">Диаметр</span><span
+                                                                    class="visible-xs">Посадочный диаметр, R</span>
                                                             </label>
-                                                            <label class="btn-default-alt btn">
-                                                                <input type="checkbox" name="season" value="S"
-                                                                       id="season_summer">
-                                                                <span>Летние</span>
-                                                            </label>
+                                                            <select class="form-control" name="d" id="diameter_f">
+                                                                <option value="0">*</option>
+                                                                <option value="12">12</option>
+                                                            </select>
                                                         </div>
                                                     </div>
-                                                    <div class="form-group add-param">
-                                                        <div data-toggle="buttons" class="btn-group">
-                                                            <label class="btn-default-alt btn">
-                                                                <input type="checkbox" name="type" value="S"
-                                                                       id="type_stud">
-                                                                <span>Шипы</span></label>
-                                                            <label class="btn-default-alt btn">
-                                                                <input type="checkbox" name="type" value="f"
-                                                                       id="type_friction">
-                                                                <span>Нешипы</span></label>
+
+                                                    <div class="form-group">
+                                                        <div class="control-label">
+                                                            <label class="checkbox-control">
+                                                                <input type="checkbox" class="checkbox">
+                                                                <span>Технология Run Flat</span></label>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
+                                            <div id="id_multi_size_2" class="param-form__row size">
+                                                <div class="control-label">
+                                                    <div class="label">Задняя ось</div>
+                                                </div>
+                                                <div class="controls">
+                                                    <div class="product-size-select tyre">
+                                                        <div class="form-group middle-size">
+                                                            <label for="width" class="small">Ширина</label>
+                                                            <select class="form-control" name="w" id="width_b">
+                                                                <option value="0">*</option>
+                                                                <option value="30">30</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="no-mobile">&nbsp;/&nbsp;</div>
+                                                        <div class="form-group middle-size">
+                                                            <label for="height" class="small">Высота профиля</label>
+                                                            <select class="form-control" name="h" id="height_b">
+                                                                <option value="0">*</option>
+                                                                <option value="8.5">8.5</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="no-mobile">&nbsp;&nbsp;R&nbsp;</div>
+                                                        <div class="form-group small-size">
+                                                            <label for="diameter" class="small"><span
+                                                                    class="hidden-xs">Диаметр</span><span
+                                                                    class="visible-xs">Посадочный диаметр, R</span>
+                                                            </label>
+                                                            <select class="form-control" name="d" id="diameter_b">
+                                                                <option value="0">*</option>
+                                                                <option value="12">12</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <div class="control-label">
+                                                            <label class="checkbox-control">
+                                                                <input type="checkbox" class="checkbox">
+                                                                <span>Технология Run Flat</span></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="id_single_size" class="param-form__row size">
+                                                <div class="control-label">
+                                                    <div class="label">Типоразмер</div>
+                                                </div>
+                                                <div class="controls">
+                                                    <div class="product-size-select tyre">
+                                                        <div class="form-group middle-size">
+                                                            <label for="width" class="small">Ширина</label>
+                                                            <select class="form-control" name="w" id="width">
+                                                                <option value="0">*</option>
+                                                                <option value="30">30</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="no-mobile">&nbsp;/&nbsp;</div>
+                                                        <div class="form-group middle-size">
+                                                            <label for="height" class="small">Высота профиля</label>
+                                                            <select class="form-control" name="h" id="height">
+                                                                <option value="0">*</option>
+                                                                <option value="8.5">8.5</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="no-mobile">&nbsp;&nbsp;R&nbsp;</div>
+                                                        <div class="form-group small-size">
+                                                            <label for="diameter" class="small"><span
+                                                                    class="hidden-xs">Диаметр</span><span
+                                                                    class="visible-xs">Посадочный диаметр, R</span>
+                                                            </label>
+                                                            <select class="form-control" name="d" id="diameter">
+                                                                <option value="0">*</option>
+                                                                <option value="12">12</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <div class="control-label">
+                                                            <label class="checkbox-control">
+                                                                <input type="checkbox" class="checkbox">
+                                                                <span>Технология Run Flat</span></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="param-form__row m-b-xs-30">
+                                                <div class="control-label">
+                                                    <div class="label">Сезонность</div>
+                                                </div>
+                                                <div class="controls">
+                                                    <div class="form-inline js_season_btns">
+                                                        <div class="form-group main-param">
+                                                            <div data-toggle="buttons" class="btn-group">
+
+                                                                <label class="btn-default-alt btn active">
+                                                                    <input type="checkbox" name="season" value="W"
+                                                                           checked id="season_winter">
+                                                                    <span>Зимние</span>
+                                                                </label>
+                                                                <label class="btn-default-alt btn">
+                                                                    <input type="checkbox" name="season" value="S"
+                                                                           id="season_summer">
+                                                                    <span>Летние</span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group add-param">
+                                                            <div data-toggle="buttons" class="btn-group">
+                                                                <label class="btn-default-alt btn">
+                                                                    <input type="checkbox" name="type" value="S"
+                                                                           id="type_stud">
+                                                                    <span>Шипы</span></label>
+                                                                <label class="btn-default-alt btn">
+                                                                    <input type="checkbox" name="type" value="f"
+                                                                           id="type_friction">
+                                                                    <span>Нешипы</span></label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
+                                    </section>
+                                </li>
+                                <li class="tab-head-cont">
+                                    <a href="#">Производитель <sup>1</sup></a>
+                                    <section>
+                                        <div class="row">
+                                            <div class="col-md-3">
 
-                                    </div>
-                                    <div class="param-form__row">
-
-                                        <div class="btn-block">
-                                            <button data-loading-text='<div id="squaresWaveG"><div id="squaresWaveG_1" class="squaresWaveG"></div><div id="squaresWaveG_2" class="squaresWaveG"></div><div id="squaresWaveG_3" class="squaresWaveG"></div></div>'
-                                                    type="button" disabled class="btn btn-black btn-black-grad">Показать
-                                                шины
-                                                <span>(165)</span></button>
+                                            </div>
                                         </div>
-                                    </div>
-                                </form>
-                            </section>
-                        </li>
-                        <li class="tab-head-cont">
-                            <a href="#">Производитель <sup>1</sup></a>
-                            <section>
-                                <p>Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у
-                                    себя в постели превратился в страшное насекомое. Лежа на панцирнотвердой спине, он
-                                    видел, стоило ему приподнять голову, свой коричневый, выпуклый, разделенный
-                                    дугообразными чешуйками живот, на верхушке которого еле держалось готовое вот-вот
-                                    окончательно сползти одеяло. Его многочисленные, убого тонкие по сравнению с
-                                    остальным телом ножки беспомощно копошились у него перед глазами. «Что со мной
-                                    случилось?» – подумал он. Это не было сном. Его комната, настоящая, разве что
-                                    слишком маленькая, но обычная комната, мирно покоилась в своих четырех хорошо
-                                    знакомых стенах.</p>
-                            </section>
-                        </li>
-                        <li class="tab-head-cont">
-                            <a href="#">Цена</a>
-                            <section>
-                                <p>Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я
-                                    наслаждаюсь от всего сердца. Я совсем один и блаженствую в здешнем краю, словно
-                                    созданном для таких, как я. Я так счастлив, мой друг, так упоен ощущением покоя, что
-                                    искусство мое страдает от этого. Ни одного штриха не мог бы я сделать, а никогда не
-                                    был таким большим художником, как в эти минуты.</p>
-                            </section>
-                        </li>
-                        <li class="tab-head-cont">
-                            <a href="#">Акции</a>
-                            <section>
-                                <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
-                                    Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового
-                                    океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми
-                                    необходимыми правилами. Эта парадигматическая страна, в которой жаренные члены
-                                    предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти над
-                                    рыбными текстами, ведущими безорфографичный образ жизни. Однажды одна маленькая
-                                    строчка рыбного текста по имени Lorem ipsum решила выйти в большой мир
-                                    грамматики.</p>
-                            </section>
-                        </li>
-                        <li class="tab-head-cont">
-                            <a href="#">Дополнительно<sup>2</sup></a>
-                            <section>
-                                <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
-                                    Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового
-                                    океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми
-                                    необходимыми правилами. Эта парадигматическая страна, в которой жаренные члены
-                                    предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти над
-                                    рыбными текстами, ведущими безорфографичный образ жизни. Однажды одна маленькая
-                                    строчка рыбного текста по имени Lorem ipsum решила выйти в большой мир
-                                    грамматики.</p>
-                            </section>
-                        </li>
-                    </ul>
-
+                                        <ul class="list-unstyled">
+                                            <li>
+                                                <label>
+                                                    <input type="checkbox">
+                                                    <span>Nokian</span>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </section>
+                                </li>
+                                <li class="tab-head-cont">
+                                    <a href="#">Цена</a>
+                                    <section>
+                                        <p>Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми
+                                            я
+                                            наслаждаюсь от всего сердца. Я совсем один и блаженствую в здешнем краю,
+                                            словно
+                                            созданном для таких, как я. Я так счастлив, мой друг, так упоен ощущением
+                                            покоя,
+                                            что
+                                            искусство мое страдает от этого. Ни одного штриха не мог бы я сделать, а
+                                            никогда
+                                            не
+                                            был таким большим художником, как в эти минуты.</p>
+                                    </section>
+                                </li>
+                                <li class="tab-head-cont">
+                                    <a href="#">Акции</a>
+                                    <section>
+                                        <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные
+                                            тексты.
+                                            Вдали от всех живут они в буквенных домах на берегу Семантика большого
+                                            языкового
+                                            океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми
+                                            необходимыми правилами. Эта парадигматическая страна, в которой жаренные
+                                            члены
+                                            предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти
+                                            над
+                                            рыбными текстами, ведущими безорфографичный образ жизни. Однажды одна
+                                            маленькая
+                                            строчка рыбного текста по имени Lorem ipsum решила выйти в большой мир
+                                            грамматики.</p>
+                                    </section>
+                                </li>
+                                <li class="tab-head-cont">
+                                    <a href="#">Дополнительно<sup>2</sup></a>
+                                    <section>
+                                        <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные
+                                            тексты.
+                                            Вдали от всех живут они в буквенных домах на берегу Семантика большого
+                                            языкового
+                                            океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми
+                                            необходимыми правилами. Эта парадигматическая страна, в которой жаренные
+                                            члены
+                                            предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти
+                                            над
+                                            рыбными текстами, ведущими безорфографичный образ жизни. Однажды одна
+                                            маленькая
+                                            строчка рыбного текста по имени Lorem ipsum решила выйти в большой мир
+                                            грамматики.</p>
+                                    </section>
+                                </li>
+                            </ul>
+                            <div class="btn-block">
+                                <button data-loading-text='<div id="squaresWaveG"><div id="squaresWaveG_1" class="squaresWaveG"></div><div id="squaresWaveG_2" class="squaresWaveG"></div><div id="squaresWaveG_3" class="squaresWaveG"></div></div>'
+                                        type="button" disabled class="btn btn-black btn-black-grad">
+                                    Показать
+                                    шины
+                                    <span>(165)</span></button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-                <div class="row brand__list">
-                    <div class="col-xs-12 col-xs_h-6 col-sm-4 col-md-3">
-                        <div class="brand-teaser">
+                <div class="section">
+                    <div class="catalog">
 
-
+                        <div class="row catalog__list brand-list">
+                            <div class="col-xs-12 col-xs_h-6 col-sm-4 col-md-3">
+                                <div class="brand-item">
+                                    <a href="#" class="brand-item__dealer"></a>
+                                    <a href="#" class="brand-item__logo-link">
+                                        <img src="img/nokian.png" class="brand-item__logo">
+                                    </a>
+                                    <ul class="season-list">
+                                        <li class="season-list__item">
+                                            <a class="season-list__link season-list__link_summer" href="#">Летние
+                                                шины<sup>54</sup></a>
+                                        </li>
+                                        <li class="season-list__item">
+                                            <a class="season-list__link season-list__link_winter" href="#">Зимние
+                                                шины<sup>21</sup></a>
+                                        </li>
+                                    </ul>
+                                    <div class="brand-item__footer">
+                                        <ul class="availability">
+                                            <li class="availability__item">1743 размеров в наличии</li>
+                                            <li class="availability__item">75 моделей в наличии</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-xs_h-6 col-sm-4 col-md-3">
+                                <div class="brand-item">
+                                    <a href="#" class="brand-item__dealer"></a>
+                                    <a href="#" class="brand-item__logo-link">
+                                        <img src="img/nokian.png" class="brand-item__logo">
+                                    </a>
+                                    <ul class="season-list">
+                                        <li class="season-list__item">
+                                            <a class="season-list__link season-list__link_summer" href="#">Летние
+                                                шины<sup>54</sup></a>
+                                        </li>
+                                        <li class="season-list__item">
+                                            <a class="season-list__link season-list__link_winter" href="#">Зимние
+                                                шины<sup>21</sup></a>
+                                        </li>
+                                    </ul>
+                                    <div class="brand-item__footer">
+                                        <ul class="availability">
+                                            <li class="availability__item">1743 размеров в наличии</li>
+                                            <li class="availability__item">75 моделей в наличии</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-xs_h-6 col-sm-4 col-md-3">
+                                <div class="brand-item">
+                                    <a href="#" class="brand-item__dealer"></a>
+                                    <a href="#" class="brand-item__logo-link">
+                                        <img src="img/nokian.png" class="brand-item__logo">
+                                    </a>
+                                    <ul class="season-list">
+                                        <li class="season-list__item">
+                                            <a class="season-list__link season-list__link_summer" href="#">Летние
+                                                шины<sup>54</sup></a>
+                                        </li>
+                                        <li class="season-list__item">
+                                            <a class="season-list__link season-list__link_winter" href="#">Зимние
+                                                шины<sup>21</sup></a>
+                                        </li>
+                                    </ul>
+                                    <div class="brand-item__footer">
+                                        <ul class="availability">
+                                            <li class="availability__item">1743 размеров в наличии</li>
+                                            <li class="availability__item">75 моделей в наличии</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-xs_h-6 col-sm-4 col-md-3">
+                                <div class="brand-item">
+                                    <a href="#" class="brand-item__dealer"></a>
+                                    <a href="#" class="brand-item__logo-link">
+                                        <img src="img/nokian.png" class="brand-item__logo">
+                                    </a>
+                                    <ul class="season-list">
+                                        <li class="season-list__item">
+                                            <a class="season-list__link season-list__link_summer" href="#">Летние
+                                                шины<sup>54</sup></a>
+                                        </li>
+                                        <li class="season-list__item">
+                                            <a class="season-list__link season-list__link_winter" href="#">Зимние
+                                                шины<sup>21</sup></a>
+                                        </li>
+                                    </ul>
+                                    <div class="brand-item__footer">
+                                        <ul class="availability">
+                                            <li class="availability__item">1743 размеров в наличии</li>
+                                            <li class="availability__item">75 моделей в наличии</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-xs_h-6 col-sm-4 col-md-3">
+                                <div class="brand-item">
+                                    <a href="#" class="brand-item__dealer"></a>
+                                    <a href="#" class="brand-item__logo-link">
+                                        <img src="img/nokian.png" class="brand-item__logo">
+                                    </a>
+                                    <ul class="season-list">
+                                        <li class="season-list__item">
+                                            <a class="season-list__link season-list__link_summer" href="#">Летние
+                                                шины<sup>54</sup></a>
+                                        </li>
+                                        <li class="season-list__item">
+                                            <a class="season-list__link season-list__link_winter" href="#">Зимние
+                                                шины<sup>21</sup></a>
+                                        </li>
+                                    </ul>
+                                    <div class="brand-item__footer">
+                                        <ul class="availability">
+                                            <li class="availability__item">1743 размеров в наличии</li>
+                                            <li class="availability__item">75 моделей в наличии</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-xs_h-6 col-sm-4 col-md-3">
+                                <div class="brand-item">
+                                    <a href="#" class="brand-item__dealer"></a>
+                                    <a href="#" class="brand-item__logo-link">
+                                        <img src="img/nokian.png" class="brand-item__logo">
+                                    </a>
+                                    <ul class="season-list">
+                                        <li class="season-list__item">
+                                            <a class="season-list__link season-list__link_summer" href="#">Летние
+                                                шины<sup>54</sup></a>
+                                        </li>
+                                        <li class="season-list__item">
+                                            <a class="season-list__link season-list__link_winter" href="#">Зимние
+                                                шины<sup>21</sup></a>
+                                        </li>
+                                    </ul>
+                                    <div class="brand-item__footer">
+                                        <ul class="availability">
+                                            <li class="availability__item">1743 размеров в наличии</li>
+                                            <li class="availability__item">75 моделей в наличии</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-xs_h-6 col-sm-4 col-md-3">
+                                <div class="brand-item">
+                                    <a href="#" class="brand-item__dealer"></a>
+                                    <a href="#" class="brand-item__logo-link">
+                                        <img src="img/nokian.png" class="brand-item__logo">
+                                    </a>
+                                    <ul class="season-list">
+                                        <li class="season-list__item">
+                                            <a class="season-list__link season-list__link_summer" href="#">Летние
+                                                шины<sup>54</sup></a>
+                                        </li>
+                                        <li class="season-list__item">
+                                            <a class="season-list__link season-list__link_winter" href="#">Зимние
+                                                шины<sup>21</sup></a>
+                                        </li>
+                                    </ul>
+                                    <div class="brand-item__footer">
+                                        <ul class="availability">
+                                            <li class="availability__item">1743 размеров в наличии</li>
+                                            <li class="availability__item">75 моделей в наличии</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div class="section hidden-xs">
+                    <div class="text-block">
+                        <h2>Шины Nokian: уникальные особенности</h2>
+
+                        <p> Запатентованная система DSI (Driving Safety Indicator) точно показывает степень износа. На
+                            протекторе отпечатаны цифры, которые говорят о состоянии протектора. Со временем цифры
+                            стираются, поэтому водитель всегда знает, когда снова потребуется покупка шин Nokian.
+                        </p>
+
+                        <p>Защита от аквапланирования. После дождя канавы и выбоины на дороге заполнены водой, водитель,
+                            проезжая по таким местам, может потерять управление. Риск особенно велик для изношенных
+                            покрышек. С учетом системы DSI от Нокиан шины всегда будут в хорошем состоянии, а глубокий
+                            рисунок протектора успешно противостоит аквапланированию.
+                        </p>
+
+                        <p>Глубокий протектор. Доказано, что, когда протектор меньше 4 мм, сцепление с дорогой (особенно
+                            с мокрой поверхностью) нарушается. Автомобиль скользит по воде, что создает аварийную
+                            ситуацию. Рисунок протектора шин Нокиан обеспечивает стабильное движение по мокрой дороге на
+                            скорости до 90-94 км/ч, при условии использования новых, неизношенных покрышек.
+                        </p>
+
+                        <p>Увеличенная ширина покрышек Нокиан. Площадь контакта между дорожным покрытием и шиной важна
+                            для безопасности, четкого отклика автомобиля на команды водителя. Кроме того, благодаря
+                            увеличенной ширине увеличивается и срок эксплуатации изделий.
+                        </p>
+
+                        <div id="hidden-text" class="collapse">
+                            <p> Нокиан гарантирует комфортное и стабильное вождение на зимних дорогах. Покрышки
+                                обеспечат
+                                безопасность даже в самых экстремальных условиях. Производитель принимает возвраты и
+                                производит замену товара в рамках расширенной Хакка-гарантии. Покупка шин Nokian –
+                                доставка
+                                и оплата.
+                            </p>
+
+                            <p>Для оформления заказа клиенту нужно:
+                            </p>
+                            <ul>
+                                <li>
+                                    выбрать модель шин;
+                                </li>
+                                <li>
+                                    добавить товары в корзину, ввести контактные данные;
+                                </li>
+                                <li>
+                                    отправить заявку;
+                                </li>
+                                <li>
+                                    дождаться подтверждения и выбрать удобное время и место доставки.
+                                </li>
+                            </ul>
+                            <p>На каждую модель шин Nokian имеются необходимые документы — сертификат качества,
+                                гарантийный
+                                талон. Кроме того, купить изделия можно как набором, так и поштучно. Оптовые заказы
+                                рассматриваются в индивидуальном порядке.
+                            </p>
+
+                            <p>Компания «Вианор» оказывает сервисные услуги — шиномонтаж, сезонное хранение колес,
+                                ремонт
+                                шин. Только передовое оборудование, услуги профессионалов, индивидуальный подход и
+                                максимум
+                                комфорта для клиента.
+                            </p>
+                        </div>
+                        <a class="spoiler-toggler" href="#hidden-text" data-toggle="collapse">Показать полностью...</a>
+
+                    </div>
+                </div>
+
+
             </div>
         </div>
 
