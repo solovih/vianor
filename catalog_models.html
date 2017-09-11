@@ -11,13 +11,13 @@
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!--realtime less compiler-->
-    <script>less = {env: 'development'};</script>
-    <link rel="stylesheet/less" type="text/css" href="css/style.less?{rand}">
-    <script src="js/less.min.js" type="text/javascript"></script>
-    <script>less.watch();</script>
+    <!-- <script>less = {env: 'development'};</script>
+     <link rel="stylesheet/less" type="text/css" href="css/style.less?{rand}">
+     <script src="js/less.min.js" type="text/javascript"></script>
+     <script>less.watch();</script>-->
 
-    <!--это для скопмилированного css-->
-    <!--<link rel="stylesheet" href="css/style.css">-->
+     <!--это для скопмилированного css-->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -342,7 +342,9 @@
                                         </ul>
                                     </li>
                                     <li class="search">
-                                        <a href="javascript:void(0)" class="search__link" data-toggle="collapse" data-target=".search-form">Поиск</a>
+                                        <a href="javascript:void(0)" class="search__link" data-toggle="collapse"
+                                           data-target=".search-form">Поиск
+                                        </a>
                                     </li>
                                 </ul>
                             </nav>
@@ -350,7 +352,9 @@
                                 <div class="search-form__container">
                                     <div class="search-field">
                                         <input placeholder="Поиск" class="form-control" type="text" id="search-input">
-                                        <button type="submit" class="btn btn-search btn-black-grad visible-lg-inline-block">Найти</button>
+                                        <button type="submit"
+                                                class="btn btn-search btn-black-grad visible-lg-inline-block">Найти
+                                        </button>
                                         <button type="reset" class="btn-reset"></button>
                                     </div>
                                 </div>
@@ -367,10 +371,13 @@
                     <li>
                         <a href="#">Главная</a>
                     </li>
-                    <li class="active">Каталог шин</li>
+                    <li>
+                        <a href="#">Каталог шин</a>
+                    </li>
+                    <li class="active">Шины Nokian Tyres</li>
                 </ol>
                 <div class="section">
-                    <h1>Каталог производителей шин</h1>
+                    <h1>Шины Nokian Tyres</h1>
 
                     <div class="filter-tab">
                         <form method="get" action="" id="by_tire" class="param-form">
@@ -428,11 +435,11 @@
                                                     </div>
 
                                                     <div class="form-group">
-                                                        <div class="control-label">
+
                                                             <label class="checkbox-control">
                                                                 <input type="checkbox" class="checkbox">
-                                                                <span>Технология Run Flat</span></label>
-                                                        </div>
+                                                                <span><span class="hide-on-tablet">Технология</span> Run Flat</span></label>
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -471,11 +478,10 @@
                                                     </div>
 
                                                     <div class="form-group">
-                                                        <div class="control-label">
                                                             <label class="checkbox-control">
                                                                 <input type="checkbox" class="checkbox">
-                                                                <span>Технология Run Flat</span></label>
-                                                        </div>
+                                                                <span><span class="hide-on-tablet">Технология</span> Run Flat</span></label>
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -514,11 +520,11 @@
                                                     </div>
 
                                                     <div class="form-group">
-                                                        <div class="control-label">
+
                                                             <label class="checkbox-control">
                                                                 <input type="checkbox" class="checkbox">
-                                                                <span>Технология Run Flat</span></label>
-                                                        </div>
+                                                                <span><span class="hide-on-tablet">Технология</span> Run Flat</span></label>
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -837,7 +843,7 @@
                             <a href="#" class="sorting__item">по цене, сначала дешевые</a>
                         </div>
                         <div class="hidden-xs pull-right amount">
-                            <span class="amount__ешеду">На странице:</span>
+                            <span class="amount__title">На странице:</span>
                             <span class="amount__current">40</span>
                             <a class="amount__link" href="#">60</a>
                             <a class="amount__link" href="#">80</a>
@@ -848,14 +854,15 @@
                             <div class="col-xs-12 col-xs_h-6 col-sm-4 col-md-3">
                                 <div class="product-teaser">
                                     <div class="product-teaser__tags">
-                                <span tabindex="0" class="tag tag_best" data-toggle="tooltip"
-                                      title="Расширенная гарантия производителя" data-placement="right"></span>
                                 <span tabindex="0" class="tag tag_discount" data-toggle="tooltip"
                                       title="Акция! Скидка 50% на шиномонтаж" data-placement="right"></span>
                                 <span tabindex="0" class="tag tag_action" data-toggle="tooltip"
                                       title="Акция! Скидка 50% на шиномонтаж" data-placement="right"></span>
                                     </div>
-                                    <div class="product-teaser__img-wrap">
+                                    <div class="product-teaser__tags product-teaser__tags_right">
+                                        <span class="season season_sum"></span>
+                                    </div>
+                                    <div class="product-teaser__img-wrap product-teaser__img-wrap_big">
                                         <a class="product-teaser__img-link" href="#" tabindex="-1">
                                             <img class="product-teaser__img" src="img/Nokian_Hakka_Green_2.jpg">
                                         </a>
@@ -884,25 +891,218 @@
                                     </div>
                                 </div>
                             </div>
-
+                            <div class="col-xs-12 col-xs_h-6 col-sm-4 col-md-3">
+                                <div class="product-teaser">
+                                    <div class="product-teaser__tags">
+                                <span tabindex="0" class="tag tag_discount" data-toggle="tooltip"
+                                      title="Акция! Скидка 50% на шиномонтаж" data-placement="right"></span>
+                                <span tabindex="0" class="tag tag_action" data-toggle="tooltip"
+                                      title="Акция! Скидка 50% на шиномонтаж" data-placement="right"></span>
+                                    </div>
+                                    <div class="product-teaser__tags product-teaser__tags_right">
+                                        <span class="season season_sum"></span>
+                                    </div>
+                                    <div class="product-teaser__img-wrap product-teaser__img-wrap_big">
+                                        <a class="product-teaser__img-link" href="#" tabindex="-1">
+                                            <img class="product-teaser__img" src="img/Nokian_Hakka_Green_2.jpg">
+                                        </a>
+                                    </div>
+                                    <div class="product-teaser__rating">
+                                        <input type="number" name="rating" class="rating" value="4" data-readonly
+                                               data-icon-lib="icon" data-active-icon="star-active"
+                                               data-inactive-icon="star"/>
+                                        <a class="text-muted" href="#">65 отзывов</a>
+                                    </div>
+                                    <div class="product-teaser__name">
+                                        <a class="product-teaser__name-link" href="#">Nokian Hakkapeliitta 7 SUV 215/70
+                                            R16
+                                            100T
+                                        </a>
+                                    </div>
+                                    <div class="product-teaser__price">
+                                        <span class="price__text">от</span>
+                                        <span class="price">6400</span><span class="rub"></span>
+                                        <span class="price__text">за 1 шт.</span>
+                                    </div>
+                                    <div class="product-teaser__buttons">
+                                        <a href="#" class="btn btn-orange-grad">Выбрать размер</a>
+                                        <a href="#" class="product-teaser__fav">В избранное</a>
+                                        <a href="#" class="product-teaser__compare">К сравнению</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-xs_h-6 col-sm-4 col-md-3">
+                                <div class="product-teaser">
+                                    <div class="product-teaser__tags">
+                                <span tabindex="0" class="tag tag_discount" data-toggle="tooltip"
+                                      title="Акция! Скидка 50% на шиномонтаж" data-placement="right"></span>
+                                <span tabindex="0" class="tag tag_action" data-toggle="tooltip"
+                                      title="Акция! Скидка 50% на шиномонтаж" data-placement="right"></span>
+                                    </div>
+                                    <div class="product-teaser__tags product-teaser__tags_right">
+                                        <span class="season season_snow"></span>
+                                        <span class="season season_thorns"></span>
+                                    </div>
+                                    <div class="product-teaser__img-wrap product-teaser__img-wrap_big">
+                                        <a class="product-teaser__img-link" href="#" tabindex="-1">
+                                            <img class="product-teaser__img" src="img/Nokian_Hakka_Green_2.jpg">
+                                        </a>
+                                    </div>
+                                    <div class="product-teaser__rating">
+                                        <input type="number" name="rating" class="rating" value="4" data-readonly
+                                               data-icon-lib="icon" data-active-icon="star-active"
+                                               data-inactive-icon="star"/>
+                                        <a class="text-muted" href="#">65 отзывов</a>
+                                    </div>
+                                    <div class="product-teaser__name">
+                                        <a class="product-teaser__name-link" href="#">Nokian Hakkapeliitta 7 SUV 215/70
+                                            R16
+                                            100T
+                                        </a>
+                                    </div>
+                                    <div class="product-teaser__price">
+                                        <span class="price__text">от</span>
+                                        <span class="price">6400</span><span class="rub"></span>
+                                        <span class="price__text">за 1 шт.</span>
+                                    </div>
+                                    <div class="product-teaser__buttons">
+                                        <a href="#" class="btn btn-orange-grad">Выбрать размер</a>
+                                        <a href="#" class="product-teaser__fav">В избранное</a>
+                                        <a href="#" class="product-teaser__compare">К сравнению</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-xs_h-6 col-sm-4 col-md-3">
+                                <div class="product-teaser">
+                                    <div class="product-teaser__tags product-teaser__tags_right">
+                                        <span class="season season_snow"></span>
+                                    </div>
+                                    <div class="product-teaser__img-wrap product-teaser__img-wrap_big">
+                                        <a class="product-teaser__img-link" href="#" tabindex="-1">
+                                            <img class="product-teaser__img" src="img/Nokian_Hakka_Green_2.jpg">
+                                        </a>
+                                    </div>
+                                    <div class="product-teaser__rating">
+                                        <input type="number" name="rating" class="rating" value="4" data-readonly
+                                               data-icon-lib="icon" data-active-icon="star-active"
+                                               data-inactive-icon="star"/>
+                                        <a class="text-muted" href="#">65 отзывов</a>
+                                    </div>
+                                    <div class="product-teaser__name">
+                                        <a class="product-teaser__name-link" href="#">Nokian Hakkapeliitta 7 SUV 215/70
+                                            R16
+                                            100T
+                                        </a>
+                                    </div>
+                                    <div class="product-teaser__price">
+                                        <span class="price__text">от</span>
+                                        <span class="price">6400</span><span class="rub"></span>
+                                        <span class="price__text">за 1 шт.</span>
+                                    </div>
+                                    <div class="product-teaser__buttons">
+                                        <a href="#" class="btn btn-orange-grad">Выбрать размер</a>
+                                        <a href="#" class="product-teaser__fav">В избранное</a>
+                                        <a href="#" class="product-teaser__compare">К сравнению</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-xs_h-6 col-sm-4 col-md-3">
+                                <div class="product-teaser">
+                                    <div class="product-teaser__tags">
+                                <span tabindex="0" class="tag tag_discount" data-toggle="tooltip"
+                                      title="Акция! Скидка 50% на шиномонтаж" data-placement="right"></span>
+                                <span tabindex="0" class="tag tag_action" data-toggle="tooltip"
+                                      title="Акция! Скидка 50% на шиномонтаж" data-placement="right"></span>
+                                    </div>
+                                    <div class="product-teaser__tags product-teaser__tags_right">
+                                        <span class="season season_sum"></span>
+                                    </div>
+                                    <div class="product-teaser__img-wrap product-teaser__img-wrap_big">
+                                        <a class="product-teaser__img-link" href="#" tabindex="-1">
+                                            <img class="product-teaser__img" src="img/Nokian_Hakka_Green_2.jpg">
+                                        </a>
+                                    </div>
+                                    <div class="product-teaser__rating">
+                                        <input type="number" name="rating" class="rating" value="4" data-readonly
+                                               data-icon-lib="icon" data-active-icon="star-active"
+                                               data-inactive-icon="star"/>
+                                        <a class="text-muted" href="#">65 отзывов</a>
+                                    </div>
+                                    <div class="product-teaser__name">
+                                        <a class="product-teaser__name-link" href="#">Nokian Hakkapeliitta 7 SUV 215/70
+                                            R16
+                                            100T
+                                        </a>
+                                    </div>
+                                    <div class="product-teaser__price">
+                                        <span class="price__text">от</span>
+                                        <span class="price">6400</span><span class="rub"></span>
+                                        <span class="price__text">за 1 шт.</span>
+                                    </div>
+                                    <div class="product-teaser__buttons">
+                                        <a href="#" class="btn btn-orange-grad">Выбрать размер</a>
+                                        <a href="#" class="product-teaser__fav">В избранное</a>
+                                        <a href="#" class="product-teaser__compare">К сравнению</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-xs_h-6 col-sm-4 col-md-3">
+                                <div class="product-teaser">
+                                    <div class="product-teaser__tags">
+                                <span tabindex="0" class="tag tag_discount" data-toggle="tooltip"
+                                      title="Акция! Скидка 50% на шиномонтаж" data-placement="right"></span>
+                                <span tabindex="0" class="tag tag_action" data-toggle="tooltip"
+                                      title="Акция! Скидка 50% на шиномонтаж" data-placement="right"></span>
+                                    </div>
+                                    <div class="product-teaser__tags product-teaser__tags_right">
+                                        <span class="season season_sum"></span>
+                                    </div>
+                                    <div class="product-teaser__img-wrap product-teaser__img-wrap_big">
+                                        <a class="product-teaser__img-link" href="#" tabindex="-1">
+                                            <img class="product-teaser__img" src="img/Nokian_Hakka_Green_2.jpg">
+                                        </a>
+                                    </div>
+                                    <div class="product-teaser__rating">
+                                        <input type="number" name="rating" class="rating" value="4" data-readonly
+                                               data-icon-lib="icon" data-active-icon="star-active"
+                                               data-inactive-icon="star"/>
+                                        <a class="text-muted" href="#">65 отзывов</a>
+                                    </div>
+                                    <div class="product-teaser__name">
+                                        <a class="product-teaser__name-link" href="#">Nokian Hakkapeliitta 7 SUV 215/70
+                                            R16
+                                            100T
+                                        </a>
+                                    </div>
+                                    <div class="product-teaser__price">
+                                        <span class="price__text">от</span>
+                                        <span class="price">6400</span><span class="rub"></span>
+                                        <span class="price__text">за 1 шт.</span>
+                                    </div>
+                                    <div class="product-teaser__buttons">
+                                        <a href="#" class="btn btn-orange-grad">Выбрать размер</a>
+                                        <a href="#" class="product-teaser__fav">В избранное</a>
+                                        <a href="#" class="product-teaser__compare">К сравнению</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="section hidden-xs">
-                    <nav aria-label="Page navigation">
+                    <a href="#" class="visible-xs btn-more">Загрузить еще</a>
+                    <nav class="hidden-xs" aria-label="Page navigation">
                         <ul class="pagination">
                             <li class="disabled">
                                 <a href="#" aria-label="Previous">
                                     Предыдущая
                                 </a>
                             </li>
-                            <li>
+                            <li class="active">
                                 <a href="#">1</a>
                             </li>
                             <li>
                                 <a href="#">2</a>
                             </li>
-                            <li class="active">
+                            <li >
                                 <a href="#">3</a>
                             </li>
                             <li>
