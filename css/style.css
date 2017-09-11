@@ -1089,6 +1089,9 @@ textarea::-webkit-input-placeholder {
   width: auto;
   color: #ffffff;
 }
+.btn-black-grad:hover {
+  color: #ffffff;
+}
 .control-label label,
 .control-label .label,
 .control-label legend {
