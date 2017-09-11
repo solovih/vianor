@@ -79,12 +79,6 @@ $(document).ready(function () {
     $('.modal').on('shown.bs.modal', function() {
         $(this).find('[autofocus]').focus();
     });
-
-    $('.view-toggler').on('click', function () {
-        $(this).toggleClass('active');
-        var type = $(this).siblings('input').attr('type') == "text" ? "password" : 'text';
-        $(this).siblings('input').prop('type', type);
-    });
     $('#selection-tabs form').each(function () {
         $(this).find('select').on('change', function () {
             paramSelection($(this).closest('form'));

@@ -338,11 +338,18 @@
                                         </ul>
                                     </li>
                                     <li class="search">
-                                        <a href="/search.html" class="search__link">Поиск</a>
+                                        <a href="javascript:void(0)" class="search__link" data-toggle="collapse" data-target=".search-form">Поиск</a>
                                     </li>
                                 </ul>
                             </nav>
 
+                            <form method="get" action="" class="search-form collapse">
+                                <div class="search-field">
+                                    <input placeholder="Поиск" class="form-control" type="text" id="search-input">
+                                    <button type="submit" class="btn btn-search btn-black-grad visible-lg-inline-block">Найти</button>
+                                    <button type="reset" class="btn-reset"></button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
