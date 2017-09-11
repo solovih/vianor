@@ -790,7 +790,10 @@ a {
 //}
 
 .search-form {
-  margin: 20px 0;
+
+  &__container {
+    padding: 8px 0 20px;
+  }
 }
 
 .selection-tabs {
@@ -5103,11 +5106,12 @@ html {
 @media (min-width: 1200px) {
 
   .search-form {
-    background-color: @white-three;
-    padding: 8px 10px 8px 30px;
 
     .search-field {
       font-size: 0;
+      background-color: @white-three;
+      padding: 8px 10px 8px 30px;
+      .clearfix;
     }
 
     .form-control {
@@ -5129,6 +5133,8 @@ html {
       vertical-align: middle;
       padding: 5px;
       background: url("../img/ic-cross-default.svg") no-repeat 50%;
+      position: static;
+      float: right;
     }
   }
 

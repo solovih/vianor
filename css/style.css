@@ -837,8 +837,8 @@ a:focus {
   font-size: 0;
   line-height: 0;
 }
-.search-form {
-  margin: 20px 0;
+.search-form__container {
+  padding: 8px 0 20px;
 }
 .selection-tabs {
   margin: 0 0 20px;
@@ -4455,12 +4455,15 @@ html {
   }
 }
 @media (min-width: 1200px) {
-  .search-form {
+  .search-form .search-field {
+    font-size: 0;
     background-color: #f5f5f5;
     padding: 8px 10px 8px 30px;
   }
-  .search-form .search-field {
-    font-size: 0;
+  .search-form .search-field:after {
+    content: '';
+    display: block;
+    clear: both;
   }
   .search-form .form-control {
     width: 80.72727273%;
@@ -4480,6 +4483,8 @@ html {
     vertical-align: middle;
     padding: 5px;
     background: url("../img/ic-cross-default.svg") no-repeat 50%;
+    position: static;
+    float: right;
   }
   .catalog .col-sm-4 {
     margin: 20px 0 0;
