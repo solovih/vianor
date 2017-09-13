@@ -516,10 +516,11 @@ a {
 
 .catalog-nav {
   padding: 0;
-  display: table;
+  display: block;
   width: 100%;
   margin: 0 0 12px;
   border: none;
+  .clearfix;
 
   .dropdown.open {
 
@@ -565,7 +566,6 @@ a {
   }
 
   .last {
-    display: table-cell;
 
     .dropdown-menu {
       right: 0;
@@ -573,12 +573,12 @@ a {
     }
   }
 
-  li {
-    display: table-cell;
-    vertical-align: middle;
+  & > li {
+    display: block;
+    float: left;
 
     &.search {
-      float: none;
+      float: right;
     }
   }
 
@@ -639,116 +639,8 @@ a {
 
 .catalog-nav.bordered {
   padding: 0 0 3px;
-  display: block;
-  width: 100%;
   margin: 0 0 16px;
   border-bottom: 1px solid #e8e8e8;
-
-  .dropdown.open {
-
-    & > .catalog-nav__link {
-      color: @bright-orange;
-    }
-
-    span {
-      color: @bright-orange;
-
-      &:after {
-        right: 0;
-      }
-    }
-  }
-  a:focus {
-    color: @bright-orange;
-  }
-  a:hover {
-    color: inherit;
-  }
-
-  .dropdown-menu {
-    right: auto;
-    left: 0;
-
-    .catalog-nav__link {
-      text-transform: none;
-
-      span {
-        float: none;
-        color: #000000;
-
-        &:after {
-          content: none;
-        }
-      }
-    }
-
-    li {
-      display: block;
-    }
-  }
-
-  li {
-    display: inline-block;
-    vertical-align: bottom;
-
-    &.search {
-      float: right;
-    }
-  }
-
-  &__link {
-    display: block;
-    text-transform: uppercase;
-    font-family: @clearsans;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 1.56;
-    letter-spacing: -0.4px;
-    text-align: left;
-    color: @black;
-    padding: 10px 15px;
-
-    &_active {
-      span {
-        color: @bright-orange;
-
-        &:after {
-          right: 0;
-          width: 100%;
-        }
-      }
-    }
-
-    span {
-      display: inline-block;
-      vertical-align: baseline;
-      position: relative;
-      .transitions();
-
-      &:after {
-        content: '';
-        display: block;
-        position: absolute;
-        left: 0;
-        right: 100%;
-        height: 4px;
-        background-color: @bright-orange;
-        .transitions();
-      }
-    }
-
-    &:hover {
-
-      span {
-        color: @bright-orange;
-
-        &:after {
-          right: 0;
-        }
-      }
-
-    }
-  }
 }
 
 .search {
@@ -4168,6 +4060,30 @@ html {
 
   h2 {
     margin: 0 0 26px;
+  }
+}
+
+#hidden-text {
+
+  &.in {
+
+    & + .spoiler {
+
+      &:before {
+        content: none;
+      }
+
+      .spoiler__toggler {
+        font-size: 0;
+        line-height: 0;
+
+        &:before {
+          content: '\0421 \043A \0440 \044B \0442 \044C ';
+          font-size: 14px;
+          line-height: 1.43;
+        }
+      }
+    }
   }
 }
 

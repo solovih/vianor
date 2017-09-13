@@ -53,7 +53,7 @@ $(document).ready(function () {
             $('.catalog-nav .last .dropdown-menu').prepend($(catalog_item_1));
             $(catalog_item_2).insertBefore($('.catalog-nav .last'));
         } else if (window.matchMedia("(min-width: 1199px)").matches) {
-            $(catalog_item_2).insertBefore($('.catalog-nav .last'));
+            $(catalog_item_1).insertBefore($('.catalog-nav .last'));
             $(catalog_item_2).insertBefore($('.catalog-nav .last'));
         }
     }
