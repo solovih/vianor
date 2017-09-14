@@ -11,13 +11,13 @@
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!--realtime less compiler-->
-     <script>less = {env: 'development'};</script>
-     <link rel="stylesheet/less" type="text/css" href="css/style.less?{rand}">
-     <script src="js/less.min.js" type="text/javascript"></script>
-     <script>less.watch();</script>
+    <!--<script>less = {env: 'development'};</script>
+    <link rel="stylesheet/less" type="text/css" href="css/style.less?{rand}">
+    <script src="js/less.min.js" type="text/javascript"></script>
+    <script>less.watch();</script>-->
 
-     <!--это для скопмилированного css-->
-    <!--<link rel="stylesheet" href="css/style.css">-->
+    <!--это для скопмилированного css-->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -395,7 +395,7 @@
                                                         <input class="switch__input" type="checkbox"
                                                                id="id_multi_size_selector">
                                                         <label class="switch__label"
-                                                               for="id_multi_size_selector"></label>
+                                                               for="id_multi_size_selector">Разноширокие шины</label>
                                                     </div>
 
                                                 </div>
@@ -1091,7 +1091,7 @@
                     <a href="#" class="visible-xs btn-more">Загрузить еще</a>
                     <nav class="hidden-xs" aria-label="Page navigation">
                         <ul class="pagination">
-                            <li class="disabled">
+                            <li class="disabled pagination__prev">
                                 <a href="#" aria-label="Previous">
                                     Предыдущая
                                 </a>
@@ -1105,7 +1105,7 @@
                             <li >
                                 <a href="#">3</a>
                             </li>
-                            <li>
+                            <li class="pagination__next">
                                 <a href="#" aria-label="Next">
                                     Следующая
                                 </a>
