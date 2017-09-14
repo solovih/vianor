@@ -3645,10 +3645,6 @@ html {
   width: 100%;
   //min-height: 200px;
 
-  &.is-open {
-    display: block;
-  }
-
   & > *:not(.param-form__container) {
     padding-top: 5px;
   }
@@ -4254,12 +4250,11 @@ input:focus ~ label {
   }
 }
 
-.pagination>li>a:focus, .pagination>li>a:hover, .pagination>li>span:focus, .pagination>li>span:hover {
+.pagination > li > a:focus, .pagination > li > a:hover, .pagination > li > span:focus, .pagination > li > span:hover {
   color: #1b75cc;
   background-color: transparent;
   border: none;
 }
-
 
 @media (min-width: 320px) and (max-width: 479px) {
   .slideout-panel {
@@ -5115,6 +5110,7 @@ input:focus ~ label {
     &.is-open {
       position: static;
       visibility: visible;
+      display: block;
     }
   }
 

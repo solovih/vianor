@@ -39,7 +39,9 @@ $(document).ready(function () {
 
     switchToggle($("#id_multi_size_selector"));
 
-
+    if ($(window).width() < 768 && $('.is-open').length) {
+        $('.is-open').slideDown();
+    }
     $('.accordion-tabs').on('click', 'li > a', function (event) {
         event.stopPropagation();
         event.preventDefault();
