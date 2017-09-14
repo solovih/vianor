@@ -28,7 +28,7 @@ $(document).ready(function () {
             });
             $('.accordion-tabs section').css('height', height);
         } else {
-            $('.accordion-tabs section').css('height', 'auto');
+            $('.accordion-tabs section').removeAttr('style');
         }
     }
 

@@ -3316,9 +3316,6 @@ html {
   overflow: hidden;
   width: 100%;
 }
-.accordion-tabs li.tab-head-cont section.is-open {
-  display: block;
-}
 .accordion-tabs li.tab-head-cont section > *:not(.param-form__container) {
   padding-top: 5px;
 }
@@ -4511,6 +4508,7 @@ input:focus ~ label {
   .accordion-tabs li.tab-head-cont section.is-open {
     position: static;
     visibility: visible;
+    display: block;
   }
   .product-comment__item-container {
     max-width: 474px;
