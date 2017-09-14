@@ -4419,6 +4419,9 @@ input:focus ~ label {
   .filter-tab section.is-open {
     background-color: #f5f5f5;
   }
+  .filter-tab section.is-open[style="display: none;"] {
+    display: block !important;
+  }
   .filter-tab .param-form#by_tire .param-form__container,
   .filter-tab .param-form#by_disk .param-form__container {
     position: relative;

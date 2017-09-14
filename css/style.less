@@ -5004,6 +5004,10 @@ input:focus ~ label {
       &.is-open {
         //background-color: #f7f7f7;
         background-color: @white-three;
+
+        &[style="display: none;"]{
+          display: block !important;
+        }
       }
     }
 

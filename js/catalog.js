@@ -20,7 +20,7 @@ $(document).ready(function () {
     function accordionHeight() {
         if (window.matchMedia("(min-width: 768px)").matches) {
             var height = 0;
-            $('.accordion-tabs section').removeAttr('style');
+            $('.accordion-tabs section').css('height','');
             $('.accordion-tabs section').each(function () {
                 if (height < $(this)[0].clientHeight) {
                     height = $(this)[0].clientHeight;
@@ -28,7 +28,7 @@ $(document).ready(function () {
             });
             $('.accordion-tabs section').css('height', height);
         } else {
-            $('.accordion-tabs section').removeAttr('style');
+            $('.accordion-tabs section').css('height','');
         }
     }
 
@@ -39,13 +39,13 @@ $(document).ready(function () {
 
     switchToggle($("#id_multi_size_selector"));
 
-    if ($(window).width() < 768 && $('.is-open').length) {
-        $('.is-open').slideDown();
+    if (window.matchMedia("(max-width: 767px)").matches && $('.is-open').length) {
+        $('.is-open').show();
     }
     $('.accordion-tabs').on('click', 'li > a', function (event) {
         event.stopPropagation();
         event.preventDefault();
-        if ($(window).width() < 768) {
+        if (window.matchMedia("(max-width: 767px)").matches) {
             if (!$(this).hasClass('is-active')) {
                 var $this = $(this);
                 if ($('.is-open').length) {
@@ -61,7 +61,7 @@ $(document).ready(function () {
                     $this.next().addClass('is-open').slideDown();
                 }
 
-                $('.accordion-tabs').find('.is-active').removeClass('is-active');
+                $('.accordion-tabs .is-active').removeClass('is-active');
                 $(this).addClass('is-active');
 
             } else {
