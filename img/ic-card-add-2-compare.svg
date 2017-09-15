@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28" height="28" viewBox="0 0 28 28">
+    <defs>
+        <path id="a" d="M0 0h268v402H0z"/>
+        <path id="b" d="M21 10h-2v2h2v2h2v-2h2v-2h-2V8h-2v2zM4 8h3v2H4V8zm5 0h8v2H9V8zm-5 5h3v2H4v-2zm5 0h8v2H9v-2zm-5 5h3v2H4v-2zm5 0h8v2H9v-2z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g transform="translate(-216 -342)">
+            <use fill="#FFF" xlink:href="#a"/>
+            <path stroke="#D8D8D8" d="M.5.5v401h267V.5H.5z"/>
+        </g>
+        <path d="M0 0h28v28H0z"/>
+        <g>
+            <use fill="#D8D8D8" xlink:href="#b"/>
+            <path stroke="#979797" d="M21.5 8.5V8l-.5.5h.5zm1 0h.5l-.5-.5v.5zm2 2h.5l-.5-.5v.5zm0 1v.5l.5-.5h-.5zm-2 2v.5l.5-.5h-.5zm-1 0H21l.5.5v-.5zm-2-2H19l.5.5v-.5zm0-1V10l-.5.5h.5zm2-2h1v2h2v1h-2v2h-1v-2h-2v-1h2v-2zm-17 0v1h2v-1h-2zm5 0v1h7v-1h-7zm-5 5v1h2v-1h-2zm5 0v1h7v-1h-7zm-5 5v1h2v-1h-2zm5 0v1h7v-1h-7z"/>
+        </g>
+    </g>
+</svg>

@@ -237,6 +237,8 @@ a {
   border: none;
   border-bottom: 1px solid #e8e8e8;
   margin: 0 0 30px;
+  position: relative;
+  z-index: 99;
 
   .city {
     display: block;
@@ -923,7 +925,7 @@ input[type="text"], input[type="tel"], input[type="email"], input[type="password
   }
 }
 
-#by_tire {
+#id_proizvoditel_shin {
 
   & > .form-group {
     display: table;
@@ -1143,7 +1145,7 @@ input.checkbox, input[type="checkbox"] {
     }
   }
 
-  #manufacture, #manufacture2 {
+  #id_proizvoditel_shin, #id_proizvoditel_diskov {
     width: 220px;
   }
 
@@ -1278,7 +1280,7 @@ h1, .h1 {
     height: 28px;
     font-size: 0;
     line-height: 0;
-    background: url("../img/fav.png") no-repeat 50%;
+    background: url("../img/ic-card-add-2-favorite.svg") no-repeat 50%;
   }
   &__compare {
     display: inline-block;
@@ -1287,7 +1289,7 @@ h1, .h1 {
     line-height: 0;
     width: 28px;
     height: 28px;
-    background: url("../img/compare.png") no-repeat 50%;
+    background: url("../img/ic-card-add-2-compare.svg") no-repeat 50%;
   }
 
   &__rating {
@@ -1384,16 +1386,16 @@ h1, .h1 {
         margin: 0 0 10px;
 
         &_sum {
-          background: url("../img/sun.png") no-repeat 50%;
-          background-size: 24px;
+          background: url("../img/ic-card-view-summer.svg") no-repeat 50%;
+          background-size: 32px;
         }
         &_snow {
-          background: url("../img/show.png") no-repeat 50%;
-          background-size: 24px;
+          background: url("../img/ic-card-view-winter.svg") no-repeat 50%;
+          background-size: 32px;
         }
         &_thorns {
-          background: url("../img/studs.gif") no-repeat 50%;
-          background-size: 24px;
+          background: url("../img/ic-card-view-spike.svg") no-repeat 50%;
+          background-size: 32px;
         }
       }
     }
@@ -4063,11 +4065,13 @@ input:focus ~ label {
     padding-left: 26px;
 
     &_summer {
-      background: url("../img/sun.png") no-repeat top 50% left 3px;
+      background: url("../img/ic-card-view-summer.svg") no-repeat top 50% left 3px;
+      background-size: 16.5px;
     }
 
     &_winter {
-      background: url("../img/show.png") no-repeat top 50% left 3px;
+      background: url("../img/ic-card-view-winter.svg") no-repeat top 50% left 3px;
+      background-size: 16.5px;
     }
 
     sup {
@@ -4252,6 +4256,12 @@ input:focus ~ label {
 
 .pagination > li > a:focus, .pagination > li > a:hover, .pagination > li > span:focus, .pagination > li > span:hover {
   color: #1b75cc;
+  background-color: transparent;
+  border: none;
+}
+
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+  color: @bright-orange;
   background-color: transparent;
   border: none;
 }
@@ -4797,7 +4807,7 @@ input:focus ~ label {
       margin-bottom: 30px;
     }
 
-    #manufacture, #manufacture2 {
+    #id_proizvoditel_shin,  #id_proizvoditel_diskov {
       width: 100%;
     }
 
@@ -4832,7 +4842,7 @@ input:focus ~ label {
       }
     }
 
-    &#by_tire, &#by_disk {
+    &#id_proizvoditel_shin, &#id_proizvoditel_diskov {
 
       .param-form {
 
@@ -5013,7 +5023,7 @@ input:focus ~ label {
 
     .param-form {
 
-      &#by_tire .param-form__container, &#by_disk .param-form__container {
+      &#id_proizvoditel_shin .param-form__container, &#id_proizvoditel_diskov .param-form__container {
         position: relative;
         padding-bottom: 0;
         margin-bottom: 0;

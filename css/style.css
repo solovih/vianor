@@ -390,6 +390,8 @@ a:focus {
   border: none;
   border-bottom: 1px solid #e8e8e8;
   margin: 0 0 30px;
+  position: relative;
+  z-index: 99;
 }
 .navbar-default .city {
   display: block;
@@ -1007,12 +1009,12 @@ textarea::-webkit-input-placeholder {
   font-weight: normal;
   padding: 0;
 }
-#by_tire > .form-group {
+#id_proizvoditel_shin > .form-group {
   display: table;
   width: 100%;
   table-layout: fixed;
 }
-#by_tire > .form-group > .control-label {
+#id_proizvoditel_shin > .form-group > .control-label {
   display: table-cell;
   vertical-align: top;
   width: 170px;
@@ -1194,8 +1196,8 @@ input[type="checkbox"] {
 .param-form .form-inline .form-group:last-child {
   margin: 0;
 }
-.param-form #manufacture,
-.param-form #manufacture2 {
+.param-form #id_proizvoditel_shin,
+.param-form #id_proizvoditel_diskov {
   width: 220px;
 }
 .param-form__row {
@@ -1307,7 +1309,7 @@ h1,
   height: 28px;
   font-size: 0;
   line-height: 0;
-  background: url("../img/fav.png") no-repeat 50%;
+  background: url("../img/ic-card-add-2-favorite.svg") no-repeat 50%;
 }
 .product-teaser__compare {
   display: inline-block;
@@ -1316,7 +1318,7 @@ h1,
   line-height: 0;
   width: 28px;
   height: 28px;
-  background: url("../img/compare.png") no-repeat 50%;
+  background: url("../img/ic-card-add-2-compare.svg") no-repeat 50%;
 }
 .product-teaser__rating {
   font-size: 0;
@@ -1400,16 +1402,16 @@ h1,
   margin: 0 0 10px;
 }
 .product-teaser__tags_right .season_sum {
-  background: url("../img/sun.png") no-repeat 50%;
-  background-size: 24px;
+  background: url("../img/ic-card-view-summer.svg") no-repeat 50%;
+  background-size: 32px;
 }
 .product-teaser__tags_right .season_snow {
-  background: url("../img/show.png") no-repeat 50%;
-  background-size: 24px;
+  background: url("../img/ic-card-view-winter.svg") no-repeat 50%;
+  background-size: 32px;
 }
 .product-teaser__tags_right .season_thorns {
-  background: url("../img/studs.gif") no-repeat 50%;
-  background-size: 24px;
+  background: url("../img/ic-card-view-spike.svg") no-repeat 50%;
+  background-size: 32px;
 }
 .btn-more {
   border-radius: 2px;
@@ -3673,10 +3675,12 @@ input:focus ~ label {
   padding-left: 26px;
 }
 .season-list__link_summer {
-  background: url("../img/sun.png") no-repeat top 50% left 3px;
+  background: url("../img/ic-card-view-summer.svg") no-repeat top 50% left 3px;
+  background-size: 16.5px;
 }
 .season-list__link_winter {
-  background: url("../img/show.png") no-repeat top 50% left 3px;
+  background: url("../img/ic-card-view-winter.svg") no-repeat top 50% left 3px;
+  background-size: 16.5px;
 }
 .season-list__link sup {
   font-size: 12px;
@@ -3820,6 +3824,16 @@ input:focus ~ label {
 .pagination > li > span:focus,
 .pagination > li > span:hover {
   color: #1b75cc;
+  background-color: transparent;
+  border: none;
+}
+.pagination > .active > a,
+.pagination > .active > a:focus,
+.pagination > .active > a:hover,
+.pagination > .active > span,
+.pagination > .active > span:focus,
+.pagination > .active > span:hover {
+  color: #ff6700;
   background-color: transparent;
   border: none;
 }
@@ -4254,8 +4268,8 @@ input:focus ~ label {
   .param-form .m-b-xs-30 {
     margin-bottom: 30px;
   }
-  .param-form #manufacture,
-  .param-form #manufacture2 {
+  .param-form #id_proizvoditel_shin,
+  .param-form #id_proizvoditel_diskov {
     width: 100%;
   }
   .param-form .control-label {
@@ -4285,22 +4299,22 @@ input:focus ~ label {
     width: 100%;
     margin: 0 0 20px;
   }
-  .param-form#by_tire .param-form__container,
-  .param-form#by_disk .param-form__container {
+  .param-form#id_proizvoditel_shin .param-form__container,
+  .param-form#id_proizvoditel_diskov .param-form__container {
     position: relative;
     padding-bottom: 20px;
     margin-bottom: 40px;
   }
-  .param-form#by_tire .param-form__container + .param-form__row,
-  .param-form#by_disk .param-form__container + .param-form__row {
+  .param-form#id_proizvoditel_shin .param-form__container + .param-form__row,
+  .param-form#id_proizvoditel_diskov .param-form__container + .param-form__row {
     margin: 0;
   }
-  .param-form#by_tire .param-form__container .param-form__row:last-child,
-  .param-form#by_disk .param-form__container .param-form__row:last-child {
+  .param-form#id_proizvoditel_shin .param-form__container .param-form__row:last-child,
+  .param-form#id_proizvoditel_diskov .param-form__container .param-form__row:last-child {
     margin: 0;
   }
-  .param-form#by_tire .param-form__container .garanty-checkbox,
-  .param-form#by_disk .param-form__container .garanty-checkbox {
+  .param-form#id_proizvoditel_shin .param-form__container .garanty-checkbox,
+  .param-form#id_proizvoditel_diskov .param-form__container .garanty-checkbox {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -4422,8 +4436,8 @@ input:focus ~ label {
   .filter-tab section.is-open[style="display: none;"] {
     display: block !important;
   }
-  .filter-tab .param-form#by_tire .param-form__container,
-  .filter-tab .param-form#by_disk .param-form__container {
+  .filter-tab .param-form#id_proizvoditel_shin .param-form__container,
+  .filter-tab .param-form#id_proizvoditel_diskov .param-form__container {
     position: relative;
     padding-bottom: 0;
     margin-bottom: 0;
