@@ -770,7 +770,7 @@ select.form-control {
   }
 }
 
-input[type="text"], input[type="tel"], input[type="email"], input[type="password"], textarea {
+input[type="text"], input[type="tel"], input[type="number"], input[type="email"], input[type="password"], textarea {
   .none-appearance;
   border-radius: 2px;
   background-color: @white;
@@ -1023,7 +1023,7 @@ input[type="text"], input[type="tel"], input[type="email"], input[type="password
     vertical-align: bottom;
     margin: 0;
     font-size: 16px;
-    line-height: 1.5;
+    line-height: 30px;
     text-align: left;
     color: #181818;
 
@@ -2949,7 +2949,7 @@ form[name="login_form"] {
     margin: 0 0 10px;
   }
 
-  input[type="text"], input[type="password"], input[type="tel"] {
+  input[type="text"], input[type="password"], input[type="tel"], input[type="number"] {
     font-size: 14px;
     line-height: 1.43;
     text-align: left;
@@ -4009,7 +4009,9 @@ input:focus ~ label {
 
   .btn-block {
     padding: 18px 0 18px 219px;
-    margin: 0;
+    margin: 0 -30px;
+    width: auto;
+    border-top: 1px solid @white;
 
     .btn {
       width: auto;
@@ -4043,6 +4045,70 @@ input:focus ~ label {
     background: url("../img/ic-star-off.svg") no-repeat 50%;
   }
 }
+
+.product-teaser__rating {
+
+  .stars {
+    margin: 0 24px 0 0;
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    height: 14.5px;
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    vertical-align: middle;
+    background-color: transparent;
+    background-image: url("../img/ic-star-off.svg");
+    border: 0;
+
+    &:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      content: "";
+      background-image: url("../img/ic-star-fill.svg");
+    }
+  }
+
+  .stars-5 {
+    &:after {
+      width: 100%;
+    }
+  }
+
+  .stars-4 {
+    &:after {
+      width: 65px;
+    }
+  }
+
+  .stars-3 {
+    &:after {
+      width: 46px;
+    }
+  }
+
+  .stars-2 {
+    &:after {
+      width: 32px;
+    }
+  }
+
+  .stars-1 {
+    &:after {
+      width: 16px;
+    }
+  }
+  .stars-0 {
+    &:after {
+      width: 0;
+    }
+  }
+}
+
 
 .mf-list {
   -webkit-column-count: 4;
@@ -4297,6 +4363,12 @@ input:focus ~ label {
 }
 
 .sorting {
+  position: relative;
+
+  .dropdown-menu {
+    left: auto;
+    right: 0;
+  }
 
   &__title {
     display: inline-block;
@@ -4359,6 +4431,20 @@ input:focus ~ label {
 
 .pagination {
   margin: 6px 0 0;
+  font-size: 0;
+
+  &__wrap {
+    margin: 40px 0 0;
+  }
+
+  .icon-arrow {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 10px;
+    font-size: 16px;
+    line-height: 1;
+    font-weight: bold;
+  }
 
   .disabled {
     display: none;
@@ -4384,9 +4470,9 @@ input:focus ~ label {
       width: 28px;
       border: none;
       font-size: 14px;
-      line-height: 48px;
+      line-height: 20px;
+      padding: 14px 0;
       color: #1b75cc;
-      padding: 0;
       text-align: center;
     }
   }
@@ -4399,7 +4485,7 @@ input:focus ~ label {
   }
 
   .pagination__next {
-    margin-left: 15px;
+    margin-left: 10px;
   }
 
   .pagination__prev {
@@ -5248,6 +5334,7 @@ input:focus ~ label {
           border-top: solid 1px @white-two;
           border-bottom: solid 1px @white-two;
           padding: 22px 15px;
+          margin: 0;
         }
       }
     }
@@ -5273,6 +5360,22 @@ input:focus ~ label {
     left: 0;
     right: 0;
     z-index: -1;
+    padding-bottom: 0;
+
+    form {
+      display: block;
+      height: 100%;
+      position: relative;
+      padding-bottom: 104px;
+
+      .btn-block {
+        position: absolute;
+        z-index: 1;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+    }
 
     &.is-open {
       position: static;

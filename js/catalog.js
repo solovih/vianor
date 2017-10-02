@@ -1,9 +1,7 @@
 $(document).ready(function () {
 
     $('.accordion-tabs').children('li').first().children('a').addClass('is-active').next().addClass('is-open');
-    $("#id_single_size").hide();
-    $("#id_multi_size_1").show();
-    $("#id_multi_size_2").show();
+
     function switchToggle(elem) {
         if ($(elem).is(":checked")) {
             $("#id_single_size").hide();

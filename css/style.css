@@ -814,6 +814,7 @@ select.form-control::-webkit-input-placeholder {
 }
 input[type="text"],
 input[type="tel"],
+input[type="number"],
 input[type="email"],
 input[type="password"],
 textarea {
@@ -834,6 +835,7 @@ textarea {
 }
 input[type="text"]::-moz-placeholder,
 input[type="tel"]::-moz-placeholder,
+input[type="number"]::-moz-placeholder,
 input[type="email"]::-moz-placeholder,
 input[type="password"]::-moz-placeholder,
 textarea::-moz-placeholder {
@@ -841,6 +843,7 @@ textarea::-moz-placeholder {
 }
 input[type="text"]:-moz-placeholder,
 input[type="tel"]:-moz-placeholder,
+input[type="number"]:-moz-placeholder,
 input[type="email"]:-moz-placeholder,
 input[type="password"]:-moz-placeholder,
 textarea:-moz-placeholder {
@@ -848,6 +851,7 @@ textarea:-moz-placeholder {
 }
 input[type="text"]:-ms-input-placeholder,
 input[type="tel"]:-ms-input-placeholder,
+input[type="number"]:-ms-input-placeholder,
 input[type="email"]:-ms-input-placeholder,
 input[type="password"]:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
@@ -855,6 +859,7 @@ textarea:-ms-input-placeholder {
 }
 input[type="text"]::-webkit-input-placeholder,
 input[type="tel"]::-webkit-input-placeholder,
+input[type="number"]::-webkit-input-placeholder,
 input[type="email"]::-webkit-input-placeholder,
 input[type="password"]::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
@@ -1081,7 +1086,7 @@ textarea::-webkit-input-placeholder {
   vertical-align: bottom;
   margin: 0;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 30px;
   text-align: left;
   color: #181818;
 }
@@ -2688,7 +2693,8 @@ form[name="login_form"] .form-group {
 }
 form[name="login_form"] input[type="text"],
 form[name="login_form"] input[type="password"],
-form[name="login_form"] input[type="tel"] {
+form[name="login_form"] input[type="tel"],
+form[name="login_form"] input[type="number"] {
   font-size: 14px;
   line-height: 1.43;
   text-align: left;
@@ -3621,7 +3627,9 @@ input:focus ~ label {
 }
 .filter-tab .btn-block {
   padding: 18px 0 18px 219px;
-  margin: 0;
+  margin: 0 -30px;
+  width: auto;
+  border-top: 1px solid #fff;
 }
 .filter-tab .btn-block .btn {
   width: auto;
@@ -3648,6 +3656,47 @@ input:focus ~ label {
 }
 .rating-input .star {
   background: url("../img/ic-star-off.svg") no-repeat 50%;
+}
+.product-teaser__rating .stars {
+  margin: 0 24px 0 0;
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 14.5px;
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  vertical-align: middle;
+  background-color: transparent;
+  background-image: url("../img/ic-star-off.svg");
+  border: 0;
+}
+.product-teaser__rating .stars:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  content: "";
+  background-image: url("../img/ic-star-fill.svg");
+}
+.product-teaser__rating .stars-5:after {
+  width: 100%;
+}
+.product-teaser__rating .stars-4:after {
+  width: 65px;
+}
+.product-teaser__rating .stars-3:after {
+  width: 46px;
+}
+.product-teaser__rating .stars-2:after {
+  width: 32px;
+}
+.product-teaser__rating .stars-1:after {
+  width: 16px;
+}
+.product-teaser__rating .stars-0:after {
+  width: 0;
 }
 .mf-list {
   -webkit-column-count: 4;
@@ -3849,6 +3898,13 @@ input:focus ~ label {
   display: block;
   clear: both;
 }
+.sorting {
+  position: relative;
+}
+.sorting .dropdown-menu {
+  left: auto;
+  right: 0;
+}
 .sorting__title {
   display: inline-block;
   vertical-align: middle;
@@ -3901,6 +3957,18 @@ input:focus ~ label {
 }
 .pagination {
   margin: 6px 0 0;
+  font-size: 0;
+}
+.pagination__wrap {
+  margin: 40px 0 0;
+}
+.pagination .icon-arrow {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 10px;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: bold;
 }
 .pagination .disabled {
   display: none;
@@ -3923,9 +3991,9 @@ input:focus ~ label {
   width: 28px;
   border: none;
   font-size: 14px;
-  line-height: 48px;
+  line-height: 20px;
+  padding: 14px 0;
   color: #1b75cc;
-  padding: 0;
   text-align: center;
 }
 .pagination .pagination__prev > a,
@@ -3935,7 +4003,7 @@ input:focus ~ label {
   width: auto;
 }
 .pagination .pagination__next {
-  margin-left: 15px;
+  margin-left: 10px;
 }
 .pagination .pagination__prev {
   margin-right: 15px;
@@ -4618,6 +4686,7 @@ input:focus ~ label {
     border-top: solid 1px #d8d8d8;
     border-bottom: solid 1px #d8d8d8;
     padding: 22px 15px;
+    margin: 0;
   }
 }
 @media (max-width: 767px) and (max-width: 479px) {
@@ -4642,6 +4711,20 @@ input:focus ~ label {
     left: 0;
     right: 0;
     z-index: -1;
+    padding-bottom: 0;
+  }
+  .accordion-tabs li.tab-head-cont section form {
+    display: block;
+    height: 100%;
+    position: relative;
+    padding-bottom: 104px;
+  }
+  .accordion-tabs li.tab-head-cont section form .btn-block {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
   }
   .accordion-tabs li.tab-head-cont section.is-open {
     position: static;

@@ -64,15 +64,24 @@ $(document).ready(function () {
         $('#container > .content').css('min-height', 'calc(100vh - '+footerHeight+'px)');
     });
 
-    $('.js_season_btns .main-param input[type="checkbox"]').on('change', function () {
-        changeSeason();
+    $('.js_season_btns .main-param input[type="checkbox"]').on('change', function (e) {
+        changeSeason($(this), e);
     });
     changeSeason();
-    function changeSeason() {
+    function changeSeason(input, e) {
         if($('#season_winter').prop('checked')) {
             $('.add-param').addClass('visible');
         } else {
             $('.add-param').removeClass('visible');
+        }
+
+        if(input != undefined) {
+            if(!input.prop('checked') && !input.closest('.btn-group').find('input:checked').length == 1) {
+                input.closest('label').click();
+                e.stopPropagation();
+                e.preventDefault();
+                return false;
+            }
         }
     }
     // Every time a modal is shown, if it has an autofocus element, focus on it.
