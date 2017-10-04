@@ -377,464 +377,523 @@
                     <h1>Каталог производителей шин</h1>
 
                     <div class="filter-tab">
-                        <form method="get" action="" id="by_tire" class="param-form">
+                        <div id="by_tire" class="param-form">
                             <ul class="accordion-tabs">
                                 <li class="tab-head-cont">
                                     <a href="#" class="is-active"><span>Размер и вид шины</span></a>
-                                    <section>
-                                        <div class="param-form__container">
-                                            <div class="param-form__row switch__wrap">
-                                                <div class="control-label">
-                                                    <div class="label">Разноширокие шины</div>
-                                                </div>
-                                                <div class="controls">
-                                                    <div class="switch">
-                                                        <input class="switch__input" type="checkbox"
-                                                               id="id_multi_size_selector">
-                                                        <label class="switch__label"
-                                                               for="id_multi_size_selector">Разноширокие шины</label>
+                                    <section class="is-open">
+                                        <form>
+                                            <div class="param-form__container">
+                                                <div class="param-form__row switch__wrap">
+                                                    <div class="control-label">
+                                                        <div class="label">Разноширокие шины</div>
                                                     </div>
-
-                                                </div>
-                                            </div>
-                                            <div id="id_multi_size_1"  style="display: block;" class="param-form__row size">
-                                                <div class="control-label">
-                                                    <div class="label">Передняя ось</div>
-                                                </div>
-                                                <div class="controls">
-                                                    <div class="product-size-select tyre">
-                                                        <div class="form-group middle-size">
-                                                            <label for="width" class="small">Ширина</label>
-                                                            <select class="form-control" name="w" id="width_f">
-                                                                <option value="0">*</option>
-                                                                <option value="30">30</option>
-                                                            </select>
-                                                        </div>
-                                                        <div class="no-mobile delim_1">/</div>
-                                                        <div class="form-group middle-size">
-                                                            <label for="height" class="small">Высота профиля</label>
-                                                            <select class="form-control" name="h" id="height_f">
-                                                                <option value="0">*</option>
-                                                                <option value="8.5">8.5</option>
-                                                            </select>
-                                                        </div>
-                                                        <div class="no-mobile delim_2">R</div>
-                                                        <div class="form-group small-size">
-                                                            <label for="diameter" class="small"><span
-                                                                    class="hidden-xs">Диаметр</span><span
-                                                                    class="visible-xs">Посадочный диаметр, R</span>
+                                                    <div class="controls">
+                                                        <div class="switch">
+                                                            <input class="switch__input" type="checkbox"
+                                                                   id="id_multi_size_selector">
+                                                            <label class="switch__label"
+                                                                   for="id_multi_size_selector">Разноширокие шины
                                                             </label>
-                                                            <select class="form-control" name="d" id="diameter_f">
-                                                                <option value="0">*</option>
-                                                                <option value="12">12</option>
-                                                            </select>
                                                         </div>
-                                                    </div>
-
-                                                    <div class="form-group">
-
-                                                        <label class="checkbox-control">
-                                                            <input type="checkbox" class="checkbox">
-                                                            <span><span class="hide-on-tablet">Технология</span> Run Flat</span>
-                                                        </label>
 
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div id="id_multi_size_2" style="display: block;" class="param-form__row size"  >
-                                                <div class="control-label">
-                                                    <div class="label">Задняя ось</div>
-                                                </div>
-                                                <div class="controls">
-                                                    <div class="product-size-select tyre">
-                                                        <div class="form-group middle-size">
-                                                            <label for="width" class="small">Ширина</label>
-                                                            <select class="form-control" name="w" id="width_b">
-                                                                <option value="0">*</option>
-                                                                <option value="30">30</option>
-                                                            </select>
-                                                        </div>
-                                                        <div class="no-mobile delim_1">/</div>
-                                                        <div class="form-group middle-size">
-                                                            <label for="height" class="small">Высота профиля</label>
-                                                            <select class="form-control" name="h" id="height_b">
-                                                                <option value="0">*</option>
-                                                                <option value="8.5">8.5</option>
-                                                            </select>
-                                                        </div>
-                                                        <div class="no-mobile delim_2">R</div>
-                                                        <div class="form-group small-size">
-                                                            <label for="diameter" class="small"><span
-                                                                    class="hidden-xs">Диаметр</span><span
-                                                                    class="visible-xs">Посадочный диаметр, R</span>
-                                                            </label>
-                                                            <select class="form-control" name="d" id="diameter_b">
-                                                                <option value="0">*</option>
-                                                                <option value="12">12</option>
-                                                            </select>
-                                                        </div>
+                                                <div id="id_multi_size_1" style="display: block;"
+                                                     class="param-form__row size">
+                                                    <div class="control-label">
+                                                        <div class="label">Передняя ось</div>
                                                     </div>
-
-                                                    <div class="form-group">
-                                                        <label class="checkbox-control">
-                                                            <input type="checkbox" class="checkbox">
-                                                            <span><span class="hide-on-tablet">Технология</span> Run Flat</span>
-                                                        </label>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div id="id_single_size" class="param-form__row size" style="display: none;">
-                                                <div class="control-label">
-                                                    <div class="label">Типоразмер</div>
-                                                </div>
-                                                <div class="controls">
-                                                    <div class="product-size-select tyre">
-                                                        <div class="form-group middle-size">
-                                                            <label for="width" class="small">Ширина</label>
-                                                            <select class="form-control" name="w" id="width">
-                                                                <option value="0">*</option>
-                                                                <option value="30">30</option>
-                                                            </select>
-                                                        </div>
-                                                        <div class="no-mobile delim_1">/</div>
-                                                        <div class="form-group middle-size">
-                                                            <label for="height" class="small">Высота профиля</label>
-                                                            <select class="form-control" name="h" id="height">
-                                                                <option value="0">*</option>
-                                                                <option value="8.5">8.5</option>
-                                                            </select>
-                                                        </div>
-                                                        <div class="no-mobile delim_2">R</div>
-                                                        <div class="form-group small-size">
-                                                            <label for="diameter" class="small"><span
-                                                                    class="hidden-xs">Диаметр</span><span
-                                                                    class="visible-xs">Посадочный диаметр, R</span>
-                                                            </label>
-                                                            <select class="form-control" name="d" id="diameter">
-                                                                <option value="0">*</option>
-                                                                <option value="12">12</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="form-group">
-
-                                                        <label class="checkbox-control">
-                                                            <input type="checkbox" class="checkbox">
-                                                            <span><span class="hide-on-tablet">Технология</span> Run Flat</span>
-                                                        </label>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="param-form__row m-b-xs-30">
-                                                <div class="control-label">
-                                                    <div class="label">Сезонность</div>
-                                                </div>
-                                                <div class="controls">
-                                                    <div class="form-inline js_season_btns">
-                                                        <div class="form-group main-param">
-                                                            <div data-toggle="buttons" class="btn-group">
-
-                                                                <label class="btn-default-alt btn active">
-                                                                    <input type="checkbox" name="season" value="W"
-                                                                           checked id="season_winter">
-                                                                    <span>Зимние</span>
+                                                    <div class="controls">
+                                                        <div class="product-size-select tyre">
+                                                            <div class="form-group middle-size">
+                                                                <label for="width" class="small">Ширина</label>
+                                                                <select class="form-control" name="w" id="width_f">
+                                                                    <option value="0">*</option>
+                                                                    <option value="30">30</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="no-mobile delim_1">/</div>
+                                                            <div class="form-group middle-size">
+                                                                <label for="height" class="small">Высота профиля</label>
+                                                                <select class="form-control" name="h" id="height_f">
+                                                                    <option value="0">*</option>
+                                                                    <option value="8.5">8.5</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="no-mobile delim_2">R</div>
+                                                            <div class="form-group small-size">
+                                                                <label for="diameter" class="small"><span
+                                                                        class="hidden-xs">Диаметр</span><span
+                                                                        class="visible-xs">Посадочный диаметр, R</span>
                                                                 </label>
-                                                                <label class="btn-default-alt btn">
-                                                                    <input type="checkbox" name="season" value="S"
-                                                                           id="season_summer">
-                                                                    <span>Летние</span>
-                                                                </label>
+                                                                <select class="form-control" name="d" id="diameter_f">
+                                                                    <option value="0">*</option>
+                                                                    <option value="12">12</option>
+                                                                </select>
                                                             </div>
                                                         </div>
-                                                        <div class="form-group add-param">
-                                                            <div data-toggle="buttons" class="btn-group">
-                                                                <label class="btn-default-alt btn">
-                                                                    <input type="checkbox" name="type" value="S"
-                                                                           id="type_stud">
-                                                                    <span>Шипы</span></label>
-                                                                <label class="btn-default-alt btn">
-                                                                    <input type="checkbox" name="type" value="f"
-                                                                           id="type_friction">
-                                                                    <span>Нешипы</span></label>
+
+                                                        <div class="form-group">
+
+                                                            <label class="checkbox-control">
+                                                                <input type="checkbox" class="checkbox">
+                                                                <span><span class="hide-on-tablet">Технология</span> Run Flat</span>
+                                                            </label>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="id_multi_size_2" style="display: block;"
+                                                     class="param-form__row size">
+                                                    <div class="control-label">
+                                                        <div class="label">Задняя ось</div>
+                                                    </div>
+                                                    <div class="controls">
+                                                        <div class="product-size-select tyre">
+                                                            <div class="form-group middle-size">
+                                                                <label for="width" class="small">Ширина</label>
+                                                                <select class="form-control" name="w" id="width_b">
+                                                                    <option value="0">*</option>
+                                                                    <option value="30">30</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="no-mobile delim_1">/</div>
+                                                            <div class="form-group middle-size">
+                                                                <label for="height" class="small">Высота профиля</label>
+                                                                <select class="form-control" name="h" id="height_b">
+                                                                    <option value="0">*</option>
+                                                                    <option value="8.5">8.5</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="no-mobile delim_2">R</div>
+                                                            <div class="form-group small-size">
+                                                                <label for="diameter" class="small"><span
+                                                                        class="hidden-xs">Диаметр</span><span
+                                                                        class="visible-xs">Посадочный диаметр, R</span>
+                                                                </label>
+                                                                <select class="form-control" name="d" id="diameter_b">
+                                                                    <option value="0">*</option>
+                                                                    <option value="12">12</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label class="checkbox-control">
+                                                                <input type="checkbox" class="checkbox">
+                                                                <span><span class="hide-on-tablet">Технология</span> Run Flat</span>
+                                                            </label>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="id_single_size" class="param-form__row size"
+                                                     style="display: none;">
+                                                    <div class="control-label">
+                                                        <div class="label">Типоразмер</div>
+                                                    </div>
+                                                    <div class="controls">
+                                                        <div class="product-size-select tyre">
+                                                            <div class="form-group middle-size">
+                                                                <label for="width" class="small">Ширина</label>
+                                                                <select class="form-control" name="w" id="width">
+                                                                    <option value="0">*</option>
+                                                                    <option value="30">30</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="no-mobile delim_1">/</div>
+                                                            <div class="form-group middle-size">
+                                                                <label for="height" class="small">Высота профиля</label>
+                                                                <select class="form-control" name="h" id="height">
+                                                                    <option value="0">*</option>
+                                                                    <option value="8.5">8.5</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="no-mobile delim_2">R</div>
+                                                            <div class="form-group small-size">
+                                                                <label for="diameter" class="small"><span
+                                                                        class="hidden-xs">Диаметр</span><span
+                                                                        class="visible-xs">Посадочный диаметр, R</span>
+                                                                </label>
+                                                                <select class="form-control" name="d" id="diameter">
+                                                                    <option value="0">*</option>
+                                                                    <option value="12">12</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group">
+
+                                                            <label class="checkbox-control">
+                                                                <input type="checkbox" class="checkbox">
+                                                                <span><span class="hide-on-tablet">Технология</span> Run Flat</span>
+                                                            </label>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="param-form__row m-b-xs-30">
+                                                    <div class="control-label">
+                                                        <div class="label">Сезонность</div>
+                                                    </div>
+                                                    <div class="controls">
+                                                        <div class="form-inline js_season_btns">
+                                                            <div class="form-group main-param">
+                                                                <div data-toggle="buttons" class="btn-group">
+
+                                                                    <label class="btn-default-alt btn active">
+                                                                        <input type="checkbox" name="season" value="W"
+                                                                               checked id="season_winter">
+                                                                        <span>Зимние</span>
+                                                                    </label>
+                                                                    <label class="btn-default-alt btn">
+                                                                        <input type="checkbox" name="season" value="S"
+                                                                               id="season_summer">
+                                                                        <span>Летние</span>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group add-param">
+                                                                <div data-toggle="buttons" class="btn-group">
+                                                                    <label class="btn-default-alt btn">
+                                                                        <input type="checkbox" name="type" value="S"
+                                                                               id="type_stud">
+                                                                        <span>Шипы</span></label>
+                                                                    <label class="btn-default-alt btn">
+                                                                        <input type="checkbox" name="type" value="f"
+                                                                               id="type_friction">
+                                                                        <span>Нешипы</span></label>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                            <div class="btn-block hidden-xs">
+                                                <button data-loading-text='<div id="squaresWaveG"><div id="squaresWaveG_1" class="squaresWaveG"></div><div id="squaresWaveG_2" class="squaresWaveG"></div><div id="squaresWaveG_3" class="squaresWaveG"></div></div>'
+                                                        type="button" disabled class="btn btn-black btn-black-grad">
+                                                    Показать
+                                                    шины
+                                                    <span>(165)</span></button>
+                                            </div>
+                                        </form>
                                     </section>
+
                                 </li>
                                 <li class="tab-head-cont">
                                     <a href="#"><span>Производитель</span><sup>1</sup></a>
                                     <section>
-                                        <ul class="list-unstyled checkbox-list mf-list">
-                                            <li class="checkbox-list__item">
-                                                <label>
-                                                    <input type="checkbox">
-                                                    <span>Nokian</span>
-                                                </label>
-                                            </li>
-                                            <li class="checkbox-list__item">
-                                                <label>
-                                                    <input type="checkbox">
-                                                    <span>Nitto</span>
-                                                </label>
-                                            </li>
-                                            <li class="checkbox-list__item">
-                                                <label>
-                                                    <input type="checkbox">
-                                                    <span>Toyo</span>
-                                                </label>
-                                            </li>
-                                            <li class="checkbox-list__item">
-                                                <label>
-                                                    <input type="checkbox">
-                                                    <span>Bridgestone</span>
-                                                </label>
-                                            </li>
-                                            <li class="checkbox-list__item">
-                                                <label>
-                                                    <input type="checkbox">
-                                                    <span>Pirelli</span>
-                                                </label>
-                                            </li>
-                                            <li class="checkbox-list__item">
-                                                <label>
-                                                    <input type="checkbox">
-                                                    <span>Michelin</span>
-                                                </label>
-                                            </li>
-                                            <li class="checkbox-list__item">
-                                                <label>
-                                                    <input type="checkbox">
-                                                    <span>Dunlop</span>
-                                                </label>
-                                            </li>
-                                            <li class="checkbox-list__item">
-                                                <label>
-                                                    <input type="checkbox">
-                                                    <span>Gislaved</span>
-                                                </label>
-                                            </li>
-                                            <li class="checkbox-list__item">
-                                                <label>
-                                                    <input type="checkbox">
-                                                    <span>Hankook</span>
-                                                </label>
-                                            </li>
-                                            <li class="checkbox-list__item">
-                                                <label>
-                                                    <input type="checkbox">
-                                                    <span>Yokohama</span>
-                                                </label>
-                                            </li>
-                                            <li class="checkbox-list__item">
-                                                <label>
-                                                    <input type="checkbox">
-                                                    <span>BFGoodrich</span>
-                                                </label>
-                                            </li>
-                                            <li class="checkbox-list__item">
-                                                <label>
-                                                    <input type="checkbox">
-                                                    <span>Continental</span>
-                                                </label>
-                                            </li>
-                                            <li class="checkbox-list__item">
-                                                <label>
-                                                    <input type="checkbox">
-                                                    <span>Maxxis</span>
-                                                </label>
-                                            </li>
-                                            <li class="checkbox-list__item">
-                                                <label>
-                                                    <input type="checkbox">
-                                                    <span>GT Radial</span>
-                                                </label>
-                                            </li>
-                                            <li class="checkbox-list__item">
-                                                <label>
-                                                    <input type="checkbox">
-                                                    <span>Nexen</span>
-                                                </label>
-                                            </li>
-                                            <li class="checkbox-list__item">
-                                                <label>
-                                                    <input type="checkbox">
-                                                    <span>DMack</span>
-                                                </label>
-                                            </li>
-                                            <li class="checkbox-list__item">
-                                                <label>
-                                                    <input type="checkbox">
-                                                    <span>Mickey Thompson</span>
-                                                </label>
-                                            </li>
-                                            <li class="checkbox-list__item">
-                                                <label>
-                                                    <input type="checkbox">
-                                                    <span>Cordiant</span>
-                                                </label>
-                                            </li>
-                                            <li class="checkbox-list__item">
-                                                <label>
-                                                    <input type="checkbox">
-                                                    <span>Tigar</span>
-                                                </label>
-                                            </li>
-                                            <li class="checkbox-list__item">
-                                                <label>
-                                                    <input type="checkbox">
-                                                    <span>Ovation</span>
-                                                </label>
-                                            </li>
-                                            <li class="checkbox-list__item">
-                                                <label>
-                                                    <input type="checkbox">
-                                                    <span>Sailun</span>
-                                                </label>
-                                            </li>
-                                            <li class="checkbox-list__item">
-                                                <label>
-                                                    <input type="checkbox">
-                                                    <span>Matador</span>
-                                                </label>
-                                            </li>
-                                            <li class="checkbox-list__item">
-                                                <label>
-                                                    <input type="checkbox">
-                                                    <span>Marshal</span>
-                                                </label>
-                                            </li>
-                                            <li class="checkbox-list__item">
-                                                <label>
-                                                    <input type="checkbox">
-                                                    <span>Antares</span>
-                                                </label>
-                                            </li>
-                                            <li class="checkbox-list__item">
-                                                <label>
-                                                    <input type="checkbox">
-                                                    <span>Belshina</span>
-                                                </label>
-                                            </li>
-                                            <li class="checkbox-list__item">
-                                                <label>
-                                                    <input type="checkbox">
-                                                    <span>Kormoran</span>
-                                                </label>
-                                            </li>
-                                            <li class="checkbox-list__item">
-                                                <label>
-                                                    <input type="checkbox">
-                                                    <span>Laufenn</span>
-                                                </label>
-                                            </li>
-                                            <li class="checkbox-list__item">
-                                                <label>
-                                                    <input type="checkbox">
-                                                    <span>Habilead</span>
-                                                </label>
-                                            </li>
-                                            <li class="checkbox-list__item">
-                                                <label>
-                                                    <input type="checkbox">
-                                                    <span>Firestone</span>
-                                                </label>
-                                            </li>
-                                        </ul>
+                                        <form>
+                                            <ul class="list-unstyled checkbox-list mf-list">
+                                                <li class="checkbox-list__item">
+                                                    <label>
+                                                        <input type="checkbox">
+                                                        <span>Nokian</span>
+                                                    </label>
+                                                </li>
+                                                <li class="checkbox-list__item">
+                                                    <label>
+                                                        <input type="checkbox">
+                                                        <span>Nitto</span>
+                                                    </label>
+                                                </li>
+                                                <li class="checkbox-list__item">
+                                                    <label>
+                                                        <input type="checkbox">
+                                                        <span>Toyo</span>
+                                                    </label>
+                                                </li>
+                                                <li class="checkbox-list__item">
+                                                    <label>
+                                                        <input type="checkbox">
+                                                        <span>Bridgestone</span>
+                                                    </label>
+                                                </li>
+                                                <li class="checkbox-list__item">
+                                                    <label>
+                                                        <input type="checkbox">
+                                                        <span>Pirelli</span>
+                                                    </label>
+                                                </li>
+                                                <li class="checkbox-list__item">
+                                                    <label>
+                                                        <input type="checkbox">
+                                                        <span>Michelin</span>
+                                                    </label>
+                                                </li>
+                                                <li class="checkbox-list__item">
+                                                    <label>
+                                                        <input type="checkbox">
+                                                        <span>Dunlop</span>
+                                                    </label>
+                                                </li>
+                                                <li class="checkbox-list__item">
+                                                    <label>
+                                                        <input type="checkbox">
+                                                        <span>Gislaved</span>
+                                                    </label>
+                                                </li>
+                                                <li class="checkbox-list__item">
+                                                    <label>
+                                                        <input type="checkbox">
+                                                        <span>Hankook</span>
+                                                    </label>
+                                                </li>
+                                                <li class="checkbox-list__item">
+                                                    <label>
+                                                        <input type="checkbox">
+                                                        <span>Yokohama</span>
+                                                    </label>
+                                                </li>
+                                                <li class="checkbox-list__item">
+                                                    <label>
+                                                        <input type="checkbox">
+                                                        <span>BFGoodrich</span>
+                                                    </label>
+                                                </li>
+                                                <li class="checkbox-list__item">
+                                                    <label>
+                                                        <input type="checkbox">
+                                                        <span>Continental</span>
+                                                    </label>
+                                                </li>
+                                                <li class="checkbox-list__item">
+                                                    <label>
+                                                        <input type="checkbox">
+                                                        <span>Maxxis</span>
+                                                    </label>
+                                                </li>
+                                                <li class="checkbox-list__item">
+                                                    <label>
+                                                        <input type="checkbox">
+                                                        <span>GT Radial</span>
+                                                    </label>
+                                                </li>
+                                                <li class="checkbox-list__item">
+                                                    <label>
+                                                        <input type="checkbox">
+                                                        <span>Nexen</span>
+                                                    </label>
+                                                </li>
+                                                <li class="checkbox-list__item">
+                                                    <label>
+                                                        <input type="checkbox">
+                                                        <span>DMack</span>
+                                                    </label>
+                                                </li>
+                                                <li class="checkbox-list__item">
+                                                    <label>
+                                                        <input type="checkbox">
+                                                        <span>Mickey Thompson</span>
+                                                    </label>
+                                                </li>
+                                                <li class="checkbox-list__item">
+                                                    <label>
+                                                        <input type="checkbox">
+                                                        <span>Cordiant</span>
+                                                    </label>
+                                                </li>
+                                                <li class="checkbox-list__item">
+                                                    <label>
+                                                        <input type="checkbox">
+                                                        <span>Tigar</span>
+                                                    </label>
+                                                </li>
+                                                <li class="checkbox-list__item">
+                                                    <label>
+                                                        <input type="checkbox">
+                                                        <span>Ovation</span>
+                                                    </label>
+                                                </li>
+                                                <li class="checkbox-list__item">
+                                                    <label>
+                                                        <input type="checkbox">
+                                                        <span>Sailun</span>
+                                                    </label>
+                                                </li>
+                                                <li class="checkbox-list__item">
+                                                    <label>
+                                                        <input type="checkbox">
+                                                        <span>Matador</span>
+                                                    </label>
+                                                </li>
+                                                <li class="checkbox-list__item">
+                                                    <label>
+                                                        <input type="checkbox">
+                                                        <span>Marshal</span>
+                                                    </label>
+                                                </li>
+                                                <li class="checkbox-list__item">
+                                                    <label>
+                                                        <input type="checkbox">
+                                                        <span>Antares</span>
+                                                    </label>
+                                                </li>
+                                                <li class="checkbox-list__item">
+                                                    <label>
+                                                        <input type="checkbox">
+                                                        <span>Belshina</span>
+                                                    </label>
+                                                </li>
+                                                <li class="checkbox-list__item">
+                                                    <label>
+                                                        <input type="checkbox">
+                                                        <span>Kormoran</span>
+                                                    </label>
+                                                </li>
+                                                <li class="checkbox-list__item">
+                                                    <label>
+                                                        <input type="checkbox">
+                                                        <span>Laufenn</span>
+                                                    </label>
+                                                </li>
+                                                <li class="checkbox-list__item">
+                                                    <label>
+                                                        <input type="checkbox">
+                                                        <span>Habilead</span>
+                                                    </label>
+                                                </li>
+                                                <li class="checkbox-list__item">
+                                                    <label>
+                                                        <input type="checkbox">
+                                                        <span>Firestone</span>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                            <div class="btn-block hidden-xs">
+                                                <button data-loading-text='<div id="squaresWaveG"><div id="squaresWaveG_1" class="squaresWaveG"></div><div id="squaresWaveG_2" class="squaresWaveG"></div><div id="squaresWaveG_3" class="squaresWaveG"></div></div>'
+                                                        type="button" disabled class="btn btn-black btn-black-grad">
+                                                    Показать
+                                                    шины
+                                                    <span>(165)</span></button>
+                                            </div>
+                                        </form>
                                     </section>
+
                                 </li>
                                 <li class="tab-head-cont">
                                     <a href="#"><span>Стоимость</span></a>
                                     <section>
-                                        <div class="param-form__container">
-                                            <div class="param-form__row">
-                                                <div class="control-label">
-                                                    <div class="label">Ценовой диапазон</div>
-                                                </div>
-                                                <div class="controls">
-                                                    <div class="form-cost">
-                                                        <input type="tel" step="10" id="minCost" value="2000"/>
-                                                        <span>–</span>
-                                                        <input type="tel" step="10" id="maxCost" value="125000"/>
-                                                        <span class="rub"></span>
+                                        <form>
+                                            <div class="param-form__container">
+                                                <div class="param-form__row">
+                                                    <div class="control-label">
+                                                        <div class="label">Ценовой диапазон</div>
                                                     </div>
-                                                    <div class="slider-cont">
-                                                        <div id="slider"></div>
-                                                    </div>
-                                                    <div class="slider__scale"><span
-                                                            class="slider__min-val"></span><span
-                                                            class="slider__max-val"></span></div>
+                                                    <div class="controls">
+                                                        <div class="form-cost">
+                                                            <input type="number" step="10" id="minCost" value="2000"
+                                                                   min="2000" max="125000"/>
+                                                            <span>–</span>
+                                                            <input type="number" step="10" id="maxCost" value="125000"
+                                                                   min="2000" max="125000"/>
+                                                            <span class="rub"></span>
+                                                        </div>
+                                                        <div class="slider-cont">
+                                                            <div id="slider"></div>
+                                                        </div>
+                                                        <div class="slider__scale"><span
+                                                                class="slider__min-val"></span><span
+                                                                class="slider__max-val"></span></div>
 
+                                                    </div>
                                                 </div>
+
                                             </div>
-
-                                        </div>
-
+                                            <div class="btn-block hidden-xs">
+                                                <button data-loading-text='<div id="squaresWaveG"><div id="squaresWaveG_1" class="squaresWaveG"></div><div id="squaresWaveG_2" class="squaresWaveG"></div><div id="squaresWaveG_3" class="squaresWaveG"></div></div>'
+                                                        type="button" disabled class="btn btn-black btn-black-grad">
+                                                    Показать
+                                                    шины
+                                                    <span>(165)</span></button>
+                                            </div>
+                                        </form>
                                     </section>
+
                                 </li>
                                 <li class="tab-head-cont">
                                     <a href="#"><span>Акции</span></a>
                                     <section>
-                                        <ul class="list-unstyled checkbox-list">
-                                            <li class="checkbox-list__item">
-                                                <label>
-                                                    <input type="checkbox">
-                                                    <span>Все товары по акции</span>
-                                                </label>
-                                            </li>
-                                            <li class="checkbox-list__item">
-                                                <label>
-                                                    <input type="checkbox">
-                                                    <span>Скидка на шиномонтаж</span>
-                                                </label>
-                                            </li>
-                                            <li class="checkbox-list__item">
-                                                <label>
-                                                    <input type="checkbox">
-                                                    <span>Скидка на сезонное хранение</span>
-                                                </label>
-                                            </li>
-                                            <li class="checkbox-list__item">
-                                                <label>
-                                                    <input type="checkbox">
-                                                    <span>Скидки до 50%</span>
-                                                </label>
-                                            </li>
-                                        </ul>
+                                        <form>
+                                            <ul class="list-unstyled checkbox-list">
+                                                <li class="checkbox-list__item">
+                                                    <label>
+                                                        <input type="checkbox">
+                                                        <span>Все товары по акции</span>
+                                                    </label>
+                                                </li>
+                                                <li class="checkbox-list__item">
+                                                    <label>
+                                                        <input type="checkbox">
+                                                        <span>Скидка на шиномонтаж</span>
+                                                    </label>
+                                                </li>
+                                                <li class="checkbox-list__item">
+                                                    <label>
+                                                        <input type="checkbox">
+                                                        <span>Скидка на сезонное хранение</span>
+                                                    </label>
+                                                </li>
+                                                <li class="checkbox-list__item">
+                                                    <label>
+                                                        <input type="checkbox">
+                                                        <span>Скидки до 50%</span>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                            <div class="btn-block hidden-xs">
+                                                <button data-loading-text='<div id="squaresWaveG"><div id="squaresWaveG_1" class="squaresWaveG"></div><div id="squaresWaveG_2" class="squaresWaveG"></div><div id="squaresWaveG_3" class="squaresWaveG"></div></div>'
+                                                        type="button" disabled class="btn btn-black btn-black-grad">
+                                                    Показать
+                                                    шины
+                                                    <span>(165)</span></button>
+                                            </div>
+                                        </form>
                                     </section>
+
                                 </li>
                                 <li class="tab-head-cont">
                                     <a href="#"><span>Дополнительно</span><sup>2</sup></a>
                                     <section>
-                                        <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные
-                                            тексты.
-                                            Вдали от всех живут они в буквенных домах на берегу Семантика большого
-                                            языкового
-                                            океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми
-                                            необходимыми правилами. Эта парадигматическая страна, в которой жаренные
-                                            члены
-                                            предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти
-                                            над
-                                            рыбными текстами, ведущими безорфографичный образ жизни. Однажды одна
-                                            маленькая
-                                            строчка рыбного текста по имени Lorem ipsum решила выйти в большой мир
-                                            грамматики.</p>
+                                        <form>
+                                            <p>Далеко-далеко за словесными горами в стране гласных и согласных живут
+                                                рыбные
+                                                тексты.
+                                                Вдали от всех живут они в буквенных домах на берегу Семантика большого
+                                                языкового
+                                                океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее
+                                                всеми
+                                                необходимыми правилами. Эта парадигматическая страна, в которой жаренные
+                                                члены
+                                                предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет
+                                                власти
+                                                над
+                                                рыбными текстами, ведущими безорфографичный образ жизни. Однажды одна
+                                                маленькая
+                                                строчка рыбного текста по имени Lorem ipsum решила выйти в большой мир
+                                                грамматики.</p>
+
+                                            <div class="btn-block hidden-xs">
+                                                <button data-loading-text='<div id="squaresWaveG"><div id="squaresWaveG_1" class="squaresWaveG"></div><div id="squaresWaveG_2" class="squaresWaveG"></div><div id="squaresWaveG_3" class="squaresWaveG"></div></div>'
+                                                        type="button" disabled class="btn btn-black btn-black-grad">
+                                                    Показать
+                                                    шины
+                                                    <span>(165)</span></button>
+                                            </div>
+                                        </form>
+
                                     </section>
                                 </li>
                             </ul>
-                            <div class="btn-block">
+                            <div class="visible-xs mobile-btn__wrap">
                                 <button data-loading-text='<div id="squaresWaveG"><div id="squaresWaveG_1" class="squaresWaveG"></div><div id="squaresWaveG_2" class="squaresWaveG"></div><div id="squaresWaveG_3" class="squaresWaveG"></div></div>'
                                         type="button" disabled class="btn btn-black btn-black-grad">
                                     Показать
                                     шины
                                     <span>(165)</span></button>
                             </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
                 <div class="section">

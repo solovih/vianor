@@ -381,11 +381,11 @@
                     <h1>Шины Nokian Tyres</h1>
 
                     <div class="filter-tab">
-                        <div  id="by_tire" class="param-form">
+                        <div id="by_tire" class="param-form">
                             <ul class="accordion-tabs">
                                 <li class="tab-head-cont">
                                     <a href="#" class="is-active"><span>Размер и вид шины</span></a>
-                                    <section>
+                                    <section class="is-open">
                                         <form>
                                             <div class="param-form__container">
                                                 <div class="param-form__row switch__wrap">
@@ -403,7 +403,8 @@
 
                                                     </div>
                                                 </div>
-                                                <div id="id_multi_size_1"  style="display: block;" class="param-form__row size">
+                                                <div id="id_multi_size_1" style="display: block;"
+                                                     class="param-form__row size">
                                                     <div class="control-label">
                                                         <div class="label">Передняя ось</div>
                                                     </div>
@@ -447,7 +448,8 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div id="id_multi_size_2" style="display: block;" class="param-form__row size"  >
+                                                <div id="id_multi_size_2" style="display: block;"
+                                                     class="param-form__row size">
                                                     <div class="control-label">
                                                         <div class="label">Задняя ось</div>
                                                     </div>
@@ -490,7 +492,8 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div id="id_single_size" class="param-form__row size" style="display: none;">
+                                                <div id="id_single_size" class="param-form__row size"
+                                                     style="display: none;">
                                                     <div class="control-label">
                                                         <div class="label">Типоразмер</div>
                                                     </div>
@@ -571,7 +574,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="btn-block">
+                                            <div class="btn-block hidden-xs">
                                                 <button data-loading-text='<div id="squaresWaveG"><div id="squaresWaveG_1" class="squaresWaveG"></div><div id="squaresWaveG_2" class="squaresWaveG"></div><div id="squaresWaveG_3" class="squaresWaveG"></div></div>'
                                                         type="button" disabled class="btn btn-black btn-black-grad">
                                                     Показать
@@ -762,7 +765,7 @@
                                                     </label>
                                                 </li>
                                             </ul>
-                                            <div class="btn-block">
+                                            <div class="btn-block hidden-xs">
                                                 <button data-loading-text='<div id="squaresWaveG"><div id="squaresWaveG_1" class="squaresWaveG"></div><div id="squaresWaveG_2" class="squaresWaveG"></div><div id="squaresWaveG_3" class="squaresWaveG"></div></div>'
                                                         type="button" disabled class="btn btn-black btn-black-grad">
                                                     Показать
@@ -784,9 +787,11 @@
                                                     </div>
                                                     <div class="controls">
                                                         <div class="form-cost">
-                                                            <input type="tel" id="minCost" value="2000"/>
+                                                            <input type="number" step="10" id="minCost" value="2000"
+                                                                   min="2000" max="125000"/>
                                                             <span>–</span>
-                                                            <input type="tel" id="maxCost" value="125000"/>
+                                                            <input type="number" step="10" id="maxCost" value="125000"
+                                                                   min="2000" max="125000"/>
                                                             <span class="rub"></span>
                                                         </div>
                                                         <div class="slider-cont">
@@ -800,7 +805,7 @@
                                                 </div>
 
                                             </div>
-                                            <div class="btn-block">
+                                            <div class="btn-block hidden-xs">
                                                 <button data-loading-text='<div id="squaresWaveG"><div id="squaresWaveG_1" class="squaresWaveG"></div><div id="squaresWaveG_2" class="squaresWaveG"></div><div id="squaresWaveG_3" class="squaresWaveG"></div></div>'
                                                         type="button" disabled class="btn btn-black btn-black-grad">
                                                     Показать
@@ -841,7 +846,7 @@
                                                     </label>
                                                 </li>
                                             </ul>
-                                            <div class="btn-block">
+                                            <div class="btn-block hidden-xs">
                                                 <button data-loading-text='<div id="squaresWaveG"><div id="squaresWaveG_1" class="squaresWaveG"></div><div id="squaresWaveG_2" class="squaresWaveG"></div><div id="squaresWaveG_3" class="squaresWaveG"></div></div>'
                                                         type="button" disabled class="btn btn-black btn-black-grad">
                                                     Показать
@@ -856,20 +861,24 @@
                                     <a href="#"><span>Дополнительно</span><sup>2</sup></a>
                                     <section>
                                         <form>
-                                            <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные
+                                            <p>Далеко-далеко за словесными горами в стране гласных и согласных живут
+                                                рыбные
                                                 тексты.
                                                 Вдали от всех живут они в буквенных домах на берегу Семантика большого
                                                 языкового
-                                                океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми
+                                                океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее
+                                                всеми
                                                 необходимыми правилами. Эта парадигматическая страна, в которой жаренные
                                                 члены
-                                                предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти
+                                                предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет
+                                                власти
                                                 над
                                                 рыбными текстами, ведущими безорфографичный образ жизни. Однажды одна
                                                 маленькая
                                                 строчка рыбного текста по имени Lorem ipsum решила выйти в большой мир
                                                 грамматики.</p>
-                                            <div class="btn-block">
+
+                                            <div class="btn-block hidden-xs">
                                                 <button data-loading-text='<div id="squaresWaveG"><div id="squaresWaveG_1" class="squaresWaveG"></div><div id="squaresWaveG_2" class="squaresWaveG"></div><div id="squaresWaveG_3" class="squaresWaveG"></div></div>'
                                                         type="button" disabled class="btn btn-black btn-black-grad">
                                                     Показать
@@ -881,19 +890,35 @@
                                     </section>
                                 </li>
                             </ul>
-
+                            <div class="visible-xs mobile-btn__wrap">
+                                <button data-loading-text='<div id="squaresWaveG"><div id="squaresWaveG_1" class="squaresWaveG"></div><div id="squaresWaveG_2" class="squaresWaveG"></div><div id="squaresWaveG_3" class="squaresWaveG"></div></div>'
+                                        type="button" disabled class="btn btn-black btn-black-grad">
+                                    Показать
+                                    шины
+                                    <span>(165)</span></button>
+                            </div>
                         </div>
                     </div>
 
                     <div class="sort-panel">
                         <div class="pull-left sorting">
                             <span class="sorting__title">Сортировать:</span>
-                            <a class="sorting__item dropdown-toggle" href="javascript:void(0)" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">по цене, сначала дешевые</a>
+                            <a class="sorting__item dropdown-toggle" href="javascript:void(0)" data-toggle="dropdown"
+                               aria-haspopup="true" aria-expanded="false">по цене, сначала дешевые
+                            </a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">по цене, сначала дешёвые</a></li>
-                                <li><a href="#">по цене, сначала дорогие</a></li>
-                                <li><a href="#">по рейтингу</a></li>
-                                <li><a href="#">по наличию</a></li>
+                                <li>
+                                    <a href="#">по цене, сначала дешёвые</a>
+                                </li>
+                                <li>
+                                    <a href="#">по цене, сначала дорогие</a>
+                                </li>
+                                <li>
+                                    <a href="#">по рейтингу</a>
+                                </li>
+                                <li>
+                                    <a href="#">по наличию</a>
+                                </li>
                             </ul>
                         </div>
                         <div class="hidden-xs pull-right amount">

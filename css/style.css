@@ -3955,6 +3955,11 @@ input:focus ~ label {
   text-align: left;
   color: #8b8b8b;
 }
+.mobile-btn__wrap {
+  border: solid 1px #d8d8d8;
+  border-top: none;
+  padding: 18px 15px;
+}
 .pagination {
   margin: 6px 0 0;
   font-size: 0;
@@ -3967,7 +3972,7 @@ input:focus ~ label {
   vertical-align: middle;
   margin: 0 10px;
   font-size: 16px;
-  line-height: 1;
+  line-height: 20px;
   font-weight: bold;
 }
 .pagination .disabled {
