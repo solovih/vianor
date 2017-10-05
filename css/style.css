@@ -3384,6 +3384,9 @@ html {
   margin: 0;
   padding-left: 0;
 }
+.accordion-tabs .section {
+  margin: 0;
+}
 .accordion-tabs .hide-on-tablet {
   padding-right: 5px;
 }
