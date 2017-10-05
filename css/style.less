@@ -4419,11 +4419,32 @@ input:focus ~ label {
 
 .amount {
 
+  &__list {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+  }
+  &__item {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+
+    input[type="radio"] {
+      display: none;
+
+      &:checked {
+
+        & + label {
+          color: @warm-grey-two;
+        }
+      }
+    }
+  }
+
   &__title {
     display: inline-block;
     vertical-align: middle;
     padding: 14px 0;
-    margin-right: 8px;
     font-size: 14px;
     line-height: 1.43;
     text-align: left;
@@ -4431,25 +4452,16 @@ input:focus ~ label {
   }
 
   &__link {
-    display: inline-block;
-    vertical-align: middle;
+    display: block;
+    width: 36px;
+    font-weight: 400;
     padding: 14px 0;
-    margin-left: 8px;
     font-size: 14px;
     line-height: 1.43;
-    text-align: left;
+    text-align: center;
     color: #1b75cc;
-  }
-
-  &__current {
-    display: inline-block;
-    vertical-align: middle;
-    padding: 14px 0;
-    margin-left: 8px;
-    font-size: 14px;
-    line-height: 1.43;
-    text-align: left;
-    color: @warm-grey-two;
+    margin: 0;
+    cursor: pointer;
   }
 }
 

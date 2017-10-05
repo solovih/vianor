@@ -898,8 +898,8 @@
                         </div>
                     </div>
 
-                    <div class="sort-panel">
-                        <form method="get" action="#" class="pull-left sorting">
+                    <form method="get" action="#" class="sort-panel">
+                        <div class="pull-left sorting">
                             <span class="sorting__title">Сортировать:</span>
                             <a class="sorting__item dropdown-toggle" href="javascript:void(0)" data-toggle="dropdown"
                                aria-haspopup="true" aria-expanded="false">по цене, сначала дешёвые
@@ -920,14 +920,25 @@
                                 </li>
                             </ul>
 
-                        </form>
+                        </div>
                         <div class="hidden-xs pull-right amount">
                             <span class="amount__title">На странице:</span>
-                            <span class="amount__current">40</span>
-                            <a class="amount__link" href="#">60</a>
-                            <a class="amount__link" href="#">80</a>
+                            <ul class="amount__list list-unstyled">
+                                <li class="amount__item">
+                                    <input type="radio" name="amount" value="40"  id="id_amount_40" checked>
+                                    <label class="amount__link" for="id_amount_40">40</label>
+                                </li>
+                                <li class="amount__item">
+                                    <input type="radio" name="amount" value="60"  id="id_amount_60">
+                                    <label class="amount__link" for="id_amount_60">60</label>
+                                </li>
+                                <li class="amount__item">
+                                    <input type="radio" name="amount" value="80"  id="id_amount_80">
+                                    <label class="amount__link" for="id_amount_80">80</label>
+                                </li>
+                            </ul>
                         </div>
-                    </div>
+                    </form>
                     <div class="catalog">
                         <div class="catalog__list row">
                             <div class="col-xs-12 col-xs_h-6 col-sm-4 col-md-3">
