@@ -3773,7 +3773,7 @@ html {
   color: #333333;
 }
 
-.accordion-tabs li.tab-head-cont section {
+.accordion-tabs li.tab-head-cont .section {
   padding: 20px 30px 30px;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
@@ -3836,7 +3836,7 @@ html {
   }
 }
 
-.accordion-tabs li.tab-head-cont section {
+.accordion-tabs li.tab-head-cont .section {
   padding: 15px 30px 30px;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
@@ -3984,6 +3984,17 @@ input:focus ~ label {
 .filter-tab {
   background-color: @white-three;
 
+  .param-form__row {
+
+    &.size {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+  }
+
   .param-form .control-label {
     width: 189px;
   }
@@ -4108,7 +4119,6 @@ input:focus ~ label {
     }
   }
 }
-
 
 .mf-list {
   -webkit-column-count: 4;
@@ -4368,6 +4378,20 @@ input:focus ~ label {
   .dropdown-menu {
     left: auto;
     right: 0;
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    label {
+      display: block;
+      cursor: pointer;
+      font-size: 14px;
+      line-height: 1.43;
+      font-weight: 400;
+      margin: 0;
+      padding: 8px 10px;
+    }
   }
 
   &__title {
@@ -4434,6 +4458,7 @@ input:focus ~ label {
   border-top: none;
   padding: 18px 15px;
 }
+
 .pagination {
   margin: 6px 0 0;
   font-size: 0;
@@ -5335,7 +5360,7 @@ input:focus ~ label {
           display: block;
         }
 
-        section {
+        .section {
           border-top: solid 1px @white-two;
           border-bottom: solid 1px @white-two;
           padding: 22px 15px;
@@ -5357,7 +5382,7 @@ input:focus ~ label {
 
 @media (min-width: 768px) {
 
-  .accordion-tabs li.tab-head-cont section {
+  .accordion-tabs li.tab-head-cont .section {
     display: block;
     visibility: hidden;
     position: absolute;
@@ -5366,6 +5391,7 @@ input:focus ~ label {
     right: 0;
     z-index: -1;
     padding-bottom: 0;
+    min-height: 360px;
 
     form {
       display: block;
@@ -5732,4 +5758,8 @@ input:focus ~ label {
       }
     }
   }
+}
+
+#id_multi_size_2, #id_multi_size_1 {
+  display: none;
 }

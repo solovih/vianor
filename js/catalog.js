@@ -2,29 +2,29 @@ $(document).ready(function () {
 
     function switchToggle(elem) {
         if ($(elem).is(":checked")) {
-            $("#id_single_size").hide();
-            $("#id_multi_size_1").show();
-            $("#id_multi_size_2").show();
+            $("#id_single_size").hide().removeClass('active');
+            $("#id_multi_size_1").show().addClass('active');
+            $("#id_multi_size_2").show().addClass('active');
 
         } else {
-            $("#id_single_size").show();
-            $("#id_multi_size_1").hide();
-            $("#id_multi_size_2").hide();
+            $("#id_single_size").show().addClass('active');
+            $("#id_multi_size_1").hide().removeClass('active');
+            $("#id_multi_size_2").hide().removeClass('active');
         }
     }
 
     function accordionHeight() {
         if (window.matchMedia("(min-width: 768px)").matches) {
             var height = 0;
-            $('.accordion-tabs section').css('height','');
-            $('.accordion-tabs section').each(function () {
+            $('.accordion-tabs .section').css('height','');
+            $('.accordion-tabs .section').each(function () {
                 if (height < $(this)[0].clientHeight) {
                     height = $(this)[0].clientHeight;
                 }
             });
-            $('.accordion-tabs section').css('height', height);
+            $('.accordion-tabs .section').css('height', height);
         } else {
-            $('.accordion-tabs section').css('height','');
+            $('.accordion-tabs .section').css('height','');
         }
     }
 
@@ -32,8 +32,6 @@ $(document).ready(function () {
         accordionHeight();
     });
     accordionHeight();
-
-    switchToggle($("#id_multi_size_selector"));
 
     if (window.matchMedia("(max-width: 767px)").matches && $('.is-open').length) {
         $('.is-open').show();
@@ -62,7 +60,7 @@ $(document).ready(function () {
 
             } else {
                 $(this).removeClass('is-active');
-                $(this).siblings('section').removeClass('is-open').slideUp();
+                $(this).siblings('.section').removeClass('is-open').slideUp();
             }
         } else {
             if (!$(this).hasClass('is-active')) {

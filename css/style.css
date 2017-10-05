@@ -3424,7 +3424,7 @@ html {
   border-bottom: 0;
   color: #333333;
 }
-.accordion-tabs li.tab-head-cont section {
+.accordion-tabs li.tab-head-cont .section {
   padding: 20px 30px 30px;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
@@ -3432,7 +3432,7 @@ html {
   overflow: hidden;
   width: 100%;
 }
-.accordion-tabs li.tab-head-cont section > *:not(.param-form__container) {
+.accordion-tabs li.tab-head-cont .section > *:not(.param-form__container) {
   padding-top: 5px;
 }
 .accordion-tabs {
@@ -3476,7 +3476,7 @@ html {
 .accordion-tabs li.tab-head-cont a.is-active span:after {
   right: 0;
 }
-.accordion-tabs li.tab-head-cont section {
+.accordion-tabs li.tab-head-cont .section {
   padding: 15px 30px 30px;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
@@ -3609,6 +3609,12 @@ input:focus ~ label {
 }
 .filter-tab {
   background-color: #f5f5f5;
+}
+.filter-tab .param-form__row.size {
+  display: none;
+}
+.filter-tab .param-form__row.size.active {
+  display: block;
 }
 .filter-tab .param-form .control-label {
   width: 189px;
@@ -3904,6 +3910,18 @@ input:focus ~ label {
 .sorting .dropdown-menu {
   left: auto;
   right: 0;
+}
+.sorting .dropdown-menu input[type="radio"] {
+  display: none;
+}
+.sorting .dropdown-menu label {
+  display: block;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1.43;
+  font-weight: 400;
+  margin: 0;
+  padding: 8px 10px;
 }
 .sorting__title {
   display: inline-block;
@@ -4687,7 +4705,7 @@ input:focus ~ label {
   .filter-tab .accordion-tabs li.tab-head-cont > a {
     display: block;
   }
-  .filter-tab .accordion-tabs li.tab-head-cont section {
+  .filter-tab .accordion-tabs li.tab-head-cont .section {
     border-top: solid 1px #d8d8d8;
     border-bottom: solid 1px #d8d8d8;
     padding: 22px 15px;
@@ -4708,7 +4726,7 @@ input:focus ~ label {
   }
 }
 @media (min-width: 768px) {
-  .accordion-tabs li.tab-head-cont section {
+  .accordion-tabs li.tab-head-cont .section {
     display: block;
     visibility: hidden;
     position: absolute;
@@ -4717,21 +4735,22 @@ input:focus ~ label {
     right: 0;
     z-index: -1;
     padding-bottom: 0;
+    min-height: 360px;
   }
-  .accordion-tabs li.tab-head-cont section form {
+  .accordion-tabs li.tab-head-cont .section form {
     display: block;
     height: 100%;
     position: relative;
     padding-bottom: 104px;
   }
-  .accordion-tabs li.tab-head-cont section form .btn-block {
+  .accordion-tabs li.tab-head-cont .section form .btn-block {
     position: absolute;
     z-index: 1;
     bottom: 0;
     left: 0;
     right: 0;
   }
-  .accordion-tabs li.tab-head-cont section.is-open {
+  .accordion-tabs li.tab-head-cont .section.is-open {
     position: static;
     visibility: visible;
     display: block;
@@ -4959,4 +4978,8 @@ input:focus ~ label {
   #myCarousel .slick-arrow.slick-next {
     right: 50px;
   }
+}
+#id_multi_size_2,
+#id_multi_size_1 {
+  display: none;
 }
